@@ -3,8 +3,8 @@
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![LeetCode](https://img.shields.io/badge/LeetCode-Practice-orange?logo=leetcode)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Repo Size](https://img.shields.io/github/repo-size/your-username/LeetCode-Solutions)
-![Last Commit](https://img.shields.io/github/last-commit/your-username/LeetCode-Solutions)
+![Repo Size](https://img.shields.io/github/repo-size/sdivyanshu90/LeetCode-Solutions)
+![Last Commit](https://img.shields.io/github/last-commit/sdivyanshu90/LeetCode-Solutions)
 
 ---
 
