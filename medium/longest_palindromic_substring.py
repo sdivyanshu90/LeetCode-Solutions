@@ -58,4 +58,4 @@ def test_longest_palindrome():
     print(solution.longestPalindrome(s))  # Expected: "madam"
     # Test Case 10: Mixed characters with special characters
     s = "Hannah"
-    print(solution.longestPalindrome(s))  # Expected: "Hannah"
+    print(solution.longestPalindrome(s))  # Expected: "Hannah"git
