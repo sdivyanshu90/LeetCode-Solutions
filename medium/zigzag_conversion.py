@@ -120,3 +120,5 @@ def test_zigzag_conversion():
     s = "abba"
     numRows = 2
     print(solution.convert(s, numRows))  # Expected: "abba"
+
+test_zigzag_conversion()
