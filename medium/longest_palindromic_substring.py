@@ -76,12 +76,17 @@ def test_longest_palindrome():
     # Test Case 7: Palindrome at the start
     s = "racecarxyz"
     print(solution.longestPalindrome(s))  # Expected: "racecar" 
+
     # Test Case 8: Palindrome at the end
     s = "xyzracecar"
     print(solution.longestPalindrome(s))  # Expected: "racecar"
+
     # Test Case 9: Entire string is a palindrome
     s = "madam"
     print(solution.longestPalindrome(s))  # Expected: "madam"
+
     # Test Case 10: Mixed characters with special characters
     s = "Hannah"
-    print(solution.longestPalindrome(s))  # Expected: "Hannah"
+    print(solution.longestPalindrome(s))  # Expected: "anna"
+
+test_longest_palindrome()
