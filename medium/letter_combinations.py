@@ -1,22 +1,30 @@
-from collections import deque
 from typing import List
 
 class Solution:
-    def letterCombinations(self, digits: str) -> List[str]:
-        button = {"2": "abc", "3": "def", "4": "ghi", "5": "jkl", "6": "mno", "7": "pqrs", "8": "tuv", "9": "wxyz"}
-        
+    def letterCombinations(self, digits: str) -> List[str]:  
         if not digits:
             return []
         
-        queue = deque([""])
-        for digit in digits:
-            n = len(queue)
-            for _ in range(n):
-                current_combination = queue.popleft()
-                for char in button[digit]:
-                    queue.append(current_combination + char)
+        Map = {
+            '2': 'abc', '3': 'def', '4': 'ghi', '5': 'jkl',
+            '6': 'mno', '7': 'pqrs', '8': 'tuv', '9': 'wxyz'
+        }
         
-        return queue
+        ans = []
+        path = []
+        
+        def backtrack(i):
+            if i == len(digits):
+                ans.append(''.join(path))
+                return
+            
+            for char in Map[digits[i]]:
+                path.append(char)
+                backtrack(i+1)
+                path.pop()
+                
+        backtrack(0)
+        return ans
 
 def test_letter_combinations():
     solution = Solution()
