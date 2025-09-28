@@ -87,7 +87,7 @@ def test_find_substring():
     s8 = "zzzzzzzz"
     words8 = ["zz","zz"]
     result8 = solution.findSubstring(s8, words8)
-    print(result8)  # Expected output: [0, 2, 4]
+    print(result8)  # Expected output: [0, 2, 4, 1, 3]
 
     # Test case 9: Large input
     s9 = "a" * 10000 + "b" * 10000
