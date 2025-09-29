@@ -40,7 +40,7 @@ def test_max_sub_array():
     print(s.maxSubArray([1000,-1001,2000,-2001,3000]))  # Expected output: 3000
 
     # Test case 9: Array with alternating large positive and negative numbers
-    print(s.maxSubArray([1000,-999,1000,-999,1000]))  # Expected output: 2001
+    print(s.maxSubArray([1000,-999,1000,-999,1000]))  # Expected output: 1002
 
     # Test case 10: Array with multiple maximum subarrays
     print(s.maxSubArray([1,-1,1,-1,1,-1,1]))  # Expected output: 1
