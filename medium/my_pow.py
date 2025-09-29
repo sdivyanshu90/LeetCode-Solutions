@@ -52,10 +52,10 @@ def test_my_pow():
     print(s.myPow(0.5, -3))  # Expected output: 8.0
 
     # Test case 6: Large positive exponent
-    print(s.myPow(1.00001, 100000))  # Expected output: Approximately 2.71815
+    print(s.myPow(1.00001, 100000))  # Expected output: 2.718268237197528
 
     # Test case 7: Large negative exponent
-    print(s.myPow(1.00001, -100000)) # Expected output: Approximately 0.36788
+    print(s.myPow(1.00001, -100000)) # Expected output: 0.3678812805578661
 
     # Test case 8: Base is zero and positive exponent
     print(s.myPow(0.0, 5))   # Expected output: 0.0
