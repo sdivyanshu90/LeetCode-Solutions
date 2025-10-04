@@ -82,7 +82,7 @@ def test_min_window():
     # Test case 8
     s8 = "cabwefgewcwaefgcf"
     t8 = "cae"
-    print(solution.minWindow(s8, t8))  # Expected output: "cwaef"
+    print(solution.minWindow(s8, t8))  # Expected output: "cwae"
 
     # Test case 9
     s9 = "ab"
