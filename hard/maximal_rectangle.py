@@ -54,11 +54,11 @@ def test_maximal_rectangle():
 
     # Test case 7
     matrix = [["1", "0"], ["1", "1"]]
-    print(solution.maximalRectangle(matrix))  # Output: 3
+    print(solution.maximalRectangle(matrix))  # Output: 2
 
     # Test case 8
     matrix = [["0", "1"], ["1", "1"]]
-    print(solution.maximalRectangle(matrix))  # Output: 3
+    print(solution.maximalRectangle(matrix))  # Output: 2
 
     # Test case 9
     matrix = [["0", "0"], ["0", "0"]]
