@@ -41,7 +41,7 @@ def test_is_interleave():
 
     # Test Case 5
     s1, s2, s3 = "abc", "def", "abdecf"
-    print(solution.isInterleave(s1, s2, s3)) # Output: False
+    print(solution.isInterleave(s1, s2, s3)) # Output: True
 
     # Test Case 6
     s1, s2, s3 = "a", "", "c"
