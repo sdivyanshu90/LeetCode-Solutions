@@ -38,7 +38,7 @@ def test_sorted_array_to_bst():
     # Test case 3: Two elements
     nums3 = [1, 2]
     bst3 = solution.sortedArrayToBST(nums3)
-    print(bst3.val)        # Expected output: 2
+    print(bst3.val)        # Expected output: 1
 
     # Test case 4: Empty array
     nums4 = []
