@@ -34,6 +34,6 @@ def test_longest_consecutive():
 
     # Test case 5
     nums = [9,1,-3,2,4,8,3,-1,6,-2,-4,7]
-    print(solution.longestConsecutive(nums))  # Expected output: 7
+    print(solution.longestConsecutive(nums))  # Expected output: 4
 
 test_longest_consecutive()
