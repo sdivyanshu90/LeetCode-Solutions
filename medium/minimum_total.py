@@ -41,7 +41,7 @@ def test_minimum_total():
         [4, 6, 8],
         [0, 7, 1, 5]
     ]
-    print(solution.minimumTotal(triangle4))  # Expected output: 15
+    print(solution.minimumTotal(triangle4))  # Expected output: 18
 
     # Test case 5: Triangle with negative numbers
     triangle5 = [
