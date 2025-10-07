@@ -29,7 +29,7 @@ def test_partition():
 
     # Test case 3
     s = "racecar"
-    print(solution.partition(s))  # Expected output: [["r","a","c","e","c","a","r"], ["r","a","cec","a","r"], ["racecar"]]
+    print(solution.partition(s))  # Expected output: [["r","a","c","e","c","a","r"], ["r","a","cec","a","r"], ["r", "aceca", "r"], ["racecar"]]
 
     # Test case 4
     s = "level"
