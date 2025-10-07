@@ -51,6 +51,6 @@ def test_sum_numbers():
     root.left.right = TreeNode(1)
     root.right.left = TreeNode(0)
     root.right.right = TreeNode(1)
-    print(solution.sumNumbers(root))  # Expected output: 262
+    print(solution.sumNumbers(root))  # Expected output: 422
 
 test_sum_numbers()
