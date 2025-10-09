@@ -41,7 +41,7 @@ def test_eval_rpn():
     print(sol.evalRPN(["4", "-2", "/"])) # Expected output: -2
 
     # Test Case 7
-    print(sol.evalRPN(["-1", "1", "-", "2", "*", "3", "+", "4", "-", "5", "*", "6", "/"])) # Expected output: -2
+    print(sol.evalRPN(["-1", "1", "-", "2", "*", "3", "+", "4", "-", "5", "*", "6", "/"])) # Expected output: -4
 
     # Test Case 8
     print(sol.evalRPN(["-4", "-2", "/"])) # Expected output: 2
@@ -50,6 +50,6 @@ def test_eval_rpn():
     print(sol.evalRPN(["0", "3", "/"])) # Expected output: 0
 
     # Test Case 10
-    print(sol.evalRPN(["3", "100", "/"])) # Expected output: ZeroDivisionError
+    print(sol.evalRPN(["3", "100", "/"])) # Expected output: 0
 
 test_eval_rpn()
