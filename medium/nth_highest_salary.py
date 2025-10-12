@@ -1,19 +1,15 @@
 import pandas as pd
 import numpy as np
 
-def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
-    # A robust check for invalid N and empty dataframes
-    if N <= 0 or 'salary' not in employee.columns or employee.empty:
-        # Using np.nan is more idiomatic for missing numerical data in pandas
-        return pd.DataFrame({f'getNthHighestSalary({N})': [np.nan]})
+import pandas as pd
 
+def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
     unique_salaries = employee['salary'].unique()
 
-    if len(unique_salaries) < N:
-        nth_highest_salary = np.nan
+    if len(unique_salaries) < N or N <= 0:
+        nth_highest_salary = None
     else:
-        # Using np.sort is efficient for numpy arrays
-        sorted_salaries = np.sort(unique_salaries)[::-1] # Descending sort
+        sorted_salaries = sorted(unique_salaries, reverse=True)
         nth_highest_salary = sorted_salaries[N-1]
 
     result_df = pd.DataFrame({f'getNthHighestSalary({N})': [nth_highest_salary]})
