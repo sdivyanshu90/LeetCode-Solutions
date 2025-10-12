@@ -11,6 +11,13 @@ class Solution:
             if H[nums[i]] > n / 2:
                 return nums[i]
 
+# Approach 2
+# class Solution:
+#     def majorityElement(self, nums: List[int]) -> int:
+#         nums.sort()
+#         n=len(nums)
+#         return nums[n//2]
+
 def test_majority_element():
     s = Solution()
 
