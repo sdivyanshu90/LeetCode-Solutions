@@ -39,7 +39,7 @@ def test_convert_to_title():
     print(s.convertToTitle(78)) # Expected Output: BZ
     
     # Test Case 9: A large column number
-    print(s.convertToTitle(16384)) # Expected Output: XFZ
+    print(s.convertToTitle(16384)) # Expected Output: XFD
     
     # Test Case 10: Invalid input (zero)
     print(s.convertToTitle(0)) # Expected Output: ""
