@@ -23,6 +23,7 @@ class Solution:
 
 
         # Method 2
+        
         # nums.insert(0, 1)
         # nums.append(1)
         # dp = [[0 for _ in range(len(nums))] for _ in range(len(nums))]
