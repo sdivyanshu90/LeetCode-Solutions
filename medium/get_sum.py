@@ -1,6 +1,55 @@
 class Solution:
+    # Approach 1: Using bit manipulation (XOR and AND)
     def getSum(self, a: int, b: int) -> int:
-        return sum([a, b])
+        # 32-bit mask in hexadecimal
+        mask = 0xFFFFFFFF
+        
+        while b != 0:
+            # XOR gives sum without carry
+            # AND and left shift gives carry
+            a, b = (a ^ b) & mask, ((a & b) << 1) & mask
+        
+        # Handle negative numbers in Python
+        return a if a <= 0x7FFFFFFF else ~(a ^ mask)
+    
+    # Approach 2: Using recursion with bit manipulation
+    # def getSum2(self, a: int, b: int) -> int:
+    #     mask = 0xFFFFFFFF
+        
+    #     if b == 0:
+    #         return a if a <= 0x7FFFFFFF else ~(a ^ mask)
+        
+    #     # Sum without carry
+    #     sum_without_carry = (a ^ b) & mask
+    #     # Carry
+    #     carry = ((a & b) << 1) & mask
+        
+    #     return self.getSum2(sum_without_carry, carry)
+    
+    # Approach 3: Using logarithm (mathematical approach)
+    # def getSum3(self, a: int, b: int) -> int:
+    #     import math
+        
+    #     if a == 0:
+    #         return b
+    #     if b == 0:
+    #         return a
+        
+    #     # Handle negative numbers
+    #     if a < 0 and b < 0:
+    #         return -self.getSum3(-a, -b)
+    #     if a < 0:
+    #         return -self.getSum3(-a, -b) if -a > b else self.getSum3(b, a)
+    #     if b < 0:
+    #         return -self.getSum3(-b, -a) if -b > a else self.getSum3(a, b)
+        
+    #     # Both positive
+    #     return int(math.log2(2**a * 2**b))
+    
+    # Approach 4: Using built-in sum (simple approach)
+    # def getSum4(self, a: int, b: int) -> int:
+    #     return sum([a, b])
+
 
 def test_get_sum():
     solution = Solution()
