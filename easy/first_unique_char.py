@@ -32,7 +32,7 @@ def test_first_unique_char():
     print(solution.firstUniqChar("")) # Expected output: -1
 
     # Test case 7: Unique character in the middle
-    print(solution.firstUniqChar("swiss")) # Expected output: 0
+    print(solution.firstUniqChar("swiss")) # Expected output: 1
 
     # Test case 8: All unique characters
     print(solution.firstUniqChar("abcdef")) # Expected output: 0
