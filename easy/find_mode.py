@@ -57,7 +57,7 @@ def test_find_mode():
     root.left.right = TreeNode(6)
     root.right.right = TreeNode(4)
     root.right.left = TreeNode(3)
-    print(solution.findMode(root))  # Expected output: [3, 4, 5, 6, 7, 8, 9]
+    print(solution.findMode(root))  # Expected output: [9, 7, 5, 6, 8, 3, 4]
 
     # Test case 5
     root = TreeNode(3)
