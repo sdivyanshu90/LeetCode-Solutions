@@ -16,10 +16,19 @@ class Solution:
 def test_fib():
     solution = Solution()
 
+    # Test Case 1
     print(solution.fib(2))  # Expected: 1
+
+    # Test Case 2
     print(solution.fib(3))  # Expected: 2
+
+    # Test Case 3
     print(solution.fib(4))  # Expected: 3
+
+    # Test Case 4
     print(solution.fib(5))  # Expected: 5
+
+    # Test Case 5
     print(solution.fib(10)) # Expected: 55
 
 test_fib()
