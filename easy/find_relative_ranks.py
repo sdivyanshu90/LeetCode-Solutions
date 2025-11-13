@@ -31,18 +31,23 @@ class Solution:
 def test_find_relative_ranks():
     solution = Solution()
 
+    # Test Case 1
     score1 = [5, 4, 3, 2, 1]
     print(solution.findRelativeRanks(score1)) # Expected: ["Gold Medal", "Silver Medal", "Bronze Medal", "4", "5"]
 
+    # Test Case 2
     score2 = [10, 3, 8, 9, 4]
     print(solution.findRelativeRanks(score2)) # Expected: ["Gold Medal", "5", "Bronze Medal", "Silver Medal", "4"]
 
+    # Test Case 3
     score3 = [1, 2, 3, 4, 5]
     print(solution.findRelativeRanks(score3)) # Expected: ["5", "4", "Bronze Medal", "Silver Medal", "Gold Medal"]
 
+    # Test Case 4
     score4 = [100, 90, 90, 80]
     print(solution.findRelativeRanks(score4)) # Expected: ["Gold Medal", "Silver Medal", "Bronze Medal", "4"]
 
+    # Test Case 5
     score5 = [50]
     print(solution.findRelativeRanks(score5)) # Expected: ["Gold Medal"]
 
