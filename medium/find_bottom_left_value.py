@@ -1,6 +1,34 @@
 from collections import deque
 from typing import Optional
 
+# Approach 1: Breadth-First Search (BFS)
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+# class Solution:
+#     def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
+#         def bfs(node):
+#             q = deque()
+#             q.append(node)
+#             levels = []
+#             while q:
+#                 n = len(q)
+#                 level = []
+#                 for i in range(n):
+#                     popped = q.popleft()
+#                     if popped:
+#                         level.append(popped.val)
+#                         q.append(popped.left)
+#                         q.append(popped.right)
+#                 if level:
+#                     levels.append(level)
+#             return levels[-1][0]      
+#         return bfs(root)
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -10,23 +38,12 @@ class TreeNode:
 
 class Solution:
     def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
-        def bfs(node):
-            q = deque()
-            q.append(node)
-            levels = []
-            while q:
-                n = len(q)
-                level = []
-                for i in range(n):
-                    popped = q.popleft()
-                    if popped:
-                        level.append(popped.val)
-                        q.append(popped.left)
-                        q.append(popped.right)
-                if level:
-                    levels.append(level)
-            return levels[-1][0]      
-        return bfs(root)
+        q = deque([root])
+        while q:
+            node = q.popleft()
+            if node.right: q.append(node.right)
+            if node.left: q.append(node.left)
+        return node.val
 
 def test_find_bottom_left_value():
     solution = Solution()
