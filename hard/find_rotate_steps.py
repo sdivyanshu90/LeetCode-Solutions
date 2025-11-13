@@ -56,7 +56,7 @@ def test_find_rotate_steps():
     # Test Case 2
     s2 = "abc"
     t2 = "abcbc"
-    print(solution.findRotateSteps(s2, t2))  # Expected: 7
+    print(solution.findRotateSteps(s2, t2))  # Expected: 9
 
     # Test Case 3
     s3 = "a"
@@ -66,6 +66,11 @@ def test_find_rotate_steps():
     # Test Case 4
     s4 = "pqrstuvwxyzabcdefghijklmno"
     t4 = "leetcode"
-    print(solution.findRotateSteps(s4, t4))  # Expected: 73
+    print(solution.findRotateSteps(s4, t4))  # Expected: 63
+
+    # Test Case 5
+    s5 = "zjpc"
+    t5 = "zjpc"
+    print(solution.findRotateSteps(s5, t5))  # Expected: 7
 
 test_find_rotate_steps()
