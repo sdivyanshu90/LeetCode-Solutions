@@ -40,7 +40,7 @@ Alternative approaches (trade-offs)
 - Two-pass hashmap: first build map of value->index, then for each element check complement; still O(n) time but slightly more work or careful handling of duplicates is needed.
 - Sorting-based two-pointer: O(n log n) time, but indices are lost unless additional bookkeeping is done — more complex to return original indices.
 
-Thought process (concise)
+Thought process
 
 - Goal: O(n) time and O(n) extra space acceptable.
 - A map from value to index provides O(1) complement checks.
