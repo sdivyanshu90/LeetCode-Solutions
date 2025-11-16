@@ -63,3 +63,5 @@ Potential improvements
 
 - Add explicit type and input validation if used outside contest/LeetCode environment.
 - Return the first found pair as currently implemented; if multiple deterministic selection is required, adapt strategy (e.g., prefer smallest indices).
+
+Code: [Link](https://github.com/sdivyanshu90/LeetCode-Solutions/blob/f9fb1234b847ad551632817b3db7d609c28b422a/easy/two_sum.py)
