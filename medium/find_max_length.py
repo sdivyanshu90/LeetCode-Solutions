@@ -35,7 +35,7 @@ def test_find_max_length():
     print(s.findMaxLength(nums4)) # Expected output: 6
 
     # Test case 5
-    nums5 = [1, 1, 1, 0, 0, 0, 1]
+    nums5 = [1, 1, 1, 0, 0, 0]
     print(s.findMaxLength(nums5)) # Expected output: 6
 
 test_find_max_length()
