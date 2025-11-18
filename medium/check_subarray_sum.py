@@ -20,7 +20,7 @@ def test_check_subarray_sum():
     # Test case 1
     nums1 = [23, 2, 4, 6, 7]
     k1 = 6
-    peinr(s.checkSubarraySum(nums1, k1)) # Expected output: True
+    print(s.checkSubarraySum(nums1, k1)) # Expected output: True
 
     # Test case 2
     nums2 = [23, 2, 6, 4, 7]
@@ -33,8 +33,8 @@ def test_check_subarray_sum():
     print(s.checkSubarraySum(nums3, k3)) # Expected output: False
 
     # Test case 4
-    nums4 = [0, 0]
-    k4 = 0
+    nums4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    k4 = 15
     print(s.checkSubarraySum(nums4, k4)) # Expected output: True
 
     # Test case 5
