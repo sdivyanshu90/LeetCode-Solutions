@@ -48,11 +48,11 @@ def test_k_inverse_pairs():
     # Test case 4
     n = 5
     k = 5
-    print(s.kInversePairs(n, k))  # Expected output: 16
+    print(s.kInversePairs(n, k))  # Expected output: 22
 
     # Test case 5
     n = 1000
     k = 1000
-    print(s.kInversePairs(n, k))  # Expected output: (large number)
+    print(s.kInversePairs(n, k))  # Expected output: 663677020
 
 test_k_inverse_pairs()
