@@ -32,7 +32,7 @@ def test_replace_words():
     # Test case 3
     dictionary = ["a", "aa", "aaa", "aaaa"]
     sentence = "aaaaa aa aaa a abcd"
-    print(s.replaceWords(dictionary, sentence))  # Expected output: "a aa aaa a a"
+    print(s.replaceWords(dictionary, sentence))  # Expected output: "a a a a a"
 
     # Test case 4
     dictionary = ["catt", "bat", "rat"]
