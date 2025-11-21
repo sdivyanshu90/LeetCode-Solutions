@@ -53,6 +53,6 @@ def test_smallest_range():
 
     # Test case 5
     nums = [[-5,-4,-3,-2,-1],[0],[1,2,3,4,5]]
-    print(s.smallestRange(nums))  # Expected output: [-1,0]
+    print(s.smallestRange(nums))  # Expected output: [-1, 1]
 
 test_smallest_range()
