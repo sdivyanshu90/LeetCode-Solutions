@@ -46,7 +46,7 @@ def test_judge_point_24():
 
     # Test Case 4
     cards4 = [1, 5, 9, 1]
-    print(solution.judgePoint24(cards4))  # Expected: True
+    print(solution.judgePoint24(cards4))  # Expected: False
 
     # Test Case 5
     cards5 = [2, 2, 6, 6]
