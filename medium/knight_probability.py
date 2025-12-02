@@ -33,7 +33,7 @@ def test_knight_probability():
 
     # Test Case 3
     n3, k3, row3, column3 = 4, 4, 0, 0
-    print(solution.knightProbability(n3, k3, row3, column3))  # Expected: 0.015625
+    print(solution.knightProbability(n3, k3, row3, column3))  # Expected: 0.017578125
 
     # Test Case 4
     n4, k4, row4, column4 = 5, 3, 2, 2
