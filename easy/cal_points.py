@@ -35,6 +35,6 @@ def test_cal_points():
 
     # Test Case 5
     ops5 = ["-5","-10","D","+","C"]
-    print(solution.calPoints(ops5))  # Expected: -15
+    print(solution.calPoints(ops5))  # Expected: -35
 
 test_cal_points()
