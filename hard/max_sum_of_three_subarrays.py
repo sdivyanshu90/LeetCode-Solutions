@@ -53,7 +53,7 @@ def test_max_sum_of_three_subarrays():
     # Test Case 4
     nums4 = [7,13,20,19,19,2,10,1,1,19]
     k4 = 3
-    print(solution.maxSumOfThreeSubarrays(nums4, k4))  # Expected: [0, 3, 7]
+    print(solution.maxSumOfThreeSubarrays(nums4, k4))  # Expected: [1, 4, 7]
 
     # Test Case 5
     nums5 = [3,8,1,3,2,1,8,9,0,7,1,2]
