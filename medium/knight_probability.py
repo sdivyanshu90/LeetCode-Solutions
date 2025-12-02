@@ -41,6 +41,6 @@ def test_knight_probability():
 
     # Test Case 5
     n5, k5, row5, column5 = 8, 30, 6, 4
-    print(solution.knightProbability(n5, k5, row5, column5))  # Expected: A small probability value
+    print(solution.knightProbability(n5, k5, row5, column5))  # Expected: 0.00019052566298333645
 
 test_knight_probability()
