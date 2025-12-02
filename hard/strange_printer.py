@@ -45,6 +45,6 @@ def test_strange_printer():
 
     # Test Case 5
     s5 = "abababab"
-    print(solution.strangePrinter(s5)) # Expected: 4
+    print(solution.strangePrinter(s5)) # Expected: 5
 
 test_strange_printer()
