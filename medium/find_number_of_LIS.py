@@ -29,7 +29,7 @@ def test_find_number_of_LIS():
 
     # Test Case 1
     nums1 = [10,9,2,5,3,7,101,18]
-    print(solution.findNumberOfLIS(nums1))  # Expected: 1
+    print(solution.findNumberOfLIS(nums1))  # Expected: 4
 
     # Test Case 2
     nums2 = [2,2,2,2,2]
