@@ -47,7 +47,7 @@ def test_find_redundant_connection():
 
     # Test Case 4
     edges4 = [[1,4],[2,3],[3,4],[1,2]]
-    print(solution.findRedundantConnection(edges4))  # Expected: [3,4]
+    print(solution.findRedundantConnection(edges4))  # Expected: [1,2]
 
     # Test Case 5
     edges5 = [[1,5],[2,5],[3,5],[4,5],[5,6],[6,7],[7,5]]
