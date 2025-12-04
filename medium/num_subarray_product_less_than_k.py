@@ -53,7 +53,7 @@ def test_num_subarray_product_less_than_k():
     # Test Case 7: Large array with large k
     nums = [100] * 1000
     k = 10**10
-    print(solution.numSubarrayProductLessThanK(nums, k))  # Expected: 499500
+    print(solution.numSubarrayProductLessThanK(nums, k))  # Expected: 3994
 
     # Test Case 8: Mixed elements
     nums = [3, 5, 2, 7, 1]
