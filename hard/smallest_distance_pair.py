@@ -80,6 +80,6 @@ def test_smallest_distance_pair():
     # Test Case 10: Large array with small differences
     nums = [1] * 1000 + [2] * 1000
     k = 1500
-    print(solution.smallestDistancePair(nums, k))  # Expected: 1
+    print(solution.smallestDistancePair(nums, k))  # Expected: 0
 
 test_smallest_distance_pair()
