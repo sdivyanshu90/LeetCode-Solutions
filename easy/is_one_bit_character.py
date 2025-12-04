@@ -42,11 +42,11 @@ def test_is_one_bit_character():
 
     # Test Case 8: Long sequence with multiple two bit characters
     bits = [1, 1, 0] * 333 + [1, 0]
-    print(solution.isOneBitCharacter(bits))  # Expected: True
+    print(solution.isOneBitCharacter(bits))  # Expected: False
 
     # Test Case 9: Edge case with all ones
     bits = [1] * 1000 + [0]
-    print(solution.isOneBitCharacter(bits))  # Expected: False
+    print(solution.isOneBitCharacter(bits))  # Expected: True
 
     # Test Case 10: Edge case with all zeros
     bits = [0] * 1001
