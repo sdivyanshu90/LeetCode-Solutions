@@ -81,7 +81,7 @@ def test_count_of_atoms():
 
     # Test Case 8: Complex nested structure
     formula = "Fe(C5H5)2"
-    print(solution.countOfAtoms(formula))  # Expected: "C10H10Fe"
+    print(solution.countOfAtoms(formula))  # Expected: "C10FeH10"
 
     # Test Case 9: Large counts
     formula = "C100H200O100"
