@@ -46,7 +46,7 @@ def test_max_chunks_to_sorted():
 
     # Test case 7
     arr7 = [2,1,0,3,4]
-    print(solution.maxChunksToSorted(arr7)) # Expected: 2
+    print(solution.maxChunksToSorted(arr7)) # Expected: 3
 
     # Test case 8
     arr8 = [1,2,3,4,0]
