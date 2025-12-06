@@ -67,5 +67,5 @@ def test_reorganize_string():
     
     # Test case 10
     s10 = "aabb"
-    print(solution.reorganizeString(s10)) # Expected: "abab"
+    print(solution.reorganizeString(s10)) # Expected: "baba"
 test_reorganize_string()
