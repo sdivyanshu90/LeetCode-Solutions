@@ -53,7 +53,7 @@ def test_partition_labels():
 
     # Test case 6
     s6 = "abacdc"
-    print(solution.partitionLabels(s6)) # Expected: [5,1]
+    print(solution.partitionLabels(s6)) # Expected: [3,3]
 
     # Test case 7
     s7 = "zxyzyx"
