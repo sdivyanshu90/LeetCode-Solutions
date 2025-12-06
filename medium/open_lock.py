@@ -60,7 +60,7 @@ def test_open_lock():
     # Test case 7
     deadends7 = ["0001","0010","0100","1000"]
     target7 = "1111"
-    print(solution.openLock(deadends7, target7)) # Expected: 8
+    print(solution.openLock(deadends7, target7)) # Expected: 6
 
     # Test case 8
     deadends8 = ["9999"]
