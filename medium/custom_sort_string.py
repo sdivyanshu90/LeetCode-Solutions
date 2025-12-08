@@ -26,7 +26,7 @@ def test_custom_sort_string():
     # Test case 2
     order = "xyz"
     s = "zyxwv"
-    print(solution.customSortString(order, s)) # Expected: "zyxwv"
+    print(solution.customSortString(order, s)) # Expected: "xyzwv"
     
     # Test case 3
     order = "hgfedcba"
@@ -41,12 +41,12 @@ def test_custom_sort_string():
     # Test case 5
     order = "qwerty"
     s = "ytrewqzxcvbn"
-    print(solution.customSortString(order, s)) # Expected: "ytrewqzxcvbn"
+    print(solution.customSortString(order, s)) # Expected: "qwertyzxcvbn"
 
     # Test case 6
     order = "mnop"
     s = "ponmlkjihg"
-    print(solution.customSortString(order, s)) # Expected: "ponmlkjihg"
+    print(solution.customSortString(order, s)) # Expected: "mnoplkjihg"
 
     # Test case 7
     order = "zyxwvutsrqponmlkjihgfedcba"
@@ -56,16 +56,16 @@ def test_custom_sort_string():
     # Test case 8
     order = "abcde"
     s = "edcbaedcba"
-    print(solution.customSortString(order, s)) # Expected: "aabbccddeed"
+    print(solution.customSortString(order, s)) # Expected: "aabbccddee"
 
     # Test case 9
     order = "lmno"
     s = "onmlkjihgfe"
-    print(solution.customSortString(order, s)) # Expected: "onmlkjihgfe"
+    print(solution.customSortString(order, s)) # Expected: "lmnokjihgfe"
 
     # Test case 10
     order = "rstuv"
     s = "uvwxyzrst"
-    print(solution.customSortString(order, s)) # Expected: "rstuuvwxyz"
+    print(solution.customSortString(order, s)) # Expected: "rstuvwxyz"
 
 test_custom_sort_string()
