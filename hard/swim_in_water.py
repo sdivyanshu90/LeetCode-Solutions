@@ -46,7 +46,7 @@ def test_swim_in_water():
             [16,28,25,24,27,13],
             [29,17,30,21,22,18],
             [35,32,31,33,0,26]]
-    print(solution.swimInWater(grid)) # Expected: 34
+    print(solution.swimInWater(grid)) # Expected: 26
 
     # Test case 4
     grid = [[0]]
@@ -56,6 +56,6 @@ def test_swim_in_water():
     grid = [[10,12,15],
             [9,11,13],
             [8,7,6]]
-    print(solution.swimInWater(grid)) # Expected: 15
+    print(solution.swimInWater(grid)) # Expected: 10
 
 test_swim_in_water()
