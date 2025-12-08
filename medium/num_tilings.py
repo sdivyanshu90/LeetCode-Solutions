@@ -46,10 +46,10 @@ def test_num_tilings():
 
     # Test case 9
     n = 9
-    print(solution.numTilings(n)) # Expected: 571
+    print(solution.numTilings(n)) # Expected: 569
 
     # Test case 10
     n = 10
-    print(solution.numTilings(n)) # Expected: 1264
+    print(solution.numTilings(n)) # Expected: 1255
 
 test_num_tilings()
