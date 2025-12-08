@@ -66,23 +66,23 @@ def test_sliding_puzzle():
     
     # Test case 5
     board = [[0, 1, 2], [3, 4, 5]]
-    print(solution.slidingPuzzle(board)) # Expected: 0
+    print(solution.slidingPuzzle(board)) # Expected: 15
 
     # Test case 6
     board = [[1, 0, 2], [3, 4, 5]]
-    print(solution.slidingPuzzle(board)) # Expected: 1
+    print(solution.slidingPuzzle(board)) # Expected: 14
 
     # Test case 7
     board = [[1, 2, 0], [3, 4, 5]]
-    print(solution.slidingPuzzle(board)) # Expected: 2
+    print(solution.slidingPuzzle(board)) # Expected: 13
 
     # Test case 8
     board = [[5, 4, 3], [2, 1, 0]]
-    print(solution.slidingPuzzle(board)) # Expected: -1
+    print(solution.slidingPuzzle(board)) # Expected: 14
 
     # Test case 9
     board = [[2, 3, 4], [1, 0, 5]]
-    print(solution.slidingPuzzle(board)) # Expected: 6
+    print(solution.slidingPuzzle(board)) # Expected: -1
 
     # Test case 10
     board = [[1, 2, 3], [0, 4, 5]]
