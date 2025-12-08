@@ -44,6 +44,6 @@ def test_champagne_tower():
     poured = 4
     query_row = 2
     query_glass = 0
-    print(solution.champagneTower(poured, query_row, query_glass)) # Expected: 1.0
+    print(solution.champagneTower(poured, query_row, query_glass)) # Expected: 0.25
 
 test_champagne_tower()
