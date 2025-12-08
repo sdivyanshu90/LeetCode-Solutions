@@ -41,11 +41,11 @@ def test_num_rabbits():
 
     # Test case 7
     answers = [4, 4, 4, 4, 4]
-    print(solution.numRabbits(answers)) # Expected: 10
+    print(solution.numRabbits(answers)) # Expected: 5
 
     # Test case 8
     answers = [1, 0, 1, 0]
-    print(solution.numRabbits(answers)) # Expected: 6
+    print(solution.numRabbits(answers)) # Expected: 4
 
     # Test case 9
     answers = [5]
