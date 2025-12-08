@@ -39,7 +39,7 @@ def test_kth_grammar():
     # Test case 7
     n = 10
     k = 512
-    print(solution.kthGrammar(n, k)) # Expected: 0
+    print(solution.kthGrammar(n, k)) # Expected: 1
 
     # Test case 8
     n = 15
