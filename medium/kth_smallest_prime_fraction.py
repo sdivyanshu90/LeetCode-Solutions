@@ -38,16 +38,16 @@ def test_kth_smallest_prime_fraction():
     # Test case 3
     arr = [1,13,17,59]
     k = 6
-    print(solution.kthSmallestPrimeFraction(arr, k)) # Expected: [13,59]
+    print(solution.kthSmallestPrimeFraction(arr, k)) # Expected: [13,17]
 
     # Test case 4
     arr = [1,19,29,59,61,67,71,73,79,83]
     k = 18
-    print(solution.kthSmallestPrimeFraction(arr, k)) # Expected: [29,83]
+    print(solution.kthSmallestPrimeFraction(arr, k)) # Expected: [29,79]
 
     # Test case 5
     arr = [1,3,7,11,13]
     k = 8
-    print(solution.kthSmallestPrimeFraction(arr, k)) # Expected: [7,11]
+    print(solution.kthSmallestPrimeFraction(arr, k)) # Expected: [7,13]
 
 test_kth_smallest_prime_fraction()
