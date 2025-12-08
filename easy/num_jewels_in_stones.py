@@ -38,7 +38,7 @@ def test_num_jewels_in_stones():
     # Test case 7
     jewels = "z"
     stones = "zzZZzZ"
-    print(solution.numJewelsInStones(jewels, stones)) # Expected: 6
+    print(solution.numJewelsInStones(jewels, stones)) # Expected: 3
 
     # Test case 8
     jewels = "bdc"
