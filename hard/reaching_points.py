@@ -33,11 +33,11 @@ def test_reaching_points():
     
     # Test case 4
     sx, sy, tx, ty = 2, 2, 12, 8
-    print(solution.reachingPoints(sx, sy, tx, ty)) # Expected: True
+    print(solution.reachingPoints(sx, sy, tx, ty)) # Expected: False
 
     # Test case 5
     sx, sy, tx, ty = 3, 3, 12, 9
-    print(solution.reachingPoints(sx, sy, tx, ty)) # Expected: False
+    print(solution.reachingPoints(sx, sy, tx, ty)) # Expected: True
 
     # Test case 6
     sx, sy, tx, ty = 1, 4, 5, 9
@@ -49,7 +49,7 @@ def test_reaching_points():
 
     # Test case 8
     sx, sy, tx, ty = 10, 15, 25, 40
-    print(solution.reachingPoints(sx, sy, tx, ty)) # Expected: False
+    print(solution.reachingPoints(sx, sy, tx, ty)) # Expected: True
 
     # Test case 9
     sx, sy, tx, ty = 1, 1, 1000000000, 1
