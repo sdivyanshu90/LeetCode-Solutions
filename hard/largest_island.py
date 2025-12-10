@@ -124,6 +124,6 @@ def test_largest_island():
 
     # Test Case 5
     grid5 = [[1,0,1],[0,1,0],[1,0,1]]
-    print(solution.largestIsland(grid5)) # Expected: 5
+    print(solution.largestIsland(grid5)) # Expected: 4
 
 test_largest_island()
