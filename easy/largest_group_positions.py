@@ -34,6 +34,6 @@ def test_largest_group_positions():
 
     # Test Case 5
     s5 = "aabbccddeeefffggghhh"
-    print(solution.largeGroupPositions(s5)) # Expected: [[8,10],[15,17]]
+    print(solution.largeGroupPositions(s5)) # Expected: [[8, 10], [11, 13], [14, 16], [17, 19]]
 
 test_largest_group_positions()
