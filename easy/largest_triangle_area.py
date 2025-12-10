@@ -27,7 +27,7 @@ def test_largest_triangle_area():
 
     # Test Case 3
     points3 = [[-1,-1],[1,0],[0,1]]
-    print(solution.largestTriangleArea(points3)) # Expected: 2.0
+    print(solution.largestTriangleArea(points3)) # Expected: 1.5
 
     # Test Case 4
     points4 = [[0,0],[3,0],[0,4]]
@@ -35,6 +35,6 @@ def test_largest_triangle_area():
 
     # Test Case 5
     points5 = [[-2,-3],[4,5],[1,1],[2,2]]
-    print(solution.largestTriangleArea(points5)) # Expected: 21.0
+    print(solution.largestTriangleArea(points5)) # Expected: 1.0
 
 test_largest_triangle_area()
