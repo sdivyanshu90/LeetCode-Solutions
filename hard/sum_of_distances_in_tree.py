@@ -57,6 +57,6 @@ def test_sum_of_distances_in_tree():
     # Test Case 5
     n5 = 4
     edges5 = [[0,1],[1,2],[1,3]]
-    print(solution.sumOfDistancesInTree(n5, edges5)) # Expected: [4,3,5,5]
+    print(solution.sumOfDistancesInTree(n5, edges5)) # Expected: [5,3,5,5]
 
 test_sum_of_distances_in_tree()
