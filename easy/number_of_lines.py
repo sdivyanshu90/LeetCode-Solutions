@@ -31,12 +31,12 @@ def test_number_of_lines():
     # Test Case 3
     widths3 = [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5]
     s3 = "abcdefghijklmnopqrstuvwxyz"
-    print(solution.numberOfLines(widths3, s3)) # Expected: [2, 60]
+    print(solution.numberOfLines(widths3, s3)) # Expected: [2, 30]
 
     # Test Case 4
     widths4 = [8,7,6,5,4,3,2,1,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
     s4 = "thequickbrownfoxjumpsoverthelazydog"
-    print(solution.numberOfLines(widths4, s4)) # Expected: [5, 16]
+    print(solution.numberOfLines(widths4, s4)) # Expected: [5, 97]
 
     # Test Case 5
     widths5 = [1]*26
