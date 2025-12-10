@@ -28,11 +28,11 @@ def test_most_common_word():
     # Test Case 4
     paragraph4 = "It was the best of times, it was the worst of times."
     banned4 = ["it", "was", "the"]
-    print(solution.mostCommonWord(paragraph4, banned4)) # Expected: "times"
+    print(solution.mostCommonWord(paragraph4, banned4)) # Expected: "of"
 
     # Test Case 5
     paragraph5 = "Hello hello HELLO"
     banned5 = ["allo"]
-    print(solution.mostCommonWord(paragraph5, banned5)) # Expected: ""
+    print(solution.mostCommonWord(paragraph5, banned5)) # Expected: "hello"
 
 test_most_common_word()
