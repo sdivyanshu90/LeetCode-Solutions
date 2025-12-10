@@ -13,6 +13,15 @@ class Solution:
 
         return arr
 
+# Approach 2
+# class Solution:
+#     def flipAndInvertImage(self, image: List[List[int]]) -> List[List[int]]:
+#         for row in image:
+#             row.reverse()
+#             for i in range(len(row)):
+#                 row[i] ^= 1
+#         return image
+
 def test_flip_and_invert_image():
     solution = Solution()
 
@@ -34,6 +43,6 @@ def test_flip_and_invert_image():
 
     # Test Case 5
     image5 = [[1,0],[0,1]]
-    print(solution.flipAndInvertImage(image5)) # Expected: [[0,1],[1,0]]
+    print(solution.flipAndInvertImage(image5)) # Expected: [[1,0],[0,1]]
 
 test_flip_and_invert_image()
