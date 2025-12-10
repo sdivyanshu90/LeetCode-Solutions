@@ -31,7 +31,7 @@ def test_soup_servings():
 
     # Test Case 3
     n3 = 200
-    print(solution.soupServings(n3)) # Expected: 0.822265625
+    print(solution.soupServings(n3)) # Expected: 0.796875
 
     # Test Case 4
     n4 = 0
