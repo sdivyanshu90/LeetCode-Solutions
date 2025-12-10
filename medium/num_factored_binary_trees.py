@@ -31,14 +31,14 @@ def test_num_factored_binary_trees():
 
     # Test Case 3
     arr3 = [18,3,6,2]
-    print(solution.numFactoredBinaryTrees(arr3)) # Expected: 6
+    print(solution.numFactoredBinaryTrees(arr3)) # Expected: 12
 
     # Test Case 4
     arr4 = [15,5,3,30,6,10,2]
-    print(solution.numFactoredBinaryTrees(arr4)) # Expected: 27
+    print(solution.numFactoredBinaryTrees(arr4)) # Expected: 31
 
     # Test Case 5
     arr5 = [8,4,6,2]
-    print(solution.numFactoredBinaryTrees(arr5)) # Expected: 6
+    print(solution.numFactoredBinaryTrees(arr5)) # Expected: 9
 
 test_num_factored_binary_trees()
