@@ -41,7 +41,7 @@ def test_max_profit_assignment():
     difficulty4 = [1,2,3]
     profit4 = [10,20,30]
     worker4 = [3,2,1,4]
-    print(solution.maxProfitAssignment(difficulty4, profit4, worker4)) # Expected: 100
+    print(solution.maxProfitAssignment(difficulty4, profit4, worker4)) # Expected: 90
 
     # Test Case 5
     difficulty5 = [5,10,15]
