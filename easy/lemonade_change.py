@@ -40,6 +40,6 @@ def test_lemonadeChange():
     print(solution.lemonadeChange([5,5,10,10,20])) # Expected: False
 
     # Test Case 5
-    print(solution.lemonadeChange([5,5,5,5,10,5,10,10,10,20])) # Expected: False
+    print(solution.lemonadeChange([5,5,5,5,10,5,10,10,10,20])) # Expected: True
 
 test_lemonadeChange()
