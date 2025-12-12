@@ -39,9 +39,9 @@ def test_shortestPathLength():
     print(solution.shortestPathLength([[1],[0]])) # Expected: 1
 
     # Test Case 4
-    print(solution.shortestPathLength([[1,2,3,4],[0],[0],[0],[0]])) # Expected: 5
+    print(solution.shortestPathLength([[1,2,3,4],[0],[0],[0],[0]])) # Expected: 6
 
     # Test Case 5
-    print(solution.shortestPathLength([[1,2],[0,3],[0,3],[1,2]])) # Expected: 4
+    print(solution.shortestPathLength([[1,2],[0,3],[0,3],[1,2]])) # Expected: 3
 
 test_shortestPathLength()
