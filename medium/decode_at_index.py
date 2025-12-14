@@ -44,7 +44,7 @@ def test_decode_at_index():
     # Test case 5
     s5 = "a2b3c4d5e6f7g8h9"
     k5 = 100
-    print(solution.decodeAtIndex(s5, k5))  # Expected output: "c"
+    print(solution.decodeAtIndex(s5, k5))  # Expected output: "a"
 
 
 test_decode_at_index()
