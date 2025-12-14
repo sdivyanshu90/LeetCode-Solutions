@@ -26,10 +26,10 @@ def test_subarray_bitwise_ors():
 
     # Test case 4
     arr4 = [3, 5, 7, 9]
-    print(solution.subarrayBitwiseORs(arr4))  # Expected output: 8
+    print(solution.subarrayBitwiseORs(arr4))  # Expected output: 5
 
     # Test case 5
     arr5 = [1, 2, 3, 4, 5]
-    print(solution.subarrayBitwiseORs(arr5))  # Expected output: 10
+    print(solution.subarrayBitwiseORs(arr5))  # Expected output: 6
 
 test_subarray_bitwise_ors()
