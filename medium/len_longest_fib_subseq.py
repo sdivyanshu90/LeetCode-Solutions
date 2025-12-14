@@ -40,11 +40,11 @@ def test_len_longest_fib_subseq():
 
     # Test case 3
     arr3 = [2, 4, 7, 11, 16, 18, 23, 29, 37, 47]
-    print(solution.lenLongestFibSubseq(arr3))  # Expected output: 5
+    print(solution.lenLongestFibSubseq(arr3))  # Expected output: 6
 
     # Test case 4
     arr4 = [1, 4, 5, 6, 7, 8, 9, 10]
-    print(solution.lenLongestFibSubseq(arr4))  # Expected output: 0
+    print(solution.lenLongestFibSubseq(arr4))  # Expected output: 4
 
     # Test case 5
     arr5 = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
