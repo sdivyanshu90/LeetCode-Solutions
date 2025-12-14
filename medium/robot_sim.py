@@ -59,11 +59,11 @@ def test_robot_sim():
     # Test case 4
     commands4 = [7, -2, -2, 7, 5]
     obstacles4 = [[-3, 2], [2, -3], [0, 1], [4, 2], [3, 3], [5, 5], [1, -4]]
-    print(solution.robotSim(commands4, obstacles4))  # Expected output: 25
+    print(solution.robotSim(commands4, obstacles4))  # Expected output: 144
 
     # Test case 5
     commands5 = [1, 2, 3, 4, 5]
     obstacles5 = [[1, 0], [2, 2], [3, 3]]
-    print(solution.robotSim(commands5, obstacles5))  # Expected output: 26
+    print(solution.robotSim(commands5, obstacles5))  # Expected output: 225
 
 test_robot_sim()
