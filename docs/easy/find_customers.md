@@ -1,4 +1,4 @@
-# Find Customers Who Never Order — Explanation, Approach, Complexity
+# Find Customers — Explanation, Approach, Complexity
 
 Problem summary
 
