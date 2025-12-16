@@ -42,9 +42,9 @@ def test_num_music_playlists():
     print(solution.numMusicPlaylists(2, 3, 1)) # Expected: 2
 
     # Test Case 4
-    print(solution.numMusicPlaylists(4, 4, 2)) # Expected: 72
+    print(solution.numMusicPlaylists(4, 4, 2)) # Expected: 24
 
     # Test Case 5
-    print(solution.numMusicPlaylists(5, 10, 3)) # Expected: 151200
+    print(solution.numMusicPlaylists(5, 10, 3)) # Expected: 7560
 
 test_num_music_playlists()
