@@ -37,12 +37,12 @@ def test_sum_subarray_mins():
     print(solution.sumSubarrayMins([11, 81, 94, 43, 3])) # Expected: 444
 
     # Test Case 3
-    print(solution.sumSubarrayMins([1, 1, 1])) # Expected: 10
+    print(solution.sumSubarrayMins([1, 1, 1])) # Expected: 6
 
     # Test Case 4
     print(solution.sumSubarrayMins([5, 4, 3, 2, 1])) # Expected: 35
 
     # Test Case 5
-    print(solution.sumSubarrayMins([2, 9, 7, 8, 3, 4, 6, 1])) # Expected: 129
+    print(solution.sumSubarrayMins([2, 9, 7, 8, 3, 4, 6, 1])) # Expected: 117
 
 test_sum_subarray_mins()
