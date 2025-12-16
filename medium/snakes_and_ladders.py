@@ -53,9 +53,9 @@ def test_snakes_and_ladders():
     # Test Case 4
     print(solution.snakesAndLadders([[-1,-1,-1],
                                      [-1,9,8],
-                                     [-1,8,9]])) # Expected: 3
+                                     [-1,8,9]])) # Expected: 1
 
     # Test Case 5
     print(solution.snakesAndLadders([[-1]])) # Expected: 0
-    
+
 test_snakes_and_ladders()
