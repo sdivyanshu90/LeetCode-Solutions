@@ -17,7 +17,7 @@ def test_smallest_range_i():
     print(solution.smallestRangeI([1,3,6], 3)) # Expected: 0
 
     # Test Case 4
-    print(solution.smallestRangeI([5,8,10], 1)) # Expected: 6
+    print(solution.smallestRangeI([5,8,10], 1)) # Expected: 3
 
     # Test Case 5
     print(solution.smallestRangeI([2,7,4,1], 3)) # Expected: 0
