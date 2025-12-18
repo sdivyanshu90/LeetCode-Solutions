@@ -12,6 +12,18 @@ class Solution:
         res = set([process_email(email) for email in emails])
         return len(res)
 
+# Approach 2: Without regex
+# class Solution:
+#     def numUniqueEmails(self, emails: List[str]) -> int:
+#         seen = set()
+#         for email in emails:
+#             local, domain = email.split('@')
+#             local = local.split('+')[0]
+#             local = local.replace('.','')
+#             seen.add(local + '@' + domain)
+#         return len(seen)
+
+
 def test_num_unique_emails():
     solution = Solution()
 
