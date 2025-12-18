@@ -42,6 +42,6 @@ def test_min_increment_for_unique():
 
     # Test case 5
     nums5 = [2,2,2,1,1,1]
-    print(solution.minIncrementForUnique(nums5))  # Expected output: 9
+    print(solution.minIncrementForUnique(nums5))  # Expected output: 12
 
 test_min_increment_for_unique()
