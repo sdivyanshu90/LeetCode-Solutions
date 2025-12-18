@@ -41,30 +41,30 @@ def test_spellchecker():
     wordlist1 = ["KiTe","kite","hare","Hare"]
     queries1 = ["kite","Kite","KiTe","Hare","HARE","Hear","hear","keti","keet","keto"]
     print(solution.spellchecker(wordlist1, queries1))  
-    # Expected output: ["kite","KiTe","KiTe","Hare","hare","","","KiTe","",""]
+    # Expected output: ['kite', 'KiTe', 'KiTe', 'Hare', 'hare', '', '', 'KiTe', '', 'KiTe']
 
     # Test case 2
     wordlist2 = ["yellow","YellOw"]
     queries2 = ["YellOw","yellow","YELLOW","yellOw","yeLLoW"]
     print(solution.spellchecker(wordlist2, queries2))  
-    # Expected output: ["YellOw","yellow","yellow","YellOw","YellOw"]
+    # Expected output: ['YellOw', 'yellow', 'yellow', 'yellow', 'yellow']
 
     # Test case 3
     wordlist3 = ["apple"]
     queries3 = ["Apple","aPPle","applE","APple"]
     print(solution.spellchecker(wordlist3, queries3))  
-    # Expected output: ["apple","apple","apple","apple"]
+    # Expected output: ['apple', 'apple', 'apple', 'apple']
 
     # Test case 4
     wordlist4 = ["banana"]
     queries4 = ["BANANA","Banana","bAnAnA"]
     print(solution.spellchecker(wordlist4, queries4))  
-    # Expected output: ["banana","banana","banana"]
+    # Expected output: ['banana', 'banana', 'banana']
 
     # Test case 5
     wordlist5 = ["orange"]
     queries5 = ["orAnge","ORANGE","oRaNgE"]
     print(solution.spellchecker(wordlist5, queries5))  
-    # Expected output: ["orange","orange","orange"]
+    # Expected output: ['orange', 'orange', 'orange']
 
 test_spellchecker()
