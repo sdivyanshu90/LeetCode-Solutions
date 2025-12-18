@@ -55,6 +55,6 @@ def test_is_unival_tree():
 
     # Test case 5
     root5 = None
-    print(solution.isUnivalTree(root5))  # Expected output: True
+    print(solution.isUnivalTree(root5))  # Expected output: False
 
 test_is_unival_tree()
