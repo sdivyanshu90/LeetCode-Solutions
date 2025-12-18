@@ -41,6 +41,6 @@ def test_num_subarrays_with_sum():
     # Test case 5
     nums5 = [0,1,0,1,0]
     goal5 = 1
-    print(solution.numSubarraysWithSum(nums5, goal5))  # Expected output: 6
+    print(solution.numSubarraysWithSum(nums5, goal5))  # Expected output: 8
 
 test_num_subarrays_with_sum()
