@@ -45,6 +45,6 @@ def test_bag_of_tokens_score():
     # Test case 5
     tokens5 = [26,87,34,11,23,8]
     power5 = 27
-    print(solution.bagOfTokensScore(tokens5, power5))  # Expected output: 3
+    print(solution.bagOfTokensScore(tokens5, power5))  # Expected output: 4
 
 test_bag_of_tokens_score()
