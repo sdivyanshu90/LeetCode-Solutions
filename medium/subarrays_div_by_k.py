@@ -35,7 +35,7 @@ def test_subarrays_div_by_k():
     # Test case 4
     nums = [7,-5,5]
     k = 5
-    print(solution.subarraysDivByK(nums, k))  # Expected output: 4
+    print(solution.subarraysDivByK(nums, k))  # Expected output: 3
 
     # Test case 5
     nums = [1,-1,1,-1]
