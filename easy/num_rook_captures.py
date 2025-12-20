@@ -58,7 +58,7 @@ def test_num_rook_captures():
              [".", ".", ".", "p", ".", ".", ".", "."],
              [".", ".", ".", ".", ".", ".", ".", "."],
              [".", ".", ".", ".", ".", ".", ".", "."]]
-    print(solution.numRookCaptures(board))  # Expected output: 3
+    print(solution.numRookCaptures(board))  # Expected output: 4
 
     # Test case 4
     board = [[".",".",".",".",".",".",".","."],
@@ -80,6 +80,6 @@ def test_num_rook_captures():
              [".",".",".",".",".",".",".","."],
              ["p",".",".",".",".",".",".","p"],
              [".",".",".",".",".",".",".","."]]
-    print(solution.numRookCaptures(board))  # Expected output: 4
+    print(solution.numRookCaptures(board))  # Expected output: 0
 
 test_num_rook_captures()
