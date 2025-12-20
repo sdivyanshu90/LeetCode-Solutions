@@ -52,7 +52,7 @@ def test_oranges_rotting():
 
     # Test case 4
     grid = [[2,2,0,1]]
-    print(solution.orangesRotting(grid))  # Expected output: 1
+    print(solution.orangesRotting(grid))  # Expected output: -1
 
     # Test case 5
     grid = [[1,1,1],[1,2,1],[1,1,1]]
