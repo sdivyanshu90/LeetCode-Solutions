@@ -48,6 +48,6 @@ def test_min_cost_tickets():
     # Test case 5
     days = [2,3,5,7,11,13,17,19]
     costs = [4,12,30]
-    print(solution.mincostTickets(days, costs))  # Expected output: 16
+    print(solution.mincostTickets(days, costs))  # Expected output: 28
 
 test_min_cost_tickets()
