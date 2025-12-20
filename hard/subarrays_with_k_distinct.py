@@ -50,7 +50,7 @@ def test_subarrays_with_k_distinct():
     # Test case 3
     nums = [1,2,1,2,1]
     k = 2
-    print(solution.subarraysWithKDistinct(nums, k))  # Expected output: 8
+    print(solution.subarraysWithKDistinct(nums, k))  # Expected output: 10
 
     # Test case 4
     nums = [1,2,3,4,5]
@@ -60,6 +60,6 @@ def test_subarrays_with_k_distinct():
     # Test case 5
     nums = [2,1,2,1,2]
     k = 2
-    print(solution.subarraysWithKDistinct(nums, k))  # Expected output: 9
+    print(solution.subarraysWithKDistinct(nums, k))  # Expected output: 10
 
 test_subarrays_with_k_distinct()
