@@ -46,7 +46,7 @@ def test_distribute_coins():
     root = TreeNode(1)
     root.left = TreeNode(0)
     root.right = TreeNode(0)
-    print(solution.distributeCoins(root))  # Expected output: 0
+    print(solution.distributeCoins(root))  # Expected output: 2
 
     # Test case 5
     root = TreeNode(4)
