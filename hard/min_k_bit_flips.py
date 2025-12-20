@@ -39,11 +39,11 @@ def test_min_k_bit_flips():
     # Test case 4
     nums = [1,0,0,0,1]
     k = 4
-    print(solution.minKBitFlips(nums, k))  # Expected output: 2
+    print(solution.minKBitFlips(nums, k))  # Expected output: -1
 
     # Test case 5
     nums = [0,0,0,0,0]
     k = 2
-    print(solution.minKBitFlips(nums, k))  # Expected output: 3
+    print(solution.minKBitFlips(nums, k))  # Expected output: -1
 
 test_min_k_bit_flips()
