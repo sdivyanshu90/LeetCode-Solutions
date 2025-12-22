@@ -30,7 +30,7 @@ def test_max_score_sightseeing_pair():
 
     # Test case 3
     values3 = [10,7,5,8,7,6,4,3,2,1]
-    print(solution.maxScoreSightseeingPair(values3))  # Expected output: 17
+    print(solution.maxScoreSightseeingPair(values3))  # Expected output: 16
 
     # Test case 4
     values4 = [4,4,4,4]
@@ -38,6 +38,6 @@ def test_max_score_sightseeing_pair():
 
     # Test case 5
     values5 = [1,3,5,7,9]
-    print(solution.maxScoreSightseeingPair(values5))  # Expected output: 13
+    print(solution.maxScoreSightseeingPair(values5))  # Expected output: 15
 
 test_max_score_sightseeing_pair()
