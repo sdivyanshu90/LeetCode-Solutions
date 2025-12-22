@@ -48,7 +48,7 @@ def test_max_ancestor_diff():
     root3 = TreeNode(5)
     root3.left = TreeNode(2)
     root3.right = TreeNode(13)
-    print(solution.maxAncestorDiff(root3))  # Expected output: 11
+    print(solution.maxAncestorDiff(root3))  # Expected output: 8
 
     # Test case 4
     root4 = TreeNode(0)
@@ -61,6 +61,6 @@ def test_max_ancestor_diff():
     root5.left.left = TreeNode(3)
     root5.left.right = TreeNode(5)
     root5.right.right = TreeNode(7)
-    print(solution.maxAncestorDiff(root5))  # Expected output: 7
+    print(solution.maxAncestorDiff(root5))  # Expected output: 6
 
 test_max_ancestor_diff()
