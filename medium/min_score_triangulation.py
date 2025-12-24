@@ -35,6 +35,6 @@ def test_min_score_triangulation():
 
     # Test case 5
     values = [1, 2, 3, 4, 5]
-    print(solution.minScoreTriangulation(values))  # Expected output: 40
+    print(solution.minScoreTriangulation(values))  # Expected output: 38
 
 test_min_score_triangulation()
