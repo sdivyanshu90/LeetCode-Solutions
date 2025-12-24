@@ -30,7 +30,7 @@ def test_max_sum_after_partitioning():
     # Test case 4
     arr = [2, 3, 5, 1, 6]
     k = 2
-    print(solution.maxSumAfterPartitioning(arr, k))  # Expected output: 22
+    print(solution.maxSumAfterPartitioning(arr, k))  # Expected output: 24
 
     # Test case 5
     arr = [10, 20, 30]
