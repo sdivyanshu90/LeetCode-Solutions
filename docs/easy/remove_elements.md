@@ -12,8 +12,6 @@ Consider the number of unique elements of `nums` to be `k`. To get accepted, you
 
 **LeetCode Problem**: [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 
-**Repository File**: [easy/remove_element.py](../../easy/remove_element.py)
-
 **Note**: The file is named `remove_element.py` but contains the solution for removing duplicates from a sorted array.
 
 ## Approach 1: Two Pointers (Implemented)
