@@ -54,8 +54,8 @@ def test_bst_to_gst():
     print(new_root.right.val)  # 21
     print(new_root.left.left.val)  # 36
     print(new_root.left.right.val)  # 35
-    print(new_root.right.left.val)  # 15
-    print(new_root.right.right.val)  # 8
+    print(new_root.right.left.val)  # 26
+    print(new_root.right.right.val)  # 15
     print(new_root.right.right.right.val)  # 8
 
 test_bst_to_gst()
