@@ -37,6 +37,6 @@ def test_longest_str_chain():
 
     # Test case 5
     words = ["ksqvsyq","ks","kss","czvh","zczpzvdhx","zczpzvh","zczpzvhx","zcpzvh","zczvh"]
-    print(solution.longestStrChain(words))  # Expected output: 7
+    print(solution.longestStrChain(words))  # Expected output: 6
 
 test_longest_str_chain()
