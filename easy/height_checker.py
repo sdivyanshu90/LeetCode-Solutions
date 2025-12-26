@@ -57,6 +57,6 @@ def test_height_checker():
 
     # Test case 5
     heights5 = [2, 2, 2, 1, 1, 1]
-    print(solution.heightChecker(heights5))  # Expected output: 4
+    print(solution.heightChecker(heights5))  # Expected output: 6
 
 test_height_checker()
