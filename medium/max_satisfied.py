@@ -43,7 +43,7 @@ def test_max_satisfied():
     customers3 = [2, 6, 9, 1, 7]
     grumpy3 = [0, 0, 1, 0, 1]
     minutes3 = 1
-    print(solution.maxSatisfied(customers3, grumpy3, minutes3))  # Expected output: 25
+    print(solution.maxSatisfied(customers3, grumpy3, minutes3))  # Expected output: 18
 
     # Test case 4
     customers4 = [1, 2, 3, 4, 5]
