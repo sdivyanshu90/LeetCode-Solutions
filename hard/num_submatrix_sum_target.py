@@ -38,11 +38,11 @@ def test_num_submatrix_sum_target():
     # Test case 4
     M4 = [[1,2,3],[4,5,6],[7,8,9]]
     T4 = 12
-    print(solution.numSubmatrixSumTarget(M4, T4))  # Expected output: 4
+    print(solution.numSubmatrixSumTarget(M4, T4))  # Expected output: 2
 
     # Test case 5
     M5 = [[-1,-1],[-1,1]]
     T5 = 0
-    print(solution.numSubmatrixSumTarget(M5, T5))  # Expected output: 1
+    print(solution.numSubmatrixSumTarget(M5, T5))  # Expected output: 2
 
 test_num_submatrix_sum_target()
