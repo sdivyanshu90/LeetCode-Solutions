@@ -23,7 +23,7 @@ class Solution:
             result.append(dfs(ch, visited))
         
         return ''.join(result)
-        
+
 def test_smallest_equivalent_string():
     solution = Solution()
 
@@ -49,12 +49,12 @@ def test_smallest_equivalent_string():
     s1_4 = "abc"
     s2_4 = "bcd"
     baseStr_4 = "cba"
-    print(solution.smallestEquivalentString(s1_4, s2_4, baseStr_4))  # Expected output: "aba"
+    print(solution.smallestEquivalentString(s1_4, s2_4, baseStr_4))  # Expected output: "aaa"
 
     # Test case 5
     s1_5 = "xyz"
     s2_5 = "yza"
     baseStr_5 = "zyx"
-    print(solution.smallestEquivalentString(s1_5, s2_5, baseStr_5))  # Expected output: "xwx"
+    print(solution.smallestEquivalentString(s1_5, s2_5, baseStr_5))  # Expected output: "aaa"
 
 test_smallest_equivalent_string()
