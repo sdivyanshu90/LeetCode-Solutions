@@ -19,7 +19,7 @@ def test_num_equiv_domino_pairs():
 
     # Test case 2
     dominoes = [[1,2],[1,2],[1,1],[1,2],[2,2]]
-    print(solution.numEquivDominoPairs(dominoes))  # Expected output: 4
+    print(solution.numEquivDominoPairs(dominoes))  # Expected output: 3
 
     # Test case 3
     dominoes = [[1,1],[1,1],[1,1]]
