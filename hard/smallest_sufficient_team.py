@@ -51,7 +51,7 @@ def test_smallest_sufficient_team():
     # Test case 3
     req_skills = ["a","b","c"]
     people = [["a"],["b"],["c"],["a","b"],["b","c"]]
-    print(solution.smallestSufficientTeam(req_skills, people))  # Expected output: [0,1,2]
+    print(solution.smallestSufficientTeam(req_skills, people))  # Expected output: [3,4]
 
     # Test case 4
     req_skills = ["skill1","skill2"]
@@ -61,6 +61,6 @@ def test_smallest_sufficient_team():
     # Test case 5
     req_skills = ["x","y","z"]
     people = [["x","y"],["y","z"],["x","z"]]
-    print(solution.smallestSufficientTeam(req_skills, people))  # Expected output: [0,1] or [0,2] or [1,2]
+    print(solution.smallestSufficientTeam(req_skills, people))  # Expected output: [0,2]
 
 test_smallest_sufficient_team()
