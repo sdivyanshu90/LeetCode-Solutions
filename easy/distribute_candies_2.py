@@ -39,6 +39,6 @@ def test_distribite_candies():
     # Test case 5
     candies = 20
     num_people = 4
-    print(solution.distributeCandies(candies, num_people))  # Expected output: [5,7,4,4]
+    print(solution.distributeCandies(candies, num_people))  # Expected output: [6,7,3,4]
 
 test_distribite_candies()
