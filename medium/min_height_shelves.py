@@ -38,7 +38,7 @@ def test_min_height_shelves():
     # Test case 4
     books = [[1,1],[2,2],[3,3],[4,4],[5,5]]
     shelfWidth = 5
-    print(solution.minHeightShelves(books, shelfWidth))  # Expected output: 15
+    print(solution.minHeightShelves(books, shelfWidth))  # Expected output: 13
 
     # Test case 5
     books = [[1,2],[2,3],[3,4],[4,5]]
