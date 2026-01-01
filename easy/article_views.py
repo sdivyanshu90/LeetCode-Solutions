@@ -14,5 +14,11 @@ def test_article_views():
     views = pd.DataFrame(data)
     result = article_views(views)
     print(result)
+    # Expected output:
+    #    id
+    # 0   1
+    # 1   2
+    # 5   3
+    # 6   4
 
 test_article_views()
