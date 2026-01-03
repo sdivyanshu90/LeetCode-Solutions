@@ -47,6 +47,6 @@ def test_distance_between_bus_stops():
     distance = [3,6,7,2,9,10]
     start = 3
     destination = 5
-    print(solution.distanceBetweenBusStops(distance, start, destination)) # Expected Output: 12
+    print(solution.distanceBetweenBusStops(distance, start, destination)) # Expected Output: 11
 
 test_distance_between_bus_stops()
