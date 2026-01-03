@@ -40,7 +40,7 @@ def test_count_characters():
     # Test Case 3
     words = ["a","b","c","ab","bc","abc"]
     chars = "abc"
-    print(solution.countCharacters(words, chars)) # Expected Output: 6
+    print(solution.countCharacters(words, chars)) # Expected Output: 10
 
     # Test Case 4
     words = ["abcd","efgh","ijkl"]
