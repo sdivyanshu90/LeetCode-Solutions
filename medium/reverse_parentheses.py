@@ -47,6 +47,6 @@ def test_reverse_parentheses():
 
     # Test Case 5
     s = "((a(bc)d)e)"
-    print(solution.reverseParentheses(s)) # Expected Output: "edcb a"
+    print(solution.reverseParentheses(s)) # Expected Output: "eacbd"
 
 test_reverse_parentheses()
