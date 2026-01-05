@@ -28,7 +28,7 @@ def test_minimum_abs_difference():
 
     # Test Case 3
     arr3 = [3, 8, -10, 23, 19, 17, 15, 11, -4, 27]
-    print(solution.minimumAbsDifference(arr3))  # Expected Output: [[15, 17], [17, 19], [19, 23], [23, 27]]
+    print(solution.minimumAbsDifference(arr3))  # Expected Output: [[15, 17], [17, 19]]
 
     # Test Case 4
     arr4 = [40, 11, 26, 27, -20]
