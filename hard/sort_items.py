@@ -69,7 +69,7 @@ def test_sort_items():
     m1 = 2
     group1 = [-1,-1,1,0,0,1,0,-1]
     beforeItems1 = [[],[6],[5],[6],[3,6],[],[],[]]
-    print(solution.sortItems(n1, m1, group1, beforeItems1))  # Expected Output: [6,3,4,5,2,0,1,7]
+    print(solution.sortItems(n1, m1, group1, beforeItems1))  # Expected Output: [7, 0, 5, 2, 6, 3, 4, 1]
 
     # Test Case 2
     n2 = 8
@@ -83,14 +83,14 @@ def test_sort_items():
     m3 = 5
     group3 = [2,0,-1,3,0]
     beforeItems3 = [[],[0,3],[1,4],[],[]]
-    print(solution.sortItems(n3, m3, group3, beforeItems3))  # Expected Output: [0,3,1,4,2]
+    print(solution.sortItems(n3, m3, group3, beforeItems3))  # Expected Output: [3, 0, 4, 1, 2]
 
     # Test Case 4
     n4 = 3
     m4 = 1
     group4 = [-1,0,0]
     beforeItems4 = [[],[0],[1]]
-    print(solution.sortItems(n4, m4, group4, beforeItems4))  # Expected Output: [0,1,2]
+    print(solution.sortItems(n4, m4, group4, beforeItems4))  # Expected Output: [0, 1, 2]
 
     # Test Case 5
     n5 = 4
