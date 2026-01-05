@@ -45,7 +45,7 @@ def test_get_maximum_gold():
 
     # Test Case 4
     grid4 = [[10,33,13,15],[22,21,4,1],[5,0,2,3],[0,6,14,2]]
-    print(solution.getMaximumGold(grid4))  # Expected Output: 83
+    print(solution.getMaximumGold(grid4))  # Expected Output: 149
 
     # Test Case 5
     grid5 = [[1]]
