@@ -35,6 +35,6 @@ def test_count_vowel_permutation():
 
     # Test Case 5
     n5 = 50
-    print(solution.countVowelPermutation(n5))  # Expected Output: 564908303
+    print(solution.countVowelPermutation(n5))  # Expected Output: 227130014
 
 test_count_vowel_permutation()
