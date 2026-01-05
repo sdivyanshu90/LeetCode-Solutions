@@ -29,7 +29,7 @@ def test_longest_subsequence():
     # Test Case 4
     arr4 = [3,0,-3,4,-4,-7,-6,-5]
     difference4 = -3
-    print(solution.longestSubsequence(arr4, difference4))  # Expected Output: 3
+    print(solution.longestSubsequence(arr4, difference4))  # Expected Output: 4
 
     # Test Case 5
     arr5 = [10,13,16,19,22,25,28]
