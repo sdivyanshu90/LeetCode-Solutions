@@ -6,9 +6,11 @@ Given a balanced string `s` containing only 'R' and 'L' characters, split it int
 
 **Example**: `"RLRRLLRLRL"` → `4` (can be split as "RL", "RRLL", "RL", "RL")
 
-## Current Implementation
+## Approach: Greedy (Implemented)
 
-The solution uses a counter to track balance and counts splits when balanced:
+### Strategy
+
+The solution uses greedy to solve the problem efficiently.
 
 ```python
 def balancedStringSplit(self, s: str) -> int:
@@ -25,7 +27,7 @@ def balancedStringSplit(self, s: str) -> int:
     return res
 ```
 
-## How It Works
+### How It Works
 
 The algorithm uses a running balance counter:
 
@@ -54,24 +56,23 @@ The algorithm uses a running balance counter:
 Result: 4
 ```
 
-## Why This Works
+### Why Greedy Works
 
 - **Balance tracking**: +1 for L, -1 for R means temp=0 when counts equal
 - **Greedy is optimal**: Splitting as early as possible maximizes total splits (can't do better by waiting)
 - **Mathematical proof**: If we wait to combine two balanced substrings, we get 1 split instead of 2
 - **Single pass**: Processes each character exactly once
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the length of the string. Single pass through all characters.
+- **Time Complexity**: O(n) where n is the length of the string. Single pass through all characters.
+- **Space Complexity**: O(1) - only uses two integer variables regardless of input size.
 
-## Space Complexity
+### Advantages
 
-O(1) - only uses two integer variables regardless of input size.
+- Efficient greedy solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Optimal**: Greedy approach achieves maximum splits
-- **Simple**: Clean counter-based logic
-- **Efficient**: Cannot do better than O(n) time since all characters must be examined
-- **Elegant**: The balance counter naturally identifies split points
+- May require additional space
