@@ -1,6 +1,6 @@
 # Binary Gap
 
-Problem summary
+## Problem Summary
 
 - Given a positive integer n, find the longest distance between any two consecutive 1's in its binary representation.
 - If there are no two consecutive 1's, return 0.
@@ -49,3 +49,65 @@ Thought process and trade-offs
 - Alternative bitwise approach (commented in code): processes bits directly using bit manipulation, slightly more efficient in space but less readable.
 - Trade-off: string approach is clearer for understanding the problem, while bitwise is more "low-level" efficient.
 - For typical integer sizes, both approaches are fast enough.
+
+## Approach: Iteration (Implemented)
+
+### Strategy
+
+The solution uses iteration to solve the problem efficiently.
+
+```python
+  bin_n = bin(n)[2:]
+  for i in range(len(bin_n)):
+      if bin_n[i] == "1":
+          idx.append(i)
+  res = max(res, idx[i] - idx[i - 1])
+  ```
+
+### How It Works
+
+- Alternative bitwise approach (commented in code): processes bits directly using bit manipulation, slightly more efficient in space but less readable.
+- Trade-off: string approach is clearer for understanding the problem, while bitwise is more "low-level" efficient.
+- For typical integer sizes, both approaches are fast enough.
+
+### Why Iteration Works
+
+- Binary string representation makes it easy to identify '1' positions.
+- Storing indices of all '1's allows computing distances between consecutive ones.
+- Maximum of all consecutive gaps gives the longest binary gap.
+- If fewer than 2 ones exist, the loop doesn't execute and returns 0.
+
+Time complexity
+
+- Let m = number of bits in n (approximately log₂(n)).
+- Converting to binary: O(m).
+- Finding '1' indices: O(m) for scanning the binary string.
+- Computing max gap: O(k) where k is the number of '1's, k <= m.
+- Overall time complexity: O(m) = O(log n).
+
+Space complexity
+
+- Binary string: O(m) = O(log n).
+- Indices array: O(k) where k is the number of '1's.
+- Overall space complexity: O(log n).
+
+Thought process and trade-offs
+
+- String-based approach: simple and readable, leverages Python's built-in binary conversion.
+- Alternative bitwise approach (commented in code): processes bits directly using bit manipulation, slightly more efficient in space but less readable.
+- Trade-off: string approach is clearer for understanding the problem, while bitwise is more "low-level" efficient.
+- For typical integer sizes, both approaches are fast enough.
+
+### Complexity Analysis
+
+- **Time Complexity**: - Let m = number of bits in n (approximately log₂(n)). - Converting to binary: O(m). - Finding '1' indices: O(m) for scanning the binary string. - Computing max gap: O(k) where k is the number of '1's, k <= m. - Overall time complexity: O(m) = O(log n). Space complexity - Binary string: O(m) = O(log n). - Indices array: O(k) where k is the number of '1's. - Overall space complexity: O(log n). Thought process and trade-offs - String-based approach: simple and readable, leverages Python's built-in binary conversion. - Alternative bitwise approach (commented in code): processes bits directly using bit manipulation, slightly more efficient in space but less readable. - Trade-off: string approach is clearer for understanding the problem, while bitwise is more "low-level" efficient. - For typical integer sizes, both approaches are fast enough.
+- **Space Complexity**: - Binary string: O(m) = O(log n). - Indices array: O(k) where k is the number of '1's. - Overall space complexity: O(log n). Thought process and trade-offs - String-based approach: simple and readable, leverages Python's built-in binary conversion. - Alternative bitwise approach (commented in code): processes bits directly using bit manipulation, slightly more efficient in space but less readable. - Trade-off: string approach is clearer for understanding the problem, while bitwise is more "low-level" efficient. - For typical integer sizes, both approaches are fast enough.
+
+### Advantages
+
+- Efficient iteration solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
