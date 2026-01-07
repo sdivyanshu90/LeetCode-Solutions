@@ -1,6 +1,6 @@
 # Convert to Title
 
-Problem summary
+## Problem Summary
 
 - Given a positive integer `columnNumber`, return its corresponding column title as appear in Excel:
   - 1 -> "A", 2 -> "B", ..., 26 -> "Z", 27 -> "AA", etc.
@@ -64,3 +64,31 @@ Alternative views
 Correctness sketch
 
 - At each step you determine the last letter correctly by mapping the remainder after subtracting 1. Removing that digit via integer division reduces the problem size and preserves correctness by induction.
+
+## Approach: Recursion (Implemented)
+
+### Strategy
+
+The solution uses recursion to solve the problem efficiently.
+
+### How It Works
+
+Step-by-step explanation of the approach.
+
+### Why Recursion Works
+
+The recursion approach is effective for this problem.
+
+### Complexity Analysis
+
+- **Time Complexity**: - Each loop iteration removes one base-26 digit. Number of iterations = O($\log_{26}(\text{columnNumber})$) = O(log columnNumber). - For typical analysis, this is O(log n) where n is the input number. Space complexity - O($\log_{26}(\text{columnNumber})$) extra space to store the resulting characters (the output itself). Auxiliary space is proportional to the number of output letters. Edge cases and notes - columnNumber = 0: Excel columns are 1-based; the implementation returns an empty string for 0 (current tests expect ""). - Very large columnNumber: algorithm scales logarithmically in the number of digits; Python handles big integers. - Works for all positive integers; no floating point operations are used so results are exact. Examples - 1 -> "A" - 26 -> "Z" - 27 -> "AA" - 52 -> "AZ" - 701 -> "ZY" - 702 -> "ZZ" - 703 -> "AAA" - 16384 -> "XFD" (Excel column boundary example) Alternative views - You can view this as repeated (columnNumber-1) divmod 26 operations. - Recursive formulation is possible but iterative is simpler and avoids recursion overhead. Correctness sketch - At each step you determine the last letter correctly by mapping the remainder after subtracting 1. Removing that digit via integer division reduces the problem size and preserves correctness by induction.
+- **Space Complexity**: - O($\log_{26}(\text{columnNumber})$) extra space to store the resulting characters (the output itself). Auxiliary space is proportional to the number of output letters. Edge cases and notes - columnNumber = 0: Excel columns are 1-based; the implementation returns an empty string for 0 (current tests expect ""). - Very large columnNumber: algorithm scales logarithmically in the number of digits; Python handles big integers. - Works for all positive integers; no floating point operations are used so results are exact. Examples - 1 -> "A" - 26 -> "Z" - 27 -> "AA" - 52 -> "AZ" - 701 -> "ZY" - 702 -> "ZZ" - 703 -> "AAA" - 16384 -> "XFD" (Excel column boundary example) Alternative views - You can view this as repeated (columnNumber-1) divmod 26 operations. - Recursive formulation is possible but iterative is simpler and avoids recursion overhead. Correctness sketch - At each step you determine the last letter correctly by mapping the remainder after subtracting 1. Removing that digit via integer division reduces the problem size and preserves correctness by induction.
+
+### Advantages
+
+- Efficient recursion solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
