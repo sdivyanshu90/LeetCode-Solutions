@@ -4,9 +4,11 @@
 
 Given a DataFrame `views` with columns `author_id` and `viewer_id`, find all authors who viewed their own articles. Return their IDs sorted in ascending order.
 
-## Current Implementation
+## Approach: Sorting (Implemented)
 
-The solution uses pandas filtering and deduplication:
+### Strategy
+
+The solution uses sorting to solve the problem efficiently.
 
 ```python
 def article_views(views: pd.DataFrame) -> pd.DataFrame:
@@ -16,7 +18,7 @@ def article_views(views: pd.DataFrame) -> pd.DataFrame:
     return result
 ```
 
-## How It Works
+### How It Works
 
 The algorithm performs sequential DataFrame operations:
 
@@ -35,30 +37,23 @@ WHERE author_id = viewer_id
 ORDER BY id ASC
 ```
 
-## Why This Works
+### Why Sorting Works
 
 - **Boolean indexing**: Efficiently filters rows matching condition
 - **Chained operations**: Pandas supports fluent method chaining
 - **Deduplication**: Handles authors who viewed their articles multiple times
 - **Rename for output**: Matches expected schema
 
-## Time Complexity
+### Complexity Analysis
 
-O(n log n) where n is the number of rows. The filtering is O(n), but sorting dominates at O(n log n).
+- **Time Complexity**: O(n log n) where n is the number of rows. The filtering is O(n), but sorting dominates at O(n log n).
+- **Space Complexity**: O(k) where k is the number of unique self-viewing authors (result size).
 
-## Space Complexity
+### Advantages
 
-O(k) where k is the number of unique self-viewing authors (result size).
+- Efficient sorting solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Readable**: Clear step-by-step DataFrame transformations
-- **Pandas idioms**: Uses standard DataFrame methods
-- **Could optimize**: Combine operations for slight efficiency gain:
-  ```python
-  return (views[views['author_id'] == views['viewer_id']]
-          [['author_id']].drop_duplicates()
-          .sort_values(by='author_id')
-          .rename(columns={'author_id': 'id'}))
-  ```
-- **SQL comparison**: For very large datasets, database query might be more efficient than in-memory pandas operations
+- May require additional space
