@@ -33,6 +33,6 @@ def test_check_straight_line():
 
     # Test case 5
     coordinates = [[1,2],[2,4],[3,6],[4,8],[5,10]]
-    print(solution.checkStraightLine(coordinates))  # Expected output: False
+    print(solution.checkStraightLine(coordinates))  # Expected output: True
 
 test_check_straight_line()
