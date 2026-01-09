@@ -6,9 +6,11 @@ Given an array of `words` and a string `chars`, return the sum of lengths of all
 
 **Example**: `words=["cat","bt","hat","tree"]`, `chars="atach"` → `6` ("cat" + "hat" = 3 + 3)
 
-## Current Implementation
+## Approach: Frequency Counting (Implemented)
 
-The solution builds a frequency map of available characters and checks each word:
+### Strategy
+
+The solution uses frequency counting to solve the problem efficiently.
 
 ```python
 def countCharacters(self, words: List[str], chars: str) -> int:
@@ -35,7 +37,7 @@ def countCharacters(self, words: List[str], chars: str) -> int:
     return result
 ```
 
-## How It Works
+### How It Works
 
 The algorithm uses frequency counting:
 
@@ -66,34 +68,23 @@ Word "bt":
 Result: 3
 ```
 
-## Why This Works
+### Why Frequency Counting Works
 
 - **Frequency tracking**: Ensures we don't use more of a character than available
 - **Copy for each word**: Allows independent checking without mutating original map
 - **Early termination**: Breaks as soon as a character cannot be matched
 - **Count matching words**: Sums lengths of all formable words
 
-## Time Complexity
+### Complexity Analysis
 
-O(n + m\*k) where n = len(chars), m = number of words, k = average word length. Building the map is O(n), and checking each word is O(k) with m words.
+- **Time Complexity**: O(n + m\*k) where n = len(chars), m = number of words, k = average word length. Building the map is O(n), and checking each word is O(k) with m words.
+- **Space Complexity**: O(1) in terms of the character set (at most 26 lowercase letters). The copy operation is O(26) = O(1).
 
-## Space Complexity
+### Advantages
 
-O(1) in terms of the character set (at most 26 lowercase letters). The copy operation is O(26) = O(1).
+- Efficient frequency counting solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Clear logic**: Easy to understand frequency-based checking
-- **Copy overhead**: Creates a new dictionary for each word (O(26) space/time per word)
-- **Could optimize**: Use Counter from collections for cleaner code:
-  ```python
-  from collections import Counter
-  chars_count = Counter(chars)
-  result = 0
-  for word in words:
-      word_count = Counter(word)
-      if all(word_count[c] <= chars_count[c] for c in word_count):
-          result += len(word)
-  return result
-  ```
-- **Alternative**: Subtract counters instead of copying and decrementing
+- May require additional space
