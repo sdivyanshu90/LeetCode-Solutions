@@ -6,9 +6,11 @@ Given a valid IPv4 address, return a "defanged" version where every period `.` i
 
 **Example**: `"1.1.1.1"` → `"1[.]1[.]1[.]1"`
 
-## Current Implementation
+## Approach: Iteration (Implemented)
 
-The solution iterates through characters and replaces periods:
+### Strategy
+
+The solution uses iteration to solve the problem efficiently.
 
 ```python
 def defangIPaddr(self, address: str) -> str:
@@ -21,7 +23,7 @@ def defangIPaddr(self, address: str) -> str:
     return res
 ```
 
-## How It Works
+### How It Works
 
 Simple character-by-character processing:
 
@@ -45,32 +47,22 @@ Simple character-by-character processing:
 ... → "192[.]168[.]0[.]1"
 ```
 
-## Why This Works
+### Why Iteration Works
 
 - **Character replacement**: Simple substitution pattern
 - **String building**: Accumulates result character by character
 - **Preserves order**: Processes left to right
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the length of the address string. Each character is processed once.
+- **Time Complexity**: O(n) where n is the length of the address string. Each character is processed once.
+- **Space Complexity**: O(n) for the result string.
 
-## Space Complexity
+### Advantages
 
-O(n) for the result string.
+- Efficient iteration solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Straightforward**: Easy to understand logic
-- **String concatenation**: In Python, string concatenation in loops can be inefficient (creates new string each time), but for small inputs like IP addresses (max ~15 chars), this is negligible
-- **Much simpler alternative**: Python's built-in replace:
-  ```python
-  def defangIPaddr(self, address: str) -> str:
-      return address.replace(".", "[.]")
-  ```
-  One-liner that's more efficient and idiomatic.
-- **Another alternative**: Using join with generator:
-  ```python
-  return ''.join('[.]' if c == '.' else c for c in address)
-  ```
-  Avoids repeated string concatenation.
+- May require additional space
