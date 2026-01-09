@@ -43,9 +43,9 @@ def test_job_scheduling():
     print(solution.jobScheduling(startTime, endTime, profit))  # Expected output: 18
 
     # Test case 5
-    startTime = [1,2,3,4,6]
+    startTime = [1,2,3,4,5]
     endTime = [3,5,10,6,9]
     profit = [20,20,100,70,60]
-    print(solution.jobScheduling(startTime, endTime, profit))  # Expected output: 150
+    print(solution.jobScheduling(startTime, endTime, profit))  # Expected output: 120
 
 test_job_scheduling()
