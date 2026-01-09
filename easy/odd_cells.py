@@ -35,7 +35,7 @@ def test_odd_cells():
     m = 3
     n = 3
     indices = [[0,0],[1,1],[2,2]]
-    print(solution.oddCells(m, n, indices))  # Expected output: 9
+    print(solution.oddCells(m, n, indices))  # Expected output: 0
 
     # Test case 4
     m = 1
