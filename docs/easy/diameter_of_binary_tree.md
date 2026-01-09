@@ -1,6 +1,6 @@
 # Diameter of Binary Tree
 
-Problem summary
+## Problem Summary
 
 - Given the root of a binary tree, return the length of the diameter.
 - Diameter: longest path between any two nodes in the tree.
@@ -57,3 +57,70 @@ Thought process and trade-offs
 - Current approach leverages fact that height calculation naturally visits all nodes.
 - Instance variable for diameter: simple but couples state to object; could use return tuple instead.
 - Trade-off: clarity of separate concerns vs. single return value.
+
+## Approach: DFS (Implemented)
+
+### Strategy
+
+The solution uses dfs to solve the problem efficiently.
+
+```python
+  def height(node=root):
+      chord = le = ri = 0
+      if node.left:
+          le = height(node.left)
+          chord += 1 + le
+      if node.right:
+          ri = height(node.right)
+          chord += 1 + ri
+      self.diameter = max(chord, self.diameter)
+      return 1 + max(le, ri)
+  ```
+
+### How It Works
+
+- Instance variable for diameter: simple but couples state to object; could use return tuple instead.
+- Trade-off: clarity of separate concerns vs. single return value.
+
+### Why DFS Works
+
+- Diameter through any node = edges in left subtree + edges in right subtree + 2 (edges to children).
+- Height function returns edges from node to deepest leaf in its subtree.
+- By checking every node as potential "center" of diameter path, finds global maximum.
+- DFS traversal ensures all nodes are considered.
+
+Time complexity
+
+- Let n = number of nodes in the tree.
+- Each node is visited once: O(n).
+- At each node, constant work is done.
+- Overall time complexity: O(n).
+
+Space complexity
+
+- Recursion stack depth = height of tree.
+- Worst case (skewed tree): O(n).
+- Average case (balanced tree): O(log n).
+- Overall space complexity: O(n) worst case.
+
+Thought process and trade-offs
+
+- Combining height calculation with diameter tracking: efficient single-pass solution.
+- Alternative: calculate height for every node as root, then find max - O(n²) time.
+- Current approach leverages fact that height calculation naturally visits all nodes.
+- Instance variable for diameter: simple but couples state to object; could use return tuple instead.
+- Trade-off: clarity of separate concerns vs. single return value.
+
+### Complexity Analysis
+
+- **Time Complexity**: - Let n = number of nodes in the tree. - Each node is visited once: O(n). - At each node, constant work is done. - Overall time complexity: O(n). Space complexity - Recursion stack depth = height of tree. - Worst case (skewed tree): O(n). - Average case (balanced tree): O(log n). - Overall space complexity: O(n) worst case. Thought process and trade-offs - Combining height calculation with diameter tracking: efficient single-pass solution. - Alternative: calculate height for every node as root, then find max - O(n²) time. - Current approach leverages fact that height calculation naturally visits all nodes. - Instance variable for diameter: simple but couples state to object; could use return tuple instead. - Trade-off: clarity of separate concerns vs. single return value.
+- **Space Complexity**: - Recursion stack depth = height of tree. - Worst case (skewed tree): O(n). - Average case (balanced tree): O(log n). - Overall space complexity: O(n) worst case. Thought process and trade-offs - Combining height calculation with diameter tracking: efficient single-pass solution. - Alternative: calculate height for every node as root, then find max - O(n²) time. - Current approach leverages fact that height calculation naturally visits all nodes. - Instance variable for diameter: simple but couples state to object; could use return tuple instead. - Trade-off: clarity of separate concerns vs. single return value.
+
+### Advantages
+
+- Efficient dfs solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
