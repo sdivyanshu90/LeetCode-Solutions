@@ -6,9 +6,11 @@ A bus travels in a circular route with `n` stops. Given an array `distance` wher
 
 **Example**: `distance=[1,2,3,4]`, `start=0`, `destination=2` → `3` (clockwise: 1+2=3, counterclockwise: 4+3=7, min=3)
 
-## Current Implementation
+## Approach: Frequency Counting (Implemented)
 
-The solution calculates both clockwise and counterclockwise distances:
+### Strategy
+
+The solution uses frequency counting to solve the problem efficiently.
 
 ```python
 def distanceBetweenBusStops(self, distance: List[int], start: int, destination: int) -> int:
@@ -27,7 +29,7 @@ def distanceBetweenBusStops(self, distance: List[int], start: int, destination: 
     return min(clockwise_distance, anticlockwise_distance)
 ```
 
-## How It Works
+### How It Works
 
 The algorithm computes both possible paths:
 
@@ -46,29 +48,23 @@ Counterclockwise (0→3 going backwards): 10-6 = 4
 Result: min(6, 4) = 4
 ```
 
-## Why This Works
+### Why Frequency Counting Works
 
 - **Circular property**: Only two paths exist between any two points on a circle
 - **Complementary distances**: The two paths together equal the full circle
 - **Normalization**: Swapping ensures consistent direction calculation
 - **Simple subtraction**: Total minus one path gives the other path
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the number of stops. Computing total is O(n), and the loop for clockwise distance is O(destination - start) ≤ O(n).
+- **Time Complexity**: O(n) where n is the number of stops. Computing total is O(n), and the loop for clockwise distance is O(destination - start) ≤ O(n).
+- **Space Complexity**: O(1) - only uses a few variables for accumulation.
 
-## Space Complexity
+### Advantages
 
-O(1) - only uses a few variables for accumulation.
+- Efficient frequency counting solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Clear logic**: Easy to understand two-path comparison
-- **Efficient**: Single pass to compute total, partial sum for clockwise
-- **Alternative**: Could calculate both paths explicitly without using complement:
-  ```python
-  clockwise = sum(distance[i % n] for i in range(start, destination))
-  counter = sum(distance[i % n] for i in range(destination, start + n))
-  return min(clockwise, counter)
-  ```
-  But current approach is more efficient (avoids second loop).
+- May require additional space
