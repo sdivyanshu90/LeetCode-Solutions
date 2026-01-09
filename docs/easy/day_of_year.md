@@ -6,9 +6,11 @@ Given a date string in the format `YYYY-MM-DD`, return the day number of the yea
 
 **Example**: `"2019-02-10"` → `41` (31 days in Jan + 10 days in Feb)
 
-## Current Implementation
+## Approach: String Manipulation (Implemented)
 
-The solution calculates the day by summing days in previous months plus the current day:
+### Strategy
+
+The solution uses string manipulation to solve the problem efficiently.
 
 ```python
 def dayOfYear(self, date: str) -> int:
@@ -23,7 +25,7 @@ def dayOfYear(self, date: str) -> int:
         return (sum(month_dates[:tes - 1]) + split_date[2])
 ```
 
-## How It Works
+### How It Works
 
 The algorithm determines leap year status and sums days:
 
@@ -45,29 +47,22 @@ Sum of Jan-Feb in leap year: 31 + 29 = 60
 Add current day: 60 + 1 = 61
 ```
 
-## Why This Works
+### Why String Manipulation Works
 
 - **Leap year rules**: Correctly implements Gregorian calendar rules
 - **Precomputed days**: Arrays store days per month for quick lookup
 - **Cumulative sum**: Adding previous months gives offset to current month
 
-## Time Complexity
+### Complexity Analysis
 
-O(m) where m is the month number (at most 12). The sum operation is O(m) for slicing and summing previous months.
+- **Time Complexity**: O(m) where m is the month number (at most 12). The sum operation is O(m) for slicing and summing previous months.
+- **Space Complexity**: O(1) - uses fixed-size arrays regardless of input.
 
-## Space Complexity
+### Advantages
 
-O(1) - uses fixed-size arrays regardless of input.
+- Efficient string manipulation solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Clear logic**: Easy to understand month-by-month accumulation
-- **Precomputed arrays**: Avoids recalculating month lengths
-- **Minor inefficiency**: `tes = split_date[1] % 12` is unnecessary (month is already 1-12)
-- **Alternative**: Python's datetime library:
-  ```python
-  from datetime import datetime
-  dt = datetime.strptime(date, "%Y-%m-%d")
-  return dt.timetuple().tm_yday
-  ```
-  More concise but less educational about the calculation.
+- May require additional space
