@@ -8,9 +8,11 @@ Distribute `candies` to `num_people` in rounds. In each round, give increasing a
 
 - Round 1: give 1,2,3,1 (used 7, none left)
 
-## Current Implementation
+## Approach: Frequency Counting (Implemented)
 
-The solution simulates the distribution process:
+### Strategy
+
+The solution uses frequency counting to solve the problem efficiently.
 
 ```python
 def distributeCandies(self, candies: int, num_people: int) -> List[int]:
@@ -26,7 +28,7 @@ def distributeCandies(self, candies: int, num_people: int) -> List[int]:
     return res
 ```
 
-## How It Works
+### How It Works
 
 The algorithm simulates giving candies round by round:
 
@@ -50,23 +52,23 @@ Turn 4: res[0]+=min(4,4)=4 → [5,2,3], candies=0, i=5
 Result: [5,2,3]
 ```
 
-## Why This Works
+### Why Frequency Counting Works
 
 - **Simulation approach**: Directly models the distribution process
 - **Modulo arithmetic**: `(idx + 1) % len(res)` handles circular wrapping
 - **min() handles remainder**: When candies < i, gives remaining candies instead of full amount
 - **Accumulation**: `+=` allows multiple rounds per person
 
-## Time Complexity
+### Complexity Analysis
 
-O(√candies) because the sum 1+2+3+...+k = k(k+1)/2 = candies, so k ≈ √(2\*candies). The loop runs k times.
+- **Time Complexity**: O(√candies) because the sum 1+2+3+...+k = k(k+1)/2 = candies, so k ≈ √(2\*candies). The loop runs k times.
+- **Space Complexity**: O(num_people) for the result array. O(1) auxiliary space.
 
-## Space Complexity
+### Advantages
 
-O(num_people) for the result array. O(1) auxiliary space.
+- Efficient frequency counting solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Simple simulation**: Easy to understand and verify
-- **Efficient enough**: For reasonable candy counts, simulation is fast
-- **Mathematical alternative**: Could calculate directly using formulas for arithmetic sequences, but would be more complex to implement correctly, especially handling the remainder
+- May require additional space
