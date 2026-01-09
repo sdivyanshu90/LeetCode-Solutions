@@ -45,13 +45,13 @@ def test_max_score_words():
     words = ["dog","cat","dad","good"]
     letters = ["a","a","c","d","d","d","g","o","o"]
     score = [1,0,9,5,0,0,3,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0]
-    print(solution.maxScoreWords(words, letters, score))  # Expected output: 23
+    print(solution.maxScoreWords(words, letters, score))  # Expected output: 19
 
     # Test case 2
     words = ["xxxz","ax","bx","cx"]
     letters = ["z","a","b","c","x","x","x"]
     score = [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]
-    print(solution.maxScoreWords(words, letters, score))  # Expected output: 27
+    print(solution.maxScoreWords(words, letters, score))  # Expected output: 24
 
     # Test case 3
     words = ["leetcode"]
@@ -69,6 +69,6 @@ def test_max_score_words():
     words = ["hello","world","leetcode"]
     letters = ["l","e","o","l","h","d","r","w","o"]
     score = [4,2,3,5,1,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
-    print(solution.maxScoreWords(words, letters, score))  # Expected output: 30
+    print(solution.maxScoreWords(words, letters, score))  # Expected output: 73
 
 test_max_score_words()
