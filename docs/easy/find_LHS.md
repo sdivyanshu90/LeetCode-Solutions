@@ -1,6 +1,6 @@
 # Longest Harmonious Subsequence
 
-Problem summary
+## Problem Summary
 
 - Given an integer array, find the length of the longest harmonious subsequence.
 - A harmonious subsequence has max value - min value = exactly 1.
@@ -48,3 +48,64 @@ Thought process and trade-offs
 - Alternative: sort array and use sliding window - O(n log n) time.
 - Current approach: optimal O(n) time with O(n) space.
 - Edge cases: single unique value returns 0 (no pair possible), empty array returns 0.
+
+## Approach: Iteration (Implemented)
+
+### Strategy
+
+The solution uses iteration to solve the problem efficiently.
+
+```python
+  freq = Counter(nums)
+  for val, key in freq.items():
+      if val - 1 in freq:
+          res = max(res, key + freq[val - 1])
+  ```
+
+### How It Works
+
+- Key insight: only need to consider pairs of adjacent values (x, x+1).
+- Alternative: sort array and use sliding window - O(n log n) time.
+- Current approach: optimal O(n) time with O(n) space.
+- Edge cases: single unique value returns 0 (no pair possible), empty array returns 0.
+
+### Why Iteration Works
+
+- Harmonious subsequence with difference 1 contains only two distinct values: x and x+1.
+- Count of elements in such subsequence = freq[x] + freq[x+1].
+- Checking val-1 instead of val+1 avoids double counting (each pair checked once).
+- Counter provides O(1) lookup for checking if adjacent value exists.
+
+Time complexity
+
+- Let n = length of array.
+- Building Counter: O(n).
+- Iterating through unique values: O(k) where k is number of unique values, k <= n.
+- Overall time complexity: O(n).
+
+Space complexity
+
+- Counter stores k unique values and their frequencies.
+- Space complexity: O(k) where k <= n.
+
+Thought process and trade-offs
+
+- Frequency-based approach: avoids checking all possible subsequences.
+- Key insight: only need to consider pairs of adjacent values (x, x+1).
+- Alternative: sort array and use sliding window - O(n log n) time.
+- Current approach: optimal O(n) time with O(n) space.
+- Edge cases: single unique value returns 0 (no pair possible), empty array returns 0.
+
+### Complexity Analysis
+
+- **Time Complexity**: - Let n = length of array. - Building Counter: O(n). - Iterating through unique values: O(k) where k is number of unique values, k <= n. - Overall time complexity: O(n). Space complexity - Counter stores k unique values and their frequencies. - Space complexity: O(k) where k <= n. Thought process and trade-offs - Frequency-based approach: avoids checking all possible subsequences. - Key insight: only need to consider pairs of adjacent values (x, x+1). - Alternative: sort array and use sliding window - O(n log n) time. - Current approach: optimal O(n) time with O(n) space. - Edge cases: single unique value returns 0 (no pair possible), empty array returns 0.
+- **Space Complexity**: - Counter stores k unique values and their frequencies. - Space complexity: O(k) where k <= n. Thought process and trade-offs - Frequency-based approach: avoids checking all possible subsequences. - Key insight: only need to consider pairs of adjacent values (x, x+1). - Alternative: sort array and use sliding window - O(n log n) time. - Current approach: optimal O(n) time with O(n) space. - Edge cases: single unique value returns 0 (no pair possible), empty array returns 0.
+
+### Advantages
+
+- Efficient iteration solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
