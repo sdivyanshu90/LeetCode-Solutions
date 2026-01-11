@@ -1,6 +1,6 @@
 # Classes More Than 5 Students
 
-Problem summary
+## Problem Summary
 
 - Given a DataFrame `courses` with student enrollments, find classes with at least 5 students.
 - Each row represents one student's enrollment in a class.
@@ -47,3 +47,61 @@ Thought process and trade-offs
 - Alternative SQL: `SELECT class FROM courses GROUP BY class HAVING COUNT(*) >= 5`.
 - Current approach leverages pandas strengths for data aggregation.
 - Trade-off: pandas dependency required, but standard for DataFrame problems.
+
+## Approach: Iterative (Implemented)
+
+### Strategy
+
+The solution uses iterative to solve the problem efficiently.
+
+```python
+  class_counts = courses['class'].value_counts()
+  classes_more_than_5 = class_counts[class_counts >= 5].reset_index()
+  return classes_more_than_5[['class']]
+  ```
+
+### How It Works
+
+- Trade-off: pandas dependency required, but standard for DataFrame problems.
+
+### Why Iterative Works
+
+- `value_counts()` aggregates and counts occurrences of each class.
+- Boolean filtering `[class_counts >= 5]` selects only classes meeting criteria.
+- `reset_index()` converts Series back to DataFrame with proper column structure.
+- Column selection `[['class']]` ensures output has only required column.
+
+Time complexity
+
+- Let n = number of rows in DataFrame.
+- `value_counts()`: O(n) for counting all rows.
+- Filtering: O(k) where k is number of unique classes, k <= n.
+- Overall time complexity: O(n).
+
+Space complexity
+
+- Series of class counts: O(k) where k is number of unique classes.
+- Result DataFrame: O(m) where m is number of qualifying classes, m <= k.
+- Overall space complexity: O(k).
+
+Thought process and trade-offs
+
+- Pandas built-in aggregation: efficient and readable.
+- Alternative: groupby with count - similar performance, slightly more verbose.
+- Alternative SQL: `SELECT class FROM courses GROUP BY class HAVING COUNT(*) >= 5`.
+- Current approach leverages pandas strengths for data aggregation.
+- Trade-off: pandas dependency required, but standard for DataFrame problems.
+
+### Complexity Analysis
+
+- **Time Complexity**: - Let n = number of rows in DataFrame. - `value_counts()`: O(n) for counting all rows. - Filtering: O(k) where k is number of unique classes, k <= n. - Overall time complexity: O(n). Space complexity - Series of class counts: O(k) where k is number of unique classes. - Result DataFrame: O(m) where m is number of qualifying classes, m <= k. - Overall space complexity: O(k). Thought process and trade-offs - Pandas built-in aggregation: efficient and readable. - Alternative: groupby with count - similar performance, slightly more verbose. - Alternative SQL: `SELECT class FROM courses GROUP BY class HAVING COUNT(*) >= 5`. - Current approach leverages pandas strengths for data aggregation. - Trade-off: pandas dependency required, but standard for DataFrame problems.
+- **Space Complexity**: - Series of class counts: O(k) where k is number of unique classes. - Result DataFrame: O(m) where m is number of qualifying classes, m <= k. - Overall space complexity: O(k). Thought process and trade-offs - Pandas built-in aggregation: efficient and readable. - Alternative: groupby with count - similar performance, slightly more verbose. - Alternative SQL: `SELECT class FROM courses GROUP BY class HAVING COUNT(*) >= 5`. - Current approach leverages pandas strengths for data aggregation. - Trade-off: pandas dependency required, but standard for DataFrame problems.
+
+### Advantages
+
+- Efficient iterative solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
