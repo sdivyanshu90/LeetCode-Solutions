@@ -1,4 +1,44 @@
-# Implement Stack Using Queues — Explanation, Approach, Complexity
+# Implement Stack Using Queues
+
+## Problem Summary
+
+**Problem Summary**
+- Implement a stack (LIFO) using only queue operations. Supported operations:
+  - push(x): add element x onto the stack
+  - pop(): remove and return the top element
+  - top(): return the top element without removing it
+  - empty(): return whether the stack is empty
+
+## Approach: Stack (Implemented)
+
+### Strategy
+
+The solution uses stack to solve the problem efficiently.
+
+```python
+from collections import deque
+
+class MyStack:
+		def __init__(self):
+				self.q = deque()
+
+		def push(self, x: int) -> None:
+				self.q.append(x)
+				# rotate so that x becomes the front (stack top)
+				for _ in range(len(self.q) - 1):
+						self.q.append(self.q.popleft())
+
+		def pop(self) -> int:
+				return self.q.popleft()
+
+		def top(self) -> int:
+				return self.q[0]
+
+		def empty(self) -> bool:
+				return not self.q
+```
+
+### How It Works
 
 **Problem Summary**
 
@@ -108,3 +148,21 @@ class MyStack:
 
 - Either approach yields O(n) push and O(1) pop/top, with O(n) space.
 - The single-queue rotation usually has slightly better constants and simpler code.
+
+### Why Stack Works
+
+The stack approach is effective for this problem.
+
+### Complexity Analysis
+
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(1)
+
+### Advantages
+
+- Efficient stack solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
