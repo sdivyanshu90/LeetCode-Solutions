@@ -1,4 +1,25 @@
-# Intersection of Two Arrays — Explanation, Approach, Complexity
+# Intersection of Two Arrays
+
+## Problem Summary
+
+**Problem Summary**
+- Given two integer arrays `nums1` and `nums2`, return an array of their intersection.
+- Each element in the result must be unique (no duplicates).
+- The order of elements in the result does not matter.
+- Difference from "Intersection II": this problem requires unique elements only, while Intersection II preserves multiplicities.
+**Approach Used (Set intersection)**
+
+## Approach: Two Pointers (Implemented)
+
+### Strategy
+
+The solution uses two pointers to solve the problem efficiently.
+
+```python
+return list(set(nums1) & set(nums2))
+```
+
+### How It Works
 
 **Problem Summary**
 
@@ -90,3 +111,21 @@ return list(set(nums1) & set(nums2))
 - Forgetting to deduplicate → would return elements multiple times (use set or check before appending).
 - Comparing values instead of using set operations → more verbose and error-prone.
 - Assuming sorted output → the problem does not require sorted results unless specified.
+
+### Why Two Pointers Works
+
+The two pointers approach is effective for this problem.
+
+### Complexity Analysis
+
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(1)
+
+### Advantages
+
+- Efficient two pointers solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
