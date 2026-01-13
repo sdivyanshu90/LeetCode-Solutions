@@ -1,4 +1,21 @@
-# Binary Tree Inorder Traversal — Explanation, Approach, Complexity
+# Binary Tree Inorder Traversal
+
+## Problem Summary
+
+**Problem Summary**
+- Given the root of a binary tree, return the inorder traversal of its nodes' values.
+- Inorder traversal order: left subtree → node → right subtree.
+**Approach Used (Recursive DFS)**
+- Define a helper `dfs(node)` that:
+  - Returns immediately on `None`.
+
+## Approach: DFS (Implemented)
+
+### Strategy
+
+The solution uses dfs to solve the problem efficiently.
+
+### How It Works
 
 **Problem Summary**
 
@@ -47,3 +64,21 @@
 - Recursive DFS is the simplest and most readable for inorder traversal.
 - For very deep trees where recursion depth could be a concern, prefer the iterative stack-based approach.
 - Morris traversal is an optimization when recursion/stack space is constrained and pointer manipulation is acceptable.
+
+### Why DFS Works
+
+The dfs approach is effective for this problem.
+
+### Complexity Analysis
+
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(1)
+
+### Advantages
+
+- Efficient dfs solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
