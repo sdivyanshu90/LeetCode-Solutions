@@ -1,4 +1,43 @@
-# Balanced Binary Tree — Explanation, Approach, Complexity
+# Balanced Binary Tree
+
+## Problem Summary
+
+**Problem Summary**
+- Given the root of a binary tree, determine if it is height-balanced.
+- A binary tree is height-balanced if for every node, the height difference between its left and right subtrees is at most 1.
+- Example: [3,9,20,null,null,15,7] is balanced; [1,2,2,3,3,null,null,4,4] is not.
+**Approach (Optimized DFS with early termination)**
+- Define a helper function `check_balance_and_height(node)` that returns:
+
+## Approach: DFS (Implemented)
+
+### Strategy
+
+The solution uses dfs to solve the problem efficiently.
+
+```python
+def isBalanced(self, root: Optional[TreeNode]) -> bool:
+    def check_balance_and_height(node):
+        if not node:
+            return 0
+
+        left_height = check_balance_and_height(node.left)
+        if left_height == -1:
+            return -1
+
+        right_height = check_balance_and_height(node.right)
+        if right_height == -1:
+            return -1
+
+        if abs(left_height - right_height) > 1:
+            return -1
+
+        return max(left_height, right_height) + 1
+
+    return check_balance_and_height(root) != -1
+```
+
+### How It Works
 
 **Problem Summary**
 
@@ -121,3 +160,21 @@ def isBalanced(self, root):
 
 - Balance property must hold at **every** node, not just the root.
 - The definition requires: for any node, `|height(left) - height(right)| ≤ 1`.
+
+### Why DFS Works
+
+The dfs approach is effective for this problem.
+
+### Complexity Analysis
+
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(1)
+
+### Advantages
+
+- Efficient dfs solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
