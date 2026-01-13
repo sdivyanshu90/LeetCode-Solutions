@@ -1,4 +1,31 @@
-# Intersection of Two Arrays II — Explanation, Approach, Complexity
+# Intersection of Two Arrays II
+
+## Problem Summary
+
+**Problem Summary**
+- Given two integer arrays `nums1` and `nums2`, return an array of their intersection. Each element in the result should appear as many times as it shows in both arrays.
+- Order of elements in the result does not matter.
+**Approach Used (Frequency Counter intersection)**
+- Build frequency maps for both arrays using `collections.Counter`.
+- Take the counter intersection `Counter(nums1) & Counter(nums2)` which keeps the minimum count for each common key.
+
+## Approach: Hash Map (Implemented)
+
+### Strategy
+
+The solution uses hash map to solve the problem efficiently.
+
+```python
+from collections import Counter
+
+x = Counter(nums1) & Counter(nums2)
+result = []
+for val, cnt in x.items():
+		result.extend([val] * cnt)
+return result
+```
+
+### How It Works
 
 **Problem Summary**
 
@@ -57,3 +84,21 @@ return result
 - Using `Counter` provides concise, correct multiset logic with minimal code.
 - For very large inputs or memory constraints, prefer counting only the smaller array and scanning the larger to reduce space.
 - Sorting + two pointers is a classic approach but less efficient due to sorting overhead.
+
+### Why Hash Map Works
+
+The hash map approach is effective for this problem.
+
+### Complexity Analysis
+
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(1)
+
+### Advantages
+
+- Efficient hash map solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
