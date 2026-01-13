@@ -1,6 +1,6 @@
 # Image Smoother
 
-Problem summary
+## Problem Summary
 
 - Given an m x n image matrix, return a smoothed image.
 - For each cell, smoothed value = floor average of the cell and its 8 neighbors (or fewer at edges).
@@ -49,3 +49,62 @@ Thought process and trade-offs
 - Alternative: use direction arrays [(0,1), (0,-1), (1,0), (-1,0), (1,1), (1,-1), (-1,1), (-1,-1)] to loop through neighbors - cleaner code, same complexity.
 - Current approach: clear logic but repetitive.
 - Trade-off: code length vs. readability.
+
+## Approach: Frequency Counting (Implemented)
+
+### Strategy
+
+The solution uses frequency counting to solve the problem efficiently.
+
+```python
+  _sum = img[r][c]
+  counter = 1
+  if r - 1 >= 0:
+      counter += 1
+      _sum += img[r-1][c]
+      # ... check diagonals
+  res[r][c] = _sum // counter
+  ```
+
+### How It Works
+
+- Trade-off: code length vs. readability.
+
+### Why Frequency Counting Works
+
+- Bounds checking ensures only valid cells are included in average.
+- Counter tracks actual number of cells included (varies at edges/corners).
+- Integer division gives floor of average as required.
+- All 9 positions (center + 8 neighbors) are considered when valid.
+
+Time complexity
+
+- Let m = rows, n = columns.
+- For each cell: O(9) = O(1) to check all neighbors.
+- Total: O(m × n × 1) = O(m × n).
+
+Space complexity
+
+- Result matrix: O(m × n).
+- Space complexity: O(m × n).
+
+Thought process and trade-offs
+
+- Manual direction checking: explicit but verbose.
+- Alternative: use direction arrays [(0,1), (0,-1), (1,0), (-1,0), (1,1), (1,-1), (-1,1), (-1,-1)] to loop through neighbors - cleaner code, same complexity.
+- Current approach: clear logic but repetitive.
+- Trade-off: code length vs. readability.
+
+### Complexity Analysis
+
+- **Time Complexity**: - Let m = rows, n = columns. - For each cell: O(9) = O(1) to check all neighbors. - Total: O(m × n × 1) = O(m × n). Space complexity - Result matrix: O(m × n). - Space complexity: O(m × n). Thought process and trade-offs - Manual direction checking: explicit but verbose. - Alternative: use direction arrays [(0,1), (0,-1), (1,0), (-1,0), (1,1), (1,-1), (-1,1), (-1,-1)] to loop through neighbors - cleaner code, same complexity. - Current approach: clear logic but repetitive. - Trade-off: code length vs. readability.
+- **Space Complexity**: - Result matrix: O(m × n). - Space complexity: O(m × n). Thought process and trade-offs - Manual direction checking: explicit but verbose. - Alternative: use direction arrays [(0,1), (0,-1), (1,0), (-1,0), (1,1), (1,-1), (-1,1), (-1,-1)] to loop through neighbors - cleaner code, same complexity. - Current approach: clear logic but repetitive. - Trade-off: code length vs. readability.
+
+### Advantages
+
+- Efficient frequency counting solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
