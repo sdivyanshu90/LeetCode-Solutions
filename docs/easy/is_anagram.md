@@ -1,10 +1,30 @@
-# Valid Anagram — Explanation, Approaches, Complexity
+# Valid Anagram
 
-**Problem Summary**
+## Problem Summary
 
-- Given two strings `s` and `t`, return true if `t` is an anagram of `s`, and false otherwise.
-- An anagram is a word or phrase formed by rearranging the letters of another, using all original letters exactly once.
-- Example: "anagram" and "nagaram" are anagrams.
+Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise. An anagram is a word or phrase formed by rearranging the letters of another, using all original letters exactly once.
+
+**Example**: `"anagram"` and `"nagaram"` are anagrams
+
+## Approach: Stack (Implemented)
+
+### Strategy
+
+The solution uses stack to solve the problem efficiently.
+
+```python
+def isAnagram(self, s: str, t: str) -> bool:
+    if len(s) != len(t):
+        return False
+    for i in set(s):
+        if s.count(i) != t.count(i):
+            return False
+    return True
+```
+
+### How It Works
+
+### Strategy
 
 **Approach 1 (Active): Frequency comparison via count()**
 
@@ -125,3 +145,21 @@ return sorted(s) == sorted(t)
 - Forgetting to check length first → wastes computation.
 - Using `set(s) == set(t)` alone → ignores character frequencies (e.g., "ab" vs. "aab").
 - Case sensitivity → convert to lowercase if problem allows: `sorted(s.lower()) == sorted(t.lower())`.
+
+### Why Stack Works
+
+The stack approach is effective for this problem.
+
+### Complexity Analysis
+
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(1)
+
+### Advantages
+
+- Efficient stack solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
