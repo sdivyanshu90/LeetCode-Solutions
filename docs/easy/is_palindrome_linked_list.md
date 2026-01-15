@@ -1,4 +1,36 @@
-# Palindrome Linked List — Explanation, Approach, Complexity
+# Palindrome Linked List
+
+## Problem Summary
+
+**Problem Summary**
+- Given the head of a singly linked list, determine if it is a palindrome.
+- A palindrome reads the same forward and backward.
+- Example: [1,2,2,1] is a palindrome; [1,2,3,4,5] is not.
+**Approach (Stack-based comparison)**
+- First pass: traverse the list and push all node values onto a stack.
+
+## Approach: Stack (Implemented)
+
+### Strategy
+
+The solution uses stack to solve the problem efficiently.
+
+```python
+def isPalindrome(self, head: Optional[ListNode]) -> bool:
+    stack = []
+    curr = head
+    while curr:
+        stack.append(curr.val)
+        curr = curr.next
+
+    curr = head
+    while curr and curr.val == stack.pop():
+        curr = curr.next
+
+    return curr is None
+```
+
+### How It Works
 
 **Problem Summary**
 
@@ -159,3 +191,21 @@ def isPalindrome(self, head: Optional[ListNode]) -> bool:
 **Follow-Up Question**
 
 - Can you solve it in O(n) time and O(1) space? → Yes, using the reverse second half approach (Approach 1 above).
+
+### Why Stack Works
+
+The stack approach is effective for this problem.
+
+### Complexity Analysis
+
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(1)
+
+### Advantages
+
+- Efficient stack solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
