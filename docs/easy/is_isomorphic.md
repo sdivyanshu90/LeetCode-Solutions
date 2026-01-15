@@ -1,4 +1,26 @@
-# Isomorphic Strings — Explanation, Approach, Complexity
+# Isomorphic Strings
+
+## Problem Summary
+
+**Problem Summary**
+- Given two strings `s` and `t`, determine if they are isomorphic.
+- Two strings are isomorphic if the characters in `s` can be replaced to get `t`.
+- Each character in `s` must map to exactly one character in `t` (bijection).
+- No two characters in `s` may map to the same character in `t`, and vice versa.
+- Example: "egg" and "add" are isomorphic (e→a, g→d); "foo" and "bar" are not (o cannot map to both a and r).
+
+## Approach: Hash Map (Implemented)
+
+### Strategy
+
+The solution uses hash map to solve the problem efficiently.
+
+```python
+def isIsomorphic(self, s: str, t: str) -> bool:
+    return len(set(zip(s, t))) == len(set(s)) == len(set(t))
+```
+
+### How It Works
 
 **Problem Summary**
 
@@ -121,3 +143,21 @@ def isIsomorphic(self, s: str, t: str) -> bool:
 
 - Isomorphism requires a bijective (one-to-one and onto) mapping.
 - Checking that the number of unique pairs equals the number of unique characters in each string verifies this bijection.
+
+### Why Hash Map Works
+
+The hash map approach is effective for this problem.
+
+### Complexity Analysis
+
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(1)
+
+### Advantages
+
+- Efficient hash map solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
