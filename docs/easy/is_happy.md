@@ -1,4 +1,36 @@
-# Happy Number — Explanation, Approach, Complexity
+# Happy Number
+
+## Problem Summary
+
+**Problem Summary**
+- A happy number is defined by the following process:
+  - Starting with any positive integer, replace the number by the sum of the squares of its digits.
+  - Repeat the process until the number equals 1 (happy), or it loops endlessly in a cycle that doesn't include 1 (unhappy).
+- Return `True` if n is a happy number, `False` otherwise.
+- Example: 19 is happy because 1² + 9² = 82, 8² + 2² = 68, 6² + 8² = 100, 1² + 0² + 0² = 1.
+
+## Approach: Two Pointers (Implemented)
+
+### Strategy
+
+The solution uses two pointers to solve the problem efficiently.
+
+```python
+def isHappy(self, n: int) -> bool:
+    def get_next(x):
+        total_sum = 0
+        while x > 0:
+            x, digit = divmod(x, 10)
+            total_sum += digit ** 2
+        return total_sum
+
+    while n != 1 and n != 4:
+        n = get_next(n)
+
+    return n == 1
+```
+
+### How It Works
 
 **Problem Summary**
 
@@ -122,3 +154,21 @@ def isHappy(self, n: int) -> bool:
 - For any unhappy number, the sequence will eventually enter the cycle: 4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4.
 - Therefore, detecting 4 is sufficient to identify unhappy numbers.
 - This avoids needing to track all visited numbers in a set.
+
+### Why Two Pointers Works
+
+The two pointers approach is effective for this problem.
+
+### Complexity Analysis
+
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(1)
+
+### Advantages
+
+- Efficient two pointers solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
