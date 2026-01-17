@@ -1,6 +1,6 @@
 # Last Stone Weight
 
-Problem summary
+## Problem Summary
 
 - Given array of stone weights, repeatedly smash the two heaviest stones together.
 - If weights equal, both destroyed. If different, new stone has weight = difference.
@@ -53,3 +53,69 @@ Thought process and trade-offs
 - Alternative: linear scan to find two max each time - O(n²), slower.
 - Negation for max-heap: elegant workaround for Python's min-heap limitation.
 - Current approach: optimal time complexity for this problem.
+
+## Approach: Iteration (Implemented)
+
+### Strategy
+
+The solution uses iteration to solve the problem efficiently.
+
+```python
+  stones = [-stone for stone in stones]
+  heapq.heapify(stones)
+  while len(stones) > 1:
+      first = heapq.heappop(stones)
+      second = heapq.heappop(stones)
+      if first != second:
+          heapq.heappush(stones, first - second)
+  return -stones[0] if stones else 0
+  ```
+
+### How It Works
+
+- Alternative: sort after each operation - O(n² log n), much slower.
+- Alternative: linear scan to find two max each time - O(n²), slower.
+- Negation for max-heap: elegant workaround for Python's min-heap limitation.
+- Current approach: optimal time complexity for this problem.
+
+### Why Iteration Works
+
+- Max heap provides efficient access to heaviest stones.
+- Negation trick: -x converts max-heap problem to min-heap problem for Python's heapq.
+- Repeatedly removing and potentially adding stones simulates the smashing process.
+- Stopping when <= 1 stone remains gives final answer.
+
+Time complexity
+
+- Let n = number of stones.
+- Heapify: O(n).
+- Each iteration: 2 pops + potential push = O(log n) each.
+- Number of iterations: O(n) worst case (one stone removed per iteration).
+- Overall time complexity: O(n log n).
+
+Space complexity
+
+- Heap array: O(n).
+- Space complexity: O(n).
+
+Thought process and trade-offs
+
+- Heap approach: optimal for repeatedly finding maximum element.
+- Alternative: sort after each operation - O(n² log n), much slower.
+- Alternative: linear scan to find two max each time - O(n²), slower.
+- Negation for max-heap: elegant workaround for Python's min-heap limitation.
+- Current approach: optimal time complexity for this problem.
+
+### Complexity Analysis
+
+- **Time Complexity**: - Let n = number of stones. - Heapify: O(n). - Each iteration: 2 pops + potential push = O(log n) each. - Number of iterations: O(n) worst case (one stone removed per iteration). - Overall time complexity: O(n log n). Space complexity - Heap array: O(n). - Space complexity: O(n). Thought process and trade-offs - Heap approach: optimal for repeatedly finding maximum element. - Alternative: sort after each operation - O(n² log n), much slower. - Alternative: linear scan to find two max each time - O(n²), slower. - Negation for max-heap: elegant workaround for Python's min-heap limitation. - Current approach: optimal time complexity for this problem.
+- **Space Complexity**: - Heap array: O(n). - Space complexity: O(n). Thought process and trade-offs - Heap approach: optimal for repeatedly finding maximum element. - Alternative: sort after each operation - O(n² log n), much slower. - Alternative: linear scan to find two max each time - O(n²), slower. - Negation for max-heap: elegant workaround for Python's min-heap limitation. - Current approach: optimal time complexity for this problem.
+
+### Advantages
+
+- Efficient iteration solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
