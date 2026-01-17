@@ -1,6 +1,6 @@
 # Lemonade Change
 
-Problem summary
+## Problem Summary
 
 - At lemonade stand, lemonade costs $5. Customers pay with $5, $10, or $20 bills.
 - Start with no change. For each customer, provide correct change if possible.
@@ -54,3 +54,69 @@ Thought process and trade-offs
 - For $20, using $10+$5 is better than three $5s (preserves more $5s).
 - Simulation: straightforward modeling of real-world scenario.
 - No backtracking needed: greedy choice is always optimal here.
+
+## Approach: Greedy (Implemented)
+
+### Strategy
+
+The solution uses greedy to solve the problem efficiently.
+
+```python
+  if customer_bill == 5:
+      five_dollar_bills += 1
+  elif customer_bill == 10:
+      if five_dollar_bills > 0:
+          five_dollar_bills -= 1
+          ten_dollar_bills += 1
+  else:  # 20
+      if ten_dollar_bills > 0 and five_dollar_bills > 0:
+          five_dollar_bills -= 1
+          ten_dollar_bills -= 1
+  ```
+
+### How It Works
+
+- Key insight: $5 bills are critical (needed for all change scenarios).
+- For $20, using $10+$5 is better than three $5s (preserves more $5s).
+- Simulation: straightforward modeling of real-world scenario.
+- No backtracking needed: greedy choice is always optimal here.
+
+### Why Greedy Works
+
+- Simulates cash register: track bills received as change.
+- $5 bills are most valuable for change (needed for both $10 and $20).
+- For $20, prefer using $10+$5 to conserve $5 bills (greedy strategy).
+- Early return on failure: impossible to recover if can't provide change once.
+
+Time complexity
+
+- Let n = number of customers.
+- Process each customer once: O(1) per customer.
+- Overall time complexity: O(n).
+
+Space complexity
+
+- Only storing two counters.
+- Space complexity: O(1).
+
+Thought process and trade-offs
+
+- Greedy approach: prioritize conserving $5 bills for $20 transactions.
+- Key insight: $5 bills are critical (needed for all change scenarios).
+- For $20, using $10+$5 is better than three $5s (preserves more $5s).
+- Simulation: straightforward modeling of real-world scenario.
+- No backtracking needed: greedy choice is always optimal here.
+
+### Complexity Analysis
+
+- **Time Complexity**: - Let n = number of customers. - Process each customer once: O(1) per customer. - Overall time complexity: O(n). Space complexity - Only storing two counters. - Space complexity: O(1). Thought process and trade-offs - Greedy approach: prioritize conserving $5 bills for $20 transactions. - Key insight: $5 bills are critical (needed for all change scenarios). - For $20, using $10+$5 is better than three $5s (preserves more $5s). - Simulation: straightforward modeling of real-world scenario. - No backtracking needed: greedy choice is always optimal here.
+- **Space Complexity**: - Only storing two counters. - Space complexity: O(1). Thought process and trade-offs - Greedy approach: prioritize conserving $5 bills for $20 transactions. - Key insight: $5 bills are critical (needed for all change scenarios). - For $20, using $10+$5 is better than three $5s (preserves more $5s). - Simulation: straightforward modeling of real-world scenario. - No backtracking needed: greedy choice is always optimal here.
+
+### Advantages
+
+- Efficient greedy solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
