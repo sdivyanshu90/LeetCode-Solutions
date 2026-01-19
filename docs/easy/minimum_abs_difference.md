@@ -6,9 +6,11 @@ Given an array of distinct integers `arr`, find all pairs of elements with the m
 
 **Example**: `[4,2,1,3]` → `[[1,2],[2,3],[3,4]]` (min difference is 1)
 
-## Current Implementation
+## Approach: Stack (Implemented)
 
-The solution sorts the array and finds the minimum difference in a single pass:
+### Strategy
+
+The solution uses stack to solve the problem efficiently.
 
 ```python
 def minimumAbsDifference(self, arr: List[int]) -> List[List[int]]:
@@ -26,7 +28,7 @@ def minimumAbsDifference(self, arr: List[int]) -> List[List[int]]:
     return res
 ```
 
-## How It Works
+### How It Works
 
 The algorithm leverages sorting to efficiently find minimum differences:
 
@@ -66,24 +68,23 @@ i=5: diff=23-19=4 → no change
 Result: [[17,19]]
 ```
 
-## Why This Works
+### Why Stack Works
 
 - **Sorted property**: Minimum difference must be between adjacent elements
 - **Single scan**: After sorting, one pass finds all optimal pairs
 - **Dynamic tracking**: Updates result when finding smaller differences
 - **Accumulation**: Collects all pairs that tie for minimum
 
-## Time Complexity
+### Complexity Analysis
 
-O(n log n) where n is the array length. Sorting dominates at O(n log n), and the scan is O(n).
+- **Time Complexity**: O(n log n) where n is the array length. Sorting dominates at O(n log n), and the scan is O(n).
+- **Space Complexity**: O(1) auxiliary space if we don't count the output list. The sort is typically O(log n) for recursion stack (or O(1) for in-place sorts like heapsort).
 
-## Space Complexity
+### Advantages
 
-O(1) auxiliary space if we don't count the output list. The sort is typically O(log n) for recursion stack (or O(1) for in-place sorts like heapsort).
+- Efficient stack solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Optimal approach**: Cannot avoid sorting since we need adjacent comparisons
-- **Efficient**: Single pass after sorting
-- **Clean logic**: Maintains only pairs with current minimum
-- **Alternative (less efficient)**: Compute all O(n²) pairwise differences, find minimum, filter → O(n²) time and space
+- May require additional space
