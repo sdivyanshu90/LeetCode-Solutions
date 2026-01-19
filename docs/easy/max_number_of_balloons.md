@@ -6,9 +6,11 @@ Given a string `text`, return the maximum number of times the word "balloon" can
 
 **Example**: `"nlaebolko"` → `1`, `"loonbalxballpoon"` → `2`
 
-## Current Implementation
+## Approach: Frequency Counting (Implemented)
 
-The solution uses character frequency counting with the Counter class:
+### Strategy
+
+The solution uses frequency counting to solve the problem efficiently.
 
 ```python
 def maxNumberOfBalloons(self, text: str) -> int:
@@ -23,7 +25,7 @@ def maxNumberOfBalloons(self, text: str) -> int:
     )
 ```
 
-## How It Works
+### How It Works
 
 The word "balloon" has specific character requirements:
 
@@ -64,31 +66,23 @@ Missing 'b', 'a', 'n' → counts as 0
 Result: min(0,0,0,0,0) = 0
 ```
 
-## Why This Works
+### Why Frequency Counting Works
 
 - **Frequency requirement**: Each "balloon" needs specific character counts
 - **Minimum constraint**: The rarest character limits total instances
 - **Integer division**: For 'l' and 'o', we need pairs, so divide by 2
 - **Counter default**: Missing characters return 0, naturally handled by min()
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the length of text. Counter construction is O(n), and the min calculation is O(1) (fixed 5 values).
+- **Time Complexity**: O(n) where n is the length of text. Counter construction is O(n), and the min calculation is O(1) (fixed 5 values).
+- **Space Complexity**: O(k) where k is the number of unique characters in text (at most 26 for lowercase letters).
 
-## Space Complexity
+### Advantages
 
-O(k) where k is the number of unique characters in text (at most 26 for lowercase letters).
+- Efficient frequency counting solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Elegant**: Very concise solution using Counter
-- **Efficient**: Single pass to count, O(1) to compute result
-- **Pythonic**: Leverages standard library effectively
-- **Alternative without Counter**: Manual counting:
-  ```python
-  counts = {'b': 0, 'a': 0, 'l': 0, 'o': 0, 'n': 0}
-  for c in text:
-      if c in counts:
-          counts[c] += 1
-  return min(counts['b'], counts['a'], counts['l']//2, counts['o']//2, counts['n'])
-  ```
+- May require additional space
