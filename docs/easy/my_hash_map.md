@@ -1,6 +1,6 @@
 # Design HashMap
 
-Problem summary
+## Problem Summary
 
 - Implement a HashMap from scratch without using built-in hash table libraries.
 - Support put(key, value), get(key), and remove(key) operations.
@@ -47,3 +47,61 @@ Thought process and trade-offs
 - True implementation should use: array of buckets, hash function, collision handling (chaining or open addressing).
 - For interview: mention this is simplified version; actual implementation would involve custom hash table structure.
 - For production/practice: use built-in dict (shown here) for reliability and efficiency.
+
+## Approach: Hash Map (Implemented)
+
+### Strategy
+
+The solution uses hash map to solve the problem efficiently.
+
+```python
+  def __init__(self):
+      self.data = {}
+  def put(self, key: int, value: int) -> None:
+      self.data[key] = value
+  def get(self, key: int) -> int:
+      return self.data.get(key, -1)
+  ```
+
+### How It Works
+
+Step-by-step explanation of the approach.
+
+### Why Hash Map Works
+
+- Python dict provides hash table functionality.
+- put() handles both insert and update operations.
+- get() with default value -1 matches requirement for missing keys.
+- remove() with existence check avoids KeyError.
+
+Time complexity
+
+- All operations (put, get, remove): O(1) average case.
+- Worst case (hash collisions): O(n) but rare with good hash function.
+- Overall time complexity: O(1) average.
+
+Space complexity
+
+- Dictionary stores up to n key-value pairs.
+- Space complexity: O(n).
+
+Thought process and trade-offs
+
+- Using built-in dict: simple but defeats "design from scratch" intent.
+- True implementation should use: array of buckets, hash function, collision handling (chaining or open addressing).
+- For interview: mention this is simplified version; actual implementation would involve custom hash table structure.
+- For production/practice: use built-in dict (shown here) for reliability and efficiency.
+
+### Complexity Analysis
+
+- **Time Complexity**: - All operations (put, get, remove): O(1) average case. - Worst case (hash collisions): O(n) but rare with good hash function. - Overall time complexity: O(1) average. Space complexity - Dictionary stores up to n key-value pairs. - Space complexity: O(n). Thought process and trade-offs - Using built-in dict: simple but defeats "design from scratch" intent. - True implementation should use: array of buckets, hash function, collision handling (chaining or open addressing). - For interview: mention this is simplified version; actual implementation would involve custom hash table structure. - For production/practice: use built-in dict (shown here) for reliability and efficiency.
+- **Space Complexity**: - Dictionary stores up to n key-value pairs. - Space complexity: O(n). Thought process and trade-offs - Using built-in dict: simple but defeats "design from scratch" intent. - True implementation should use: array of buckets, hash function, collision handling (chaining or open addressing). - For interview: mention this is simplified version; actual implementation would involve custom hash table structure. - For production/practice: use built-in dict (shown here) for reliability and efficiency.
+
+### Advantages
+
+- Efficient hash map solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
