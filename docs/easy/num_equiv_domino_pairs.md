@@ -6,9 +6,11 @@ Given a list of `dominoes` where each domino is `[a,b]`, count pairs of equivale
 
 **Example**: `[[1,2],[2,1],[3,4],[5,6]]` → `1` (one pair: [1,2] and [2,1])
 
-## Current Implementation
+## Approach: Hash Map (Implemented)
 
-The solution uses a frequency array and normalized encoding:
+### Strategy
+
+The solution uses hash map to solve the problem efficiently.
 
 ```python
 def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
@@ -21,7 +23,7 @@ def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
     return ret
 ```
 
-## How It Works
+### How It Works
 
 The algorithm normalizes dominoes and counts pairs:
 
@@ -44,34 +46,23 @@ The algorithm normalizes dominoes and counts pairs:
 Result: 3 pairs
 ```
 
-## Why This Works
+### Why Hash Map Works
 
 - **Normalization**: Treats `[a,b]` and `[b,a]` as identical by always encoding as `min*10+max`
 - **Incremental counting**: Each domino forms pairs with all previously seen identical dominoes
 - **Array indexing**: Since domino values are 1-9, encoding as `x*10+y` gives range 11-99, fits in size-100 array
 - **Avoids double counting**: Count pairs as we go, not after seeing all
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the number of dominoes. Single pass through the list.
+- **Time Complexity**: O(n) where n is the number of dominoes. Single pass through the list.
+- **Space Complexity**: O(1) - uses fixed-size array of 100 elements regardless of input size.
 
-## Space Complexity
+### Advantages
 
-O(1) - uses fixed-size array of 100 elements regardless of input size.
+- Efficient hash map solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Efficient**: O(1) lookup and update via array indexing
-- **Clever encoding**: Two-digit number uniquely identifies normalized domino
-- **Fixed space**: Array size independent of input
-- **Constraint-dependent**: Relies on domino values being 1-9 (problem constraint)
-- **Alternative with hash map**: More general but slightly slower:
-  ```python
-  count = {}
-  ret = 0
-  for x, y in dominoes:
-      key = (min(x,y), max(x,y))
-      ret += count.get(key, 0)
-      count[key] = count.get(key, 0) + 1
-  return ret
-  ```
+- May require additional space
