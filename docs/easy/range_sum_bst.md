@@ -4,9 +4,11 @@
 
 Given the root of a Binary Search Tree (BST) and two integers `low` and `high`, return the sum of all node values that fall within the range `[low, high]` inclusive.
 
-## Current Implementation
+## Approach: Binary Search (Implemented)
 
-The solution uses a recursive DFS approach that exploits BST properties to prune unnecessary branches:
+### Strategy
+
+The solution uses binary search to solve the problem efficiently.
 
 ```python
 def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
@@ -26,7 +28,7 @@ def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
     return self.ans
 ```
 
-## How It Works
+### How It Works
 
 The algorithm leverages BST properties (left subtree < node < right subtree) to optimize the search:
 
@@ -42,7 +44,7 @@ The algorithm leverages BST properties (left subtree < node < right subtree) to 
 - Right child 15: in range, add 15, explore both sides
 - Sum: 10 + 7 + 15 = 32
 
-## Why This Works
+### Why Binary Search Works
 
 BST property ensures:
 
@@ -50,17 +52,16 @@ BST property ensures:
 - All nodes in right subtree are larger than current node
 - This allows pruning entire subtrees based on current node value
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) in worst case where all nodes are in range. However, with pruning, average case is O(h + k) where h is tree height and k is number of nodes in range.
+- **Time Complexity**: O(n) in worst case where all nodes are in range. However, with pruning, average case is O(h + k) where h is tree height and k is number of nodes in range.
+- **Space Complexity**: O(h) for recursion stack where h is tree height. In worst case (skewed tree), h = n.
 
-## Space Complexity
+### Advantages
 
-O(h) for recursion stack where h is tree height. In worst case (skewed tree), h = n.
+- Efficient binary search solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Smart pruning**: Uses BST property to avoid visiting nodes outside range
-- **Instance variable**: Uses `self.ans` to accumulate sum (could alternatively pass sum through recursion)
-- **Optimal for BST**: The pruning makes this more efficient than simply visiting all nodes
-- **Alternative approach**: Could use iterative DFS with stack if recursion depth is a concern
+- May require additional space
