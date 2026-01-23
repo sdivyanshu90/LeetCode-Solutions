@@ -1,6 +1,6 @@
 # Unique Email Addresses
 
-Problem summary
+## Problem Summary
 
 - Given list of email addresses, count unique destinations.
 - Local part (before @): ignore dots '.', ignore everything after '+'.
@@ -55,3 +55,69 @@ Thought process and trade-offs
 - Set for deduplication: standard pattern, efficient.
 - Could optimize: early termination impossible since all emails must be checked.
 - Current approach: clear and correct.
+
+## Approach: String Manipulation (Implemented)
+
+### Strategy
+
+The solution uses string manipulation to solve the problem efficiently.
+
+```python
+  def process_email(email):
+      local_part, domain_part = email.split('@')
+      local_part = re.sub(r'\+[^@]*', '', local_part)
+      local_part = local_part.replace('.', '')
+      return f"{local_part}@{domain_part}"
+  res = set([process_email(email) for email in emails])
+  return len(res)
+  ```
+
+### How It Works
+
+- Alternative (commented in code): split on '+' without regex - simpler, same effect.
+- Set for deduplication: standard pattern, efficient.
+- Could optimize: early termination impossible since all emails must be checked.
+- Current approach: clear and correct.
+
+### Why String Manipulation Works
+
+- Split on '@' separates local and domain for independent processing.
+- Regex `\+[^@]*` matches '+' and everything after until '@' (or end).
+- replace('.', '') removes all dots efficiently.
+- Set deduplicates normalized emails automatically.
+- Domain remains unchanged as per problem rules.
+
+Time complexity
+
+- Let n = number of emails, m = average email length.
+- Processing each email: O(m) for regex and string operations.
+- Total processing: O(n × m).
+- Set operations: O(n) average.
+- Overall time complexity: O(n × m).
+
+Space complexity
+
+- Set stores up to n unique emails: O(n × m).
+- Space complexity: O(n × m).
+
+Thought process and trade-offs
+
+- Regex approach: concise handling of '+' rule.
+- Alternative (commented in code): split on '+' without regex - simpler, same effect.
+- Set for deduplication: standard pattern, efficient.
+- Could optimize: early termination impossible since all emails must be checked.
+- Current approach: clear and correct.
+
+### Complexity Analysis
+
+- **Time Complexity**: - Let n = number of emails, m = average email length. - Processing each email: O(m) for regex and string operations. - Total processing: O(n × m). - Set operations: O(n) average. - Overall time complexity: O(n × m). Space complexity - Set stores up to n unique emails: O(n × m). - Space complexity: O(n × m). Thought process and trade-offs - Regex approach: concise handling of '+' rule. - Alternative (commented in code): split on '+' without regex - simpler, same effect. - Set for deduplication: standard pattern, efficient. - Could optimize: early termination impossible since all emails must be checked. - Current approach: clear and correct.
+- **Space Complexity**: - Set stores up to n unique emails: O(n × m). - Space complexity: O(n × m). Thought process and trade-offs - Regex approach: concise handling of '+' rule. - Alternative (commented in code): split on '+' without regex - simpler, same effect. - Set for deduplication: standard pattern, efficient. - Could optimize: early termination impossible since all emails must be checked. - Current approach: clear and correct.
+
+### Advantages
+
+- Efficient string manipulation solution
+- Clear and maintainable code
+
+### Disadvantages
+
+- May require additional space
