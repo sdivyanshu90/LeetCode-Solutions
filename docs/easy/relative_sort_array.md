@@ -6,9 +6,11 @@ Given two arrays `arr1` and `arr2`, sort `arr1` such that elements appearing in 
 
 **Example**: `arr1=[2,3,1,3,2,4,6,7,9,2,19]`, `arr2=[2,1,4,3,9,6]` → `[2,2,2,1,4,3,3,9,6,7,19]`
 
-## Current Implementation
+## Approach: Iteration (Implemented)
 
-The solution uses counting sort with custom ordering:
+### Strategy
+
+The solution uses iteration to solve the problem efficiently.
 
 ```python
 def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
@@ -32,7 +34,7 @@ def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
     return result
 ```
 
-## How It Works
+### How It Works
 
 The algorithm uses counting sort in two phases:
 
@@ -60,29 +62,23 @@ Phase 2 (ascending order of remaining):
 Result: [2,2,1,3,3]
 ```
 
-## Why This Works
+### Why Iteration Works
 
 - **Counting sort**: Efficiently handles range-constrained integers
 - **Custom order**: First phase imposes arr2's order
 - **Stable completion**: Second phase adds remaining elements in natural order
 - **No sorting needed**: O(n) counting instead of O(n log n) comparison sort
 
-## Time Complexity
+### Complexity Analysis
 
-O(n + m + k) where n = len(arr1), m = len(arr2), k = max(arr1). All linear operations.
+- **Time Complexity**: O(n + m + k) where n = len(arr1), m = len(arr2), k = max(arr1). All linear operations.
+- **Space Complexity**: O(k) for the counting array where k = max(arr1).
 
-## Space Complexity
+### Advantages
 
-O(k) for the counting array where k = max(arr1).
+- Efficient iteration solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Efficient for small ranges**: Works well when max(arr1) is reasonable
-- **No comparison sort**: Faster than general sorting for this problem
-- **Space constraint**: If max(arr1) is very large, counting array becomes impractical
-- **Alternative approach**: Use custom comparator with sorting:
-  ```python
-  rank = {v: i for i, v in enumerate(arr2)}
-  return sorted(arr1, key=lambda x: (rank.get(x, len(arr2)), x))
-  ```
-  More general (handles large values) but O(n log n) time.
+- May require additional space
