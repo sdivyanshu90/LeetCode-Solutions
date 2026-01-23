@@ -4,9 +4,11 @@
 
 Given a binary array `nums`, return an array of booleans where `answer[i]` is `true` if the binary number formed by the first `i+1` elements (prefix) is divisible by 5, otherwise `false`.
 
-## Current Implementation
+## Approach: Iteration (Implemented)
 
-The solution maintains a running value representing the decimal number formed by the binary prefix, keeping only the remainder when divided by 5:
+### Strategy
+
+The solution uses iteration to solve the problem efficiently.
 
 ```python
 def prefixesDivBy5(self, nums: List[int]) -> List[bool]:
@@ -18,7 +20,7 @@ def prefixesDivBy5(self, nums: List[int]) -> List[bool]:
     return answer
 ```
 
-## How It Works
+### How It Works
 
 - **Binary to decimal conversion**: Each iteration shifts the current prefix left by 1 bit (`prefix << 1`) and adds the new bit (`+ num`)
 - **Modulo optimization**: Instead of tracking the full number, only track `prefix % 5` to avoid overflow with large inputs
@@ -32,22 +34,22 @@ def prefixesDivBy5(self, nums: List[int]) -> List[bool]:
 
 Result: `[True, False, False]`
 
-## Why This Works
+### Why Iteration Works
 
 - The modulo operation preserves divisibility: `(a % 5) == 0` if and only if `a` is divisible by 5
 - Using modulo prevents integer overflow for very long binary arrays
 - Left shift by 1 is equivalent to multiplying by 2 in binary
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the length of the input array. We iterate through the array once.
+- **Time Complexity**: O(n) where n is the length of the input array. We iterate through the array once.
+- **Space Complexity**: O(n) for the answer array. If we don't count the output, the auxiliary space is O(1).
 
-## Space Complexity
+### Advantages
 
-O(n) for the answer array. If we don't count the output, the auxiliary space is O(1).
+- Efficient iteration solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Efficient**: The modulo approach prevents overflow and keeps computation constant per element
-- **Simple**: Single-pass solution with clear logic
-- **Optimal**: Cannot improve on O(n) time since we must examine each element
+- May require additional space
