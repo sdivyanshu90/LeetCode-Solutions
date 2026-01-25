@@ -6,9 +6,11 @@ Given a string `s`, repeatedly remove all adjacent duplicate characters until no
 
 **Example**: `"abbaca"` → `"ca"` (remove "bb", then "aa")
 
-## Current Implementation
+## Approach: Stack (Implemented)
 
-The solution uses a stack-based approach to efficiently remove adjacent duplicates in a single pass:
+### Strategy
+
+The solution uses stack to solve the problem efficiently.
 
 ```python
 def removeDuplicates(self, s: str) -> str:
@@ -21,7 +23,7 @@ def removeDuplicates(self, s: str) -> str:
     return "".join(stack)
 ```
 
-## How It Works
+### How It Works
 
 The stack naturally handles cascading removals:
 
@@ -42,24 +44,23 @@ char 'a': stack=['c'], 'a'!='c' → push → stack=['c','a']
 Result: "ca"
 ```
 
-## Why This Works
+### Why Stack Works
 
 - Stack LIFO property ensures we always check the most recent unmatched character
 - Popping when duplicate found handles immediate and cascading removals
 - Single pass processes all characters exactly once
 - No need for multiple passes or string rebuilding
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the length of the string. Each character is pushed and popped at most once.
+- **Time Complexity**: O(n) where n is the length of the string. Each character is pushed and popped at most once.
+- **Space Complexity**: O(n) for the stack in worst case (no duplicates). Best case O(1) when all characters cancel out.
 
-## Space Complexity
+### Advantages
 
-O(n) for the stack in worst case (no duplicates). Best case O(1) when all characters cancel out.
+- Efficient stack solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Efficient**: Single pass solution vs naive repeated scanning
-- **Clean**: Stack naturally models the problem structure
-- **Optimal**: Cannot do better than O(n) since we must examine each character
-- **Alternative**: Could use string as stack (less efficient due to immutability in some languages, but Python's list is efficient)
+- May require additional space
