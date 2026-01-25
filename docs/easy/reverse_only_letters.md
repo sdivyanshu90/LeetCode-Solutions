@@ -6,9 +6,11 @@ Given a string `s`, reverse only the letters while keeping all non-letter charac
 
 **Example**: `"ab-cd"` → `"dc-ba"` (letters reversed, dash stays in position)
 
-## Current Implementation
+## Approach: Two Pointers (Implemented)
 
-The solution uses a two-pointer approach to swap letters while skipping non-letters:
+### Strategy
+
+The solution uses two pointers to solve the problem efficiently.
 
 ```python
 def reverseOnlyLetters(self, s: str) -> str:
@@ -28,7 +30,7 @@ def reverseOnlyLetters(self, s: str) -> str:
     return "".join(s)
 ```
 
-## How It Works
+### How It Works
 
 The algorithm uses two pointers converging from both ends:
 
@@ -47,24 +49,23 @@ i=2, j=2: i>=j, stop
 Result: "dc-ba"
 ```
 
-## Why This Works
+### Why Two Pointers Works
 
 - **Two-pointer technique**: Efficiently processes array from both ends
 - **Conditional advancement**: Skip non-letters without affecting position
 - **In-place swaps**: Only letter positions change
 - **Preserves non-letters**: They're never moved or swapped
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the length of the string. Each character is visited at most once by either pointer.
+- **Time Complexity**: O(n) where n is the length of the string. Each character is visited at most once by either pointer.
+- **Space Complexity**: O(n) for converting string to list (strings are immutable in Python). The algorithm itself uses O(1) auxiliary space for pointers.
 
-## Space Complexity
+### Advantages
 
-O(n) for converting string to list (strings are immutable in Python). The algorithm itself uses O(1) auxiliary space for pointers.
+- Efficient two pointers solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Clean logic**: Two-pointer pattern is straightforward and elegant
-- **Efficient**: Single pass through the string
-- **String to list conversion**: Necessary in Python due to immutability, adds O(n) space
-- **Alternative**: Could collect letters separately, reverse them, and reconstruct (also O(n) time and space)
+- May require additional space
