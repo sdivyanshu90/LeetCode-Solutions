@@ -6,9 +6,11 @@ Given a valid parentheses string `s`, remove the outermost parentheses of every 
 
 **Example**: `"(()())(())"` → `"()()()"` (remove outer `()` from `(()())` and `(())`)
 
-## Current Implementation
+## Approach: Frequency Counting (Implemented)
 
-The solution uses a counter to track nesting depth and only adds parentheses that are not outermost:
+### Strategy
+
+The solution uses frequency counting to solve the problem efficiently.
 
 ```python
 def removeOuterParentheses(self, s: str) -> str:
@@ -22,7 +24,7 @@ def removeOuterParentheses(self, s: str) -> str:
     return "".join(res)
 ```
 
-## How It Works
+### How It Works
 
 The algorithm maintains a counter `opened` to track parenthesis depth:
 
@@ -48,24 +50,23 @@ The key insight: outermost `(` has `opened=0`, outermost `)` has `opened=1` (bef
 Result: "()()()"
 ```
 
-## Why This Works
+### Why Frequency Counting Works
 
 - **Depth tracking**: `opened` identifies nesting level
 - **Outermost detection**: Level 0 for `(` and level 1 for `)` mark boundaries
 - **Single pass**: Processes each character exactly once
 - **Valid input guarantee**: Problem states input is valid parentheses
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the length of the string. Single pass through all characters.
+- **Time Complexity**: O(n) where n is the length of the string. Single pass through all characters.
+- **Space Complexity**: O(n) for the result list. The final string also requires O(n) space.
 
-## Space Complexity
+### Advantages
 
-O(n) for the result list. The final string also requires O(n) space.
+- Efficient frequency counting solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Efficient**: Single pass with simple counter logic
-- **Clear**: The depth counter makes the logic intuitive
-- **Optimal**: Cannot do better than O(n) time since we must examine each character
-- **Assumes valid input**: Doesn't validate parentheses (per problem constraints)
+- May require additional space
