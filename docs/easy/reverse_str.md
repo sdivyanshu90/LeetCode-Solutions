@@ -6,9 +6,11 @@ Given a string `s` and an integer `k`, reverse the first `k` characters for ever
 
 **Example**: `s = "abcdefg"`, `k = 2` → `"bacdfeg"`
 
-## Current Implementation
+## Approach: Iteration (Implemented)
 
-The solution iterates through the string in steps of `2k`, reversing the first `k` characters in each chunk:
+### Strategy
+
+The solution uses iteration to solve the problem efficiently.
 
 ```python
 def reverseStr(self, s: str, k: int) -> str:
@@ -18,7 +20,7 @@ def reverseStr(self, s: str, k: int) -> str:
     return "".join(a)
 ```
 
-## How It Works
+### How It Works
 
 The algorithm processes the string in chunks:
 
@@ -46,24 +48,23 @@ i=0: reverse a[0:3] → "cbadefghij"
 i=6: reverse a[6:9] → "cbadefihgj"
 ```
 
-## Why This Works
+### Why Iteration Works
 
 - **Step size 2k**: Naturally divides string into alternating chunks
 - **Slice reversal**: `reversed()` on slice creates reversed iterator
 - **Automatic edge handling**: Python slices gracefully handle insufficient elements
 - **Clean pattern**: Loop structure directly encodes the problem logic
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the length of the string. Each character is processed once (reading and possibly writing).
+- **Time Complexity**: O(n) where n is the length of the string. Each character is processed once (reading and possibly writing).
+- **Space Complexity**: O(n) for the list conversion. The algorithm uses O(1) auxiliary space beyond that.
 
-## Space Complexity
+### Advantages
 
-O(n) for the list conversion. The algorithm uses O(1) auxiliary space beyond that.
+- Efficient iteration solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Pythonic**: Uses built-in `reversed()` and slice assignment elegantly
-- **Simple**: Minimal code, easy to understand
-- **String to list**: Necessary in Python since strings are immutable
-- **Optimal**: Cannot do better than O(n) time since all characters must be examined
+- May require additional space
