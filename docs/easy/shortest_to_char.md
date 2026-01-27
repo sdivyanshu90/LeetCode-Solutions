@@ -6,9 +6,11 @@ Given a string `s` and a character `c`, return an array of integers representing
 
 **Example**: `s = "loveleetcode"`, `c = 'e'` → `[3,2,1,0,1,0,0,1,2,2,1,0]`
 
-## Current Implementation
+## Approach: String Manipulation (Implemented)
 
-The solution first collects all positions of `c`, then calculates minimum distance for each position:
+### Strategy
+
+The solution uses string manipulation to solve the problem efficiently.
 
 ```python
 def shortestToChar(self, s: str, c: str) -> List[int]:
@@ -26,7 +28,7 @@ def shortestToChar(self, s: str, c: str) -> List[int]:
     return res
 ```
 
-## How It Works
+### How It Works
 
 Two-pass algorithm:
 
@@ -48,36 +50,22 @@ i=3: s[3]=='e' → 0
 ...
 ```
 
-## Why This Works
+### Why String Manipulation Works
 
 - **Precomputing positions**: Avoids repeated scanning for `c`
 - **Minimum distance**: Naturally finds closest occurrence of `c`
 - **Handles all cases**: Works with one or multiple occurrences of `c`
 
-## Time Complexity
+### Complexity Analysis
 
-O(n \* m) where n is string length and m is number of `c` occurrences. Worst case O(n²) if all characters are `c`, but typically much better.
+- **Time Complexity**: O(n \* m) where n is string length and m is number of `c` occurrences. Worst case O(n²) if all characters are `c`, but typically much better.
+- **Space Complexity**: O(m) for storing positions of `c`, plus O(n) for result array.
 
-## Space Complexity
+### Advantages
 
-O(m) for storing positions of `c`, plus O(n) for result array.
+- Efficient string manipulation solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Straightforward**: Easy to understand logic
-- **Suboptimal**: Calculates distance to all `c` positions even when only nearest matters
-- **Better O(n) approach**: Use two passes - one left-to-right tracking nearest `c` from left, one right-to-left tracking from right, take minimum. Example:
-
-  ```python
-  # Forward pass
-  pos = float('-inf')
-  for i, char in enumerate(s):
-      if char == c: pos = i
-      res[i] = i - pos
-
-  # Backward pass
-  pos = float('inf')
-  for i in range(len(s)-1, -1, -1):
-      if s[i] == c: pos = i
-      res[i] = min(res[i], pos - i)
-  ```
+- May require additional space
