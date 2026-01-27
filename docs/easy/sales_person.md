@@ -4,9 +4,11 @@
 
 Given three DataFrames (`sales_person`, `company`, `orders`), find all salespersons who did not have any orders related to the company with the name "RED".
 
-## Current Implementation
+## Approach: Iterative (Implemented)
 
-The solution uses pandas DataFrame operations to filter out salespersons who have orders with RED company:
+### Strategy
+
+The solution uses iterative to solve the problem efficiently.
 
 ```python
 def sales_person(sales_person: pd.DataFrame, company: pd.DataFrame, orders: pd.DataFrame) -> pd.DataFrame:
@@ -16,7 +18,7 @@ def sales_person(sales_person: pd.DataFrame, company: pd.DataFrame, orders: pd.D
     return result
 ```
 
-## How It Works
+### How It Works
 
 The algorithm performs a series of filtering operations:
 
@@ -37,24 +39,23 @@ WHERE sales_id NOT IN (
 )
 ```
 
-## Why This Works
+### Why Iterative Works
 
 - **Negative filtering**: Identifies who NOT to include rather than who to include
 - **isin() for membership**: Efficiently checks if values exist in another list
 - **unique()**: Prevents double-counting salespeople with multiple RED orders
 - **Chained filtering**: Each step narrows down the result set
 
-## Time Complexity
+### Complexity Analysis
 
-O(n + m + k) where n, m, k are the sizes of sales_person, company, and orders tables respectively. Each operation (filtering, isin) is linear.
+- **Time Complexity**: O(n + m + k) where n, m, k are the sizes of sales_person, company, and orders tables respectively. Each operation (filtering, isin) is linear.
+- **Space Complexity**: O(m) for storing intermediate results (red_sales_id and red_salesmen lists).
 
-## Space Complexity
+### Advantages
 
-O(m) for storing intermediate results (red_sales_id and red_salesmen lists).
+- Efficient iterative solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Readable**: Clear step-by-step logic easy to understand
-- **Pandas idioms**: Uses standard DataFrame operations
-- **Performance**: For very large datasets, SQL database queries might be more optimized
-- **Alternative approach**: Could use merge/join operations instead of isin(), potentially more efficient for very large datasets
+- May require additional space
