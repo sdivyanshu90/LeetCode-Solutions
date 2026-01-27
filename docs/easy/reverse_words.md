@@ -6,16 +6,18 @@ Given a string `s`, reverse the order of characters in each word within a senten
 
 **Example**: `"Let's take LeetCode contest"` → `"s'teL ekat edoCteeL tsetnoc"`
 
-## Current Implementation
+## Approach: Iteration (Implemented)
 
-The solution uses list comprehension to split, reverse, and rejoin words:
+### Strategy
+
+The solution uses iteration to solve the problem efficiently.
 
 ```python
 def reverseWords(self, s: str) -> str:
     return " ".join([i[::-1] for i in s.split(" ")])
 ```
 
-## How It Works
+### How It Works
 
 This one-liner combines several string operations:
 
@@ -31,25 +33,23 @@ reverse each → ["olleH", "dlroW"]
 join(" ") → "olleH dlroW"
 ```
 
-## Why This Works
+### Why Iteration Works
 
 - **Word separation**: `split(" ")` isolates individual words
 - **Character reversal**: `[::-1]` reverses character order within each word
 - **Reconstruction**: `join(" ")` reassembles with original spacing
 - **Preserves structure**: Word order and spacing remain unchanged
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the total number of characters. Split, reverse, and join each require linear time.
+- **Time Complexity**: O(n) where n is the total number of characters. Split, reverse, and join each require linear time.
+- **Space Complexity**: O(n) for storing the split words list and the result string.
 
-## Space Complexity
+### Advantages
 
-O(n) for storing the split words list and the result string.
+- Efficient iteration solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Extremely concise**: One-line solution is readable and maintainable
-- **Pythonic**: Leverages Python's powerful string methods
-- **Space allocation**: Creates intermediate list, but unavoidable for this approach
-- **Performance**: Highly optimized built-in methods make this very efficient in practice
-- **Alternative**: Could manually iterate and build result, but would be more verbose with similar complexity
+- May require additional space
