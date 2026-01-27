@@ -6,9 +6,11 @@ Given two strings `A` and `B`, return `true` if `B` is a rotation of `A`, meanin
 
 **Example**: `A = "abcde"`, `B = "cdeab"` → `true` (rotate left by 2)
 
-## Current Implementation
+## Approach: String Manipulation (Implemented)
 
-The solution implements the KMP (Knuth-Morris-Pratt) string matching algorithm to check if `B` appears in `A+A`:
+### Strategy
+
+The solution uses string manipulation to solve the problem efficiently.
 
 ```python
 def rotateString(self, A, B):
@@ -34,7 +36,7 @@ def rotateString(self, A, B):
     return False
 ```
 
-## How It Works
+### How It Works
 
 The solution uses KMP pattern matching with a key insight:
 
@@ -51,23 +53,22 @@ The KMP algorithm:
 2. **Search in `A+A`**: Uses the shifts array to avoid redundant comparisons
 3. **Return on match**: Once full pattern matched, return `true`
 
-## Why This Works
+### Why String Manipulation Works
 
 - **Rotation property**: Any rotation creates a substring in the doubled string
 - **KMP efficiency**: Avoids naive O(n²) substring search
 - **Failure function**: Enables smart backtracking during mismatches
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the length of the strings. KMP preprocessing is O(n) and searching is O(n).
+- **Time Complexity**: O(n) where n is the length of the strings. KMP preprocessing is O(n) and searching is O(n).
+- **Space Complexity**: O(n) for the shifts/failure function array and the concatenated string `A+A`.
 
-## Space Complexity
+### Advantages
 
-O(n) for the shifts/failure function array and the concatenated string `A+A`.
+- Efficient string manipulation solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Optimal algorithm**: KMP is theoretically optimal for string matching
-- **Complex implementation**: KMP is more intricate than simpler approaches
-- **Alternative simpler solution**: `return len(A) == len(B) and B in A+A` (Python's `in` uses efficient C-level string search, often faster in practice)
-- **Academic value**: Demonstrates KMP algorithm understanding
+- May require additional space
