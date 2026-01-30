@@ -6,9 +6,11 @@ Given a sorted integer array `nums` (in non-decreasing order), return an array o
 
 **Example**: `[-4,-1,0,3,10]` → `[0,1,9,16,100]`
 
-## Current Implementation
+## Approach: Two Pointers (Implemented)
 
-The solution uses a two-pointer approach to efficiently merge squares from both ends:
+### Strategy
+
+The solution uses two pointers to solve the problem efficiently.
 
 ```python
 def sortedSquares(self, nums: List[int]) -> List[int]:
@@ -30,7 +32,7 @@ def sortedSquares(self, nums: List[int]) -> List[int]:
     return result
 ```
 
-## How It Works
+### How It Works
 
 **Key insight**: In a sorted array, the largest absolute values (and thus largest squares) are at the extremes (far left negative or far right positive).
 
@@ -53,27 +55,23 @@ Initial: left=0(-4), right=4(10), position=4
 0: place 0 at position 0 → result=[0,1,9,16,100]
 ```
 
-## Why This Works
+### Why Two Pointers Works
 
 - **Sorted input property**: Largest absolute values at extremes
 - **Fill from largest**: Avoids needing to sort after squaring
 - **Single pass**: Each element examined exactly once
 - **No extra sorting**: O(n) instead of O(n log n)
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the array length. Single pass through the array.
+- **Time Complexity**: O(n) where n is the array length. Single pass through the array.
+- **Space Complexity**: O(n) for the result array. O(1) auxiliary space if we don't count the output.
 
-## Space Complexity
+### Advantages
 
-O(n) for the result array. O(1) auxiliary space if we don't count the output.
+- Efficient two pointers solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Optimal time**: Cannot do better than O(n) since we must examine each element
-- **Two-pointer elegance**: Clean solution that exploits array structure
-- **No sorting needed**: Avoids O(n log n) sort that naive approach would require
-- **Naive alternative**: Square all elements then sort → O(n log n) time
-  ```python
-  return sorted([x**2 for x in nums])  # Simpler but slower
-  ```
+- May require additional space
