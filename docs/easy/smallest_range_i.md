@@ -4,16 +4,18 @@
 
 Given an array `nums` and an integer `k`, you can change each element by adding any value in the range `[-k, k]`. Return the minimum possible difference between the maximum and minimum values in the modified array.
 
-## Current Implementation
+## Approach: Iteration (Implemented)
 
-The solution uses a mathematical formula to determine the minimum achievable range:
+### Strategy
+
+The solution uses iteration to solve the problem efficiently.
 
 ```python
 def smallestRangeI(self, nums: List[int], k: int) -> int:
     return max(0, max(nums) - min(nums) - 2*k)
 ```
 
-## How It Works
+### How It Works
 
 **Key insight**: To minimize the range, we want to:
 
@@ -38,23 +40,22 @@ If this value is negative (we can overlap the ranges), return 0 (all elements ca
 - Original range: 6 - 1 = 5
 - Modified: (6-3) - (1+3) = 3 - 4 = -1 → return 0 (can make all equal)
 
-## Why This Works
+### Why Iteration Works
 
 - **Optimal strategy**: The best we can do is move extremes toward each other
 - **Mathematical simplification**: Formula directly computes the result
 - **Zero lower bound**: Range cannot be negative (elements overlap)
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) for finding max and min of the array (assuming `max()` and `min()` scan the array).
+- **Time Complexity**: O(n) for finding max and min of the array (assuming `max()` and `min()` scan the array).
+- **Space Complexity**: O(1) - only uses constant extra space for computation.
 
-## Space Complexity
+### Advantages
 
-O(1) - only uses constant extra space for computation.
+- Efficient iteration solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Elegant**: One-line formula-based solution
-- **Efficient**: Single pass to find max/min
-- **Optimal**: Both time and space complexity are optimal
-- **No iteration needed**: Mathematical insight eliminates need for element-by-element processing
+- May require additional space
