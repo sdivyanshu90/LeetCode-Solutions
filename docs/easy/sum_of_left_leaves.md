@@ -147,6 +147,18 @@ dfs(1, False):
 Return total = 2 ✓
 ```
 
+### Why DFS with Parent Context Works
+
+The solution correctly identifies left leaves by combining two key pieces of information:
+
+- **Leaf detection**: A node with no children is a leaf (`not node.left and not node.right`)
+- **Parent context**: The boolean `left` flag tracks whether the current node is the left child of its parent
+- **Recursive traversal**: DFS ensures we visit all nodes while maintaining parent-child relationships
+- **Separation of concerns**: Left children are flagged differently from right children during recursion
+- **Accumulation**: Using an instance variable (`self.total`) allows accumulating values across recursive calls
+
+This approach elegantly solves the problem by embedding parent-child context directly in the recursion parameters.
+
 ### Complexity Analysis
 
 - **Time Complexity**: O(n)
