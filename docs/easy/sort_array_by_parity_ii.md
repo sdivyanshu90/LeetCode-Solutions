@@ -6,9 +6,11 @@ Given an array `nums` of even length where half are even and half are odd, retur
 
 **Example**: `[4,2,5,7]` → `[4,5,2,7]` or `[2,5,4,7]` (evens at indices 0,2 and odds at indices 1,3)
 
-## Current Implementation
+## Approach: Two Pointers (Implemented)
 
-The solution uses two pointers to track even and odd index positions:
+### Strategy
+
+The solution uses two pointers to solve the problem efficiently.
 
 ```python
 def sortArrayByParityII(self, nums: List[int]) -> List[int]:
@@ -27,7 +29,7 @@ def sortArrayByParityII(self, nums: List[int]) -> List[int]:
     return res
 ```
 
-## How It Works
+### How It Works
 
 The algorithm uses two index pointers:
 
@@ -48,32 +50,23 @@ num=5 (odd): res[1]=5, odd_idx=3 → res=[4,5,2,0]
 num=7 (odd): res[3]=7, odd_idx=5 → res=[4,5,2,7]
 ```
 
-## Why This Works
+### Why Two Pointers Works
 
 - **Separate tracks**: Even and odd indices never interfere
 - **Single pass**: Processes each element exactly once
 - **Guaranteed fit**: Problem guarantees equal counts of even/odd numbers
 - **Direct placement**: No swapping or searching needed
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the array length. Single pass through the input.
+- **Time Complexity**: O(n) where n is the array length. Single pass through the input.
+- **Space Complexity**: O(n) for the result array. Uses O(1) auxiliary space for the index pointers.
 
-## Space Complexity
+### Advantages
 
-O(n) for the result array. Uses O(1) auxiliary space for the index pointers.
+- Efficient two pointers solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Simple and clear**: Straightforward two-pointer approach
-- **Single pass**: Efficient O(n) time
-- **Extra space**: Creates new array (O(n) space)
-- **Alternative in-place O(1) space**: Use two pointers on original array, swap misplaced elements:
-  ```python
-  i, j = 0, 1  # i=even indices, j=odd indices
-  while i < len(nums) and j < len(nums):
-      if nums[i] % 2 == 0: i += 2
-      elif nums[j] % 2 == 1: j += 2
-      else: nums[i], nums[j] = nums[j], nums[i]
-  ```
-  More complex but saves space.
+- May require additional space
