@@ -10,9 +10,11 @@ Convert a sentence to "Goat Latin" using these rules:
 
 **Example**: `"I speak Goat Latin"` → `"Imaa peaksmaaa oatGmaaaa atinLmaaaaa"`
 
-## Current Implementation
+## Approach: String Manipulation (Implemented)
 
-The solution processes each word according to the rules:
+### Strategy
+
+The solution uses string manipulation to solve the problem efficiently.
 
 ```python
 def toGoatLatin(self, sentence: str) -> str:
@@ -27,7 +29,7 @@ def toGoatLatin(self, sentence: str) -> str:
     return " ".join(spl)
 ```
 
-## How It Works
+### How It Works
 
 The algorithm processes words sequentially:
 
@@ -45,26 +47,23 @@ Word 1 "speak": consonant → "peaks" + "ma" + "a"*2 = "peaksmaaa"
 Result: "Imaa peaksmaaa"
 ```
 
-## Why This Works
+### Why String Manipulation Works
 
 - **Rule encoding**: Each transformation step directly implements one rule
 - **Index tracking**: Loop index naturally provides word position for suffix
 - **String building**: Concatenation constructs each modified word
 - **Vowel check**: Using membership test in vowel string handles all cases
 
-## Time Complexity
+### Complexity Analysis
 
-O(n _ m) where n is number of words and m is average word length. For each word, we perform string operations proportional to word length. The `"a" _ (i+1)` adds up to O(n²) total characters across all words.
+- **Time Complexity**: O(n _ m) where n is number of words and m is average word length. For each word, we perform string operations proportional to word length. The `"a" _ (i+1)` adds up to O(n²) total characters across all words. More precisely: O(total_chars + n²) where n is word count.
+- **Space Complexity**: O(n \* m) for storing the word list and building result strings.
 
-More precisely: O(total_chars + n²) where n is word count.
+### Advantages
 
-## Space Complexity
+- Efficient string manipulation solution
+- Clear and maintainable code
 
-O(n \* m) for storing the word list and building result strings.
+### Disadvantages
 
-## Trade-offs
-
-- **Readable**: Clear step-by-step application of rules
-- **Straightforward**: Easy to verify correctness
-- **String operations**: Multiple string concatenations per word (acceptable for problem size)
-- **Could optimize**: Using list of characters instead of string concatenation might be faster for very long words, but adds complexity
+- May require additional space
