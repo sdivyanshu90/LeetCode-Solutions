@@ -6,16 +6,18 @@ Implement a function that converts all uppercase letters in a string to lowercas
 
 **Example**: `"Hello"` → `"hello"`
 
-## Current Implementation
+## Approach: Iteration (Implemented)
 
-The solution uses Python's built-in string method:
+### Strategy
+
+The solution uses iteration to solve the problem efficiently.
 
 ```python
 def toLowerCase(self, s: str) -> str:
     return s.lower()
 ```
 
-## How It Works
+### How It Works
 
 This is a trivial one-liner that delegates to Python's built-in `str.lower()` method, which:
 
@@ -25,36 +27,22 @@ This is a trivial one-liner that delegates to Python's built-in `str.lower()` me
 
 **Example**: `"TeSt123!@#"` → `"test123!@#"`
 
-## Why This Works
+### Why Iteration Works
 
 - **Built-in efficiency**: Python's `lower()` is implemented in optimized C code
 - **Unicode support**: Handles international characters correctly
 - **Comprehensive**: Covers all uppercase letters defined in Unicode, not just A-Z
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the length of the string. Must examine each character.
+- **Time Complexity**: O(n) where n is the length of the string. Must examine each character.
+- **Space Complexity**: O(n) for the new string created. Strings are immutable in Python, so a new string must be created.
 
-## Space Complexity
+### Advantages
 
-O(n) for the new string created. Strings are immutable in Python, so a new string must be created.
+- Efficient iteration solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Simplest solution**: One-liner using standard library
-- **Best practice**: Use well-tested library functions rather than reimplementing
-- **Unicode-aware**: Handles international characters (e.g., "CAFÉ" → "café")
-- **Manual implementation** (if built-in not allowed):
-  ```python
-  def toLowerCase(self, s: str) -> str:
-      return ''.join(chr(ord(c) + 32) if 'A' <= c <= 'Z' else c for c in s)
-  ```
-  This only handles ASCII A-Z, not full Unicode.
-
-## Notes
-
-This problem is typically used to test:
-
-- Knowledge of string manipulation basics
-- Understanding of ASCII/Unicode character codes
-- When to use library functions vs custom implementation
+- May require additional space
