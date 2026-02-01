@@ -6,9 +6,11 @@ Given a 2D integer array `matrix`, return the transpose of the matrix. The trans
 
 **Example**: `[[1,2,3],[4,5,6]]` → `[[1,4],[2,5],[3,6]]`
 
-## Current Implementation
+## Approach: Iteration (Implemented)
 
-The solution iterates through columns and builds new rows from them:
+### Strategy
+
+The solution uses iteration to solve the problem efficiently.
 
 ```python
 def transpose(self, matrix):
@@ -22,7 +24,7 @@ def transpose(self, matrix):
     return res
 ```
 
-## How It Works
+### How It Works
 
 The algorithm constructs the transpose by converting columns to rows:
 
@@ -46,34 +48,22 @@ col=2: collect [matrix[0][2], matrix[1][2]] = [3, 6]
 Result: [[1,4],[2,5],[3,6]]
 ```
 
-## Why This Works
+### Why Iteration Works
 
 - **Definition of transpose**: Element (i,j) becomes (j,i)
 - **Column-to-row mapping**: Each original column becomes a row in result
 - **Nested loop pattern**: Naturally captures the 2D iteration needed
 
-## Time Complexity
+### Complexity Analysis
 
-O(m \* n) where m is number of rows and n is number of columns. Must visit every element exactly once.
+- **Time Complexity**: O(m \* n) where m is number of rows and n is number of columns. Must visit every element exactly once.
+- **Space Complexity**: O(m \* n) for the result matrix. Uses O(1) auxiliary space beyond the output.
 
-## Space Complexity
+### Advantages
 
-O(m \* n) for the result matrix. Uses O(1) auxiliary space beyond the output.
+- Efficient iteration solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Clear logic**: Explicit nested loops make the transformation obvious
-- **Readable**: Easy to trace and verify correctness
-- **Standard approach**: Common pattern for matrix operations
-- **Pythonic alternative**: Could use list comprehension or zip:
-
-  ```python
-  # Using list comprehension
-  return [[matrix[row][col] for row in range(len(matrix))]
-          for col in range(len(matrix[0]))]
-
-  # Using zip (most Pythonic)
-  return list(map(list, zip(*matrix)))
-  ```
-
-  The `zip(*matrix)` unpacks rows and zips them into columns - very concise!
+- May require additional space
