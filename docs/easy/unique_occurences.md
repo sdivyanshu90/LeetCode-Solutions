@@ -6,9 +6,14 @@ Given an array of integers `arr`, return `true` if the number of occurrences of 
 
 **Example**: `[1,2,2,1,1,3]` → `true` (1 appears 3 times, 2 appears 2 times, 3 appears 1 time - all unique)
 
-## Current Implementation
+## Approach: Frequency Counting with Set (Implemented)
 
-The solution uses frequency counting followed by uniqueness check:
+### Strategy
+
+The solution uses a two-phase approach:
+
+1. Build a frequency dictionary to count occurrences of each number
+2. Use a set to check if all frequency counts are unique
 
 ```python
 def uniqueOccurrences(self, arr: List[int]) -> bool:
@@ -27,7 +32,7 @@ def uniqueOccurrences(self, arr: List[int]) -> bool:
     return True
 ```
 
-## How It Works
+### How It Works
 
 The algorithm performs two-phase checking:
 
@@ -66,34 +71,67 @@ Phase 2:
 Result: False (duplicate frequency)
 ```
 
-## Why This Works
+### Why Frequency Counting with Set Works
 
-- **Frequency counting**: First phase determines how often each number appears
-- **Set for uniqueness**: Set naturally detects duplicates via membership test
-- **Two separate concerns**: Counting and uniqueness checking are cleanly separated
-- **Early termination**: Returns immediately upon finding duplicate frequency
+- **Frequency counting**: First phase determines how often each number appears in the array
+- **Set for uniqueness detection**: Sets naturally detect duplicates via membership test in O(1) time
+- **Two separate concerns**: Counting and uniqueness checking are cleanly separated for clarity
+- **Early termination**: Returns immediately upon finding duplicate frequency, avoiding unnecessary work
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the array length. First pass counts (O(n)), second pass checks uniqueness (O(k) where k is number of unique values, k ≤ n).
+- **Time Complexity**: O(n) where n is the array length
+  - First pass counts frequencies: O(n)
+  - Second pass checks uniqueness: O(k) where k is number of unique values (k ≤ n)
+  - Total: O(n) + O(k) = O(n)
+- **Space Complexity**: O(n)
+  - Frequency dictionary stores up to n unique numbers in worst case
+  - Set stores up to k frequency values
+  - Total space: O(n)
 
-## Space Complexity
+### Advantages
 
-O(n) for the frequency dictionary and set in worst case (all unique elements).
+- **Clear logic**: Two-phase approach is intuitive and easy to understand
+- **Efficient**: Linear time complexity with early termination on duplicate
+- **Explicit**: Each step is clearly defined and easy to debug
+- **No extra imports**: Uses only basic Python data structures
 
-## Trade-offs
+### Disadvantages
 
-- **Clear logic**: Two-phase approach is easy to understand
-- **Efficient**: Linear time with early termination
-- **Could simplify**: Can combine into one step using Counter:
-  ```python
-  from collections import Counter
-  freq = Counter(arr)
-  return len(freq.values()) == len(set(freq.values()))
-  ```
-  More concise but checks all values without early exit.
-- **Alternative one-liner**:
-  ```python
-  freq = Counter(arr)
-  return len(freq) == len(set(freq.values()))
-  ```
+- **Could be more concise**: Can be simplified using Counter from collections
+- **No early exit in counting**: Must count all frequencies before checking
+- **Two passes**: Requires iterating through data structures twice
+
+## Alternative Approach 1: Using Counter (More Concise)
+
+Use Python's Counter class for cleaner code:
+
+```python
+from collections import Counter
+
+def uniqueOccurrences(self, arr: List[int]) -> bool:
+    freq = Counter(arr)
+    return len(freq.values()) == len(set(freq.values()))
+```
+
+### How It Works
+
+- `Counter(arr)` automatically counts all frequencies
+- Compare the number of frequencies with the number of unique frequencies
+- If they match, all frequencies are unique
+
+### Complexity
+
+- **Time**: O(n) - single pass through array
+- **Space**: O(n) - Counter and set storage
+
+### Advantages
+
+- **More concise**: One-liner logic after Counter creation
+- **Pythonic**: Uses standard library efficiently
+- **Clean**: No manual dictionary building
+
+### Disadvantages
+
+- **No early exit**: Must check all values before comparison
+- **Requires import**: Depends on collections module
