@@ -11,9 +11,11 @@ Given an integer array `arr`, return `true` if it's a valid mountain array. A mo
 
 **Example**: `[0,3,2,1]` → `true`, `[3,5,5]` → `false` (plateau)
 
-## Current Implementation
+## Approach: Two Pointers (Implemented)
 
-The solution uses two pointers climbing from both ends to find the peak:
+### Strategy
+
+The solution uses two pointers to solve the problem efficiently.
 
 ```python
 def validMountainArray(self, arr: List[int]) -> bool:
@@ -32,7 +34,7 @@ def validMountainArray(self, arr: List[int]) -> bool:
         return False
 ```
 
-## How It Works
+### How It Works
 
 The algorithm climbs the mountain from both sides:
 
@@ -59,25 +61,23 @@ Right climb: 2→1 (5 not > 5), stop at index 2
 left=1, right=2: left==right ✗ → False
 ```
 
-## Why This Works
+### Why Two Pointers Works
 
 - **Two-pointer convergence**: Valid mountain has both sides meeting at unique peak
 - **Strict inequality**: Prevents plateaus (flat sections)
 - **Boundary checks**: Ensure both ascending and descending sections exist
 - **Single pass**: Each pointer scans at most n elements
 
-## Time Complexity
+### Complexity Analysis
 
-O(n) where n is the array length. Each pointer traverses the array at most once.
+- **Time Complexity**: O(n) where n is the array length. Each pointer traverses the array at most once.
+- **Space Complexity**: O(1) - only uses two pointer variables.
 
-## Space Complexity
+### Advantages
 
-O(1) - only uses two pointer variables.
+- Efficient two pointers solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Elegant**: Two-pointer pattern naturally models mountain structure
-- **Efficient**: Single pass with early termination possible
-- **Edge case handling**: Conditions ensure valid mountain shape
-- **Alternative single pointer**: Could scan once for peak, then verify both sides, but two-pointer is cleaner
-- **Handles all cases**: Correctly identifies ascending-only, descending-only, and plateau arrays as invalid
+- May require additional space
