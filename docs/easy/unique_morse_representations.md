@@ -6,9 +6,11 @@ International Morse Code defines a standard encoding where each letter is mapped
 
 **Example**: `["gin","zen","gig","msg"]` → `2` (gin, zen, msg → same code, gig → different)
 
-## Current Implementation
+## Approach: String Manipulation (Implemented)
 
-The solution converts each word to Morse code and counts unique representations:
+### Strategy
+
+The solution uses string manipulation to solve the problem efficiently.
 
 ```python
 def uniqueMorseRepresentations(self, words: List[str]) -> int:
@@ -24,7 +26,7 @@ def uniqueMorseRepresentations(self, words: List[str]) -> int:
     return len(set(res))
 ```
 
-## How It Works
+### How It Works
 
 The algorithm performs transformation and deduplication:
 
@@ -42,32 +44,23 @@ The algorithm performs transformation and deduplication:
 Unique codes: {"--..-.."} → count = 1
 ```
 
-## Why This Works
+### Why String Manipulation Works
 
 - **Standard mapping**: Morse table provides deterministic letter-to-code conversion
 - **String building**: Concatenating Morse codes creates unique identifier for each word
 - **Set deduplication**: Automatically handles identical transformations
 - **ASCII math**: `ord(char) - ord('a')` maps 'a'→0, 'b'→1, ..., 'z'→25
 
-## Time Complexity
+### Complexity Analysis
 
-O(n \* m) where n is number of words and m is average word length. Each character requires O(1) lookup and O(1) string append (amortized).
+- **Time Complexity**: O(n \* m) where n is number of words and m is average word length. Each character requires O(1) lookup and O(1) string append (amortized).
+- **Space Complexity**: O(n \* m) for storing Morse representations in the result list and set. In worst case, all words have unique Morse codes.
 
-## Space Complexity
+### Advantages
 
-O(n \* m) for storing Morse representations in the result list and set. In worst case, all words have unique Morse codes.
+- Efficient string manipulation solution
+- Clear and maintainable code
 
-## Trade-offs
+### Disadvantages
 
-- **Straightforward**: Clear conversion logic
-- **Set efficiency**: Automatic deduplication with O(1) average lookup
-- **String building**: Multiple concatenations per word (acceptable for problem constraints)
-- **Could optimize**: Use set directly instead of list:
-  ```python
-  morse_set = set()
-  for word in words:
-      morse = ''.join(table[ord(c) - ord('a')] for c in word)
-      morse_set.add(morse)
-  return len(morse_set)
-  ```
-  Saves space by not keeping list, but same time complexity.
+- May require additional space
