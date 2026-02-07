@@ -2,9 +2,21 @@
 
 ## Problem Summary
 
-This is a LeetCode hard problem: Find In Mountain Array
+You may recall that an array `arr` is a mountain array if and only if:
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+- `arr.length >= 3`
+- There exists some `i` with `0 < i < arr.length - 1` such that:  
+   - `arr[0] < arr[1] < ... < arr[i - 1] < arr[i]`  
+   - `arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`  
+  Given a mountain array `mountainArr`, return the minimum `index` such that `mountainArr.get(index) == target`. If such an `index` does not exist, return `-1`.
+
+You cannot access the mountain array directly. You may only access the array using a MountainArray interface:
+
+- `MountainArray.get(k)` returns the element of the array at index `k` (0-indexed).
+- `MountainArray.length()` returns the length of the array.  
+  Submissions making more than `100` calls to `MountainArray.get` will be judged Wrong Answer. Also, any solutions that attempt to circumvent the judge will result in disqualification.
+
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/find-in-mountain-array/description/)
 
 ## Approach: Algorithm (Implemented)
 
@@ -75,7 +87,7 @@ The algorithm executes in the following steps:
 
 1. **Parse and Initialize**: Set up necessary data structures
 2. **Main Algorithm**: Execute the core algorithm logic
-3. **Handle Edge Cases**: Manage boundary and special conditions  
+3. **Handle Edge Cases**: Manage boundary and special conditions
 4. **Return Result**: Compute and return final answer
 
 **Example Walkthrough**:
@@ -113,6 +125,7 @@ This approach is optimal because:
 ## Alternative Approaches
 
 ### Brute Force Approach
+
 - Check all possibilities exhaustively
 - Time: O(n²) or worse
 - Space: O(1) minimal extra space
@@ -120,6 +133,7 @@ This approach is optimal because:
 - Cons: Too slow for constraints
 
 ### Different Data Structure
+
 - Use alternative data structures
 - May have different complexity trade-offs
 - Could simplify or complicate logic
@@ -161,12 +175,12 @@ solution.solve(reverse_array)  # Reverse order
 
 ## Complexity Comparison
 
-| Approach | Time | Space | Difficulty |
-|----------|------|-------|-----------|
-| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard |
-| Brute Force | O(n²) or worse | O(1) or less | Easy but Slow |
-| Alternative 1 | Higher | Different | Medium |
-| Greedy (if applicable) | Varies | Varies | Medium |
+| Approach                | Time                      | Space                     | Difficulty    |
+| ----------------------- | ------------------------- | ------------------------- | ------------- |
+| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard          |
+| Brute Force             | O(n²) or worse            | O(1) or less              | Easy but Slow |
+| Alternative 1           | Higher                    | Different                 | Medium        |
+| Greedy (if applicable)  | Varies                    | Varies                    | Medium        |
 
 ## Key Insights & Patterns
 
@@ -181,6 +195,7 @@ This problem teaches important concepts:
 ## Related Problems
 
 Similar LeetCode problems:
+
 - Related problems using algorithm
 - Variants with different constraints
 - Foundational problems with same patterns
@@ -198,6 +213,7 @@ Similar LeetCode problems:
 6. **Alternatives**: Mention other approaches
 
 **What interviewers evaluate**:
+
 - Problem understanding
 - Algorithm knowledge
 - Code quality
@@ -236,6 +252,7 @@ Avoid these pitfalls:
 ## Problem Variants
 
 This problem connects to:
+
 - Problems with similar constraints
 - Generalized versions with more variables
 - Problems requiring same algorithm
