@@ -1,4 +1,4 @@
-# Count Of Atoms
+# Number of Atoms
 
 ## Problem Summary
 
