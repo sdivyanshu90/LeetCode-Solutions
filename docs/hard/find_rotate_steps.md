@@ -2,9 +2,18 @@
 
 ## Problem Summary
 
-This is a LeetCode hard problem: Find Rotate Steps
+In the video game Fallout 4, the quest <b>"Road to Freedom"</b> requires players to reach a metal dial called the <b>"Freedom Trail Ring"</b> and use the dial to spell a specific keyword to open the door.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+Given a string `ring` that represents the code engraved on the outer ring and another string `key` that represents the keyword that needs to be spelled, return the minimum number of steps to spell all the characters in the keyword.
+
+Initially, the first character of the ring is aligned at the `"12:00"` direction. You should spell all the characters in `key` one by one by rotating `ring` clockwise or anticlockwise to make each character of the string key aligned at the `"12:00"` direction and then by pressing the center button.
+
+At the stage of rotating the ring to spell the key character `key[i]`:
+
+You can rotate the ring clockwise or anticlockwise by one place, which counts as <b>one step</b>. The final purpose of the rotation is to align one of ring's characters at the `"12:00"` direction, where this character must equal `key[i]`.  
+If the character `key[i]` has been aligned at the `"12:00"` direction, press the center button to spell, which also counts as <b>one step</b>. After the pressing, you could begin to spell the next character in the key (next stage). Otherwise, you have finished all the spelling.
+
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/freedom-trail/)
 
 ## Approach: Algorithm (Implemented)
 
@@ -50,7 +59,7 @@ class Solution:
                 res1 = f[l] + (n - l + i if l > i else i - l)
                 res2 = f[r] + (n - i + r if r < i else r - i)
                 if res2 < res1 : res1 = res2
-                nf[i] = res1          
+                nf[i] = res1
             f = nf
         if s[0] == t[0]:
             return f[0] + m
@@ -75,7 +84,7 @@ The algorithm executes in the following steps:
 
 1. **Parse and Initialize**: Set up necessary data structures
 2. **Main Algorithm**: Execute the core algorithm logic
-3. **Handle Edge Cases**: Manage boundary and special conditions  
+3. **Handle Edge Cases**: Manage boundary and special conditions
 4. **Return Result**: Compute and return final answer
 
 **Example Walkthrough**:
@@ -113,6 +122,7 @@ This approach is optimal because:
 ## Alternative Approaches
 
 ### Brute Force Approach
+
 - Check all possibilities exhaustively
 - Time: O(n²) or worse
 - Space: O(1) minimal extra space
@@ -120,6 +130,7 @@ This approach is optimal because:
 - Cons: Too slow for constraints
 
 ### Different Data Structure
+
 - Use alternative data structures
 - May have different complexity trade-offs
 - Could simplify or complicate logic
@@ -161,12 +172,12 @@ solution.solve(reverse_array)  # Reverse order
 
 ## Complexity Comparison
 
-| Approach | Time | Space | Difficulty |
-|----------|------|-------|-----------|
-| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard |
-| Brute Force | O(n²) or worse | O(1) or less | Easy but Slow |
-| Alternative 1 | Higher | Different | Medium |
-| Greedy (if applicable) | Varies | Varies | Medium |
+| Approach                | Time                      | Space                     | Difficulty    |
+| ----------------------- | ------------------------- | ------------------------- | ------------- |
+| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard          |
+| Brute Force             | O(n²) or worse            | O(1) or less              | Easy but Slow |
+| Alternative 1           | Higher                    | Different                 | Medium        |
+| Greedy (if applicable)  | Varies                    | Varies                    | Medium        |
 
 ## Key Insights & Patterns
 
@@ -181,6 +192,7 @@ This problem teaches important concepts:
 ## Related Problems
 
 Similar LeetCode problems:
+
 - Related problems using algorithm
 - Variants with different constraints
 - Foundational problems with same patterns
@@ -198,6 +210,7 @@ Similar LeetCode problems:
 6. **Alternatives**: Mention other approaches
 
 **What interviewers evaluate**:
+
 - Problem understanding
 - Algorithm knowledge
 - Code quality
@@ -236,6 +249,7 @@ Avoid these pitfalls:
 ## Problem Variants
 
 This problem connects to:
+
 - Problems with similar constraints
 - Generalized versions with more variables
 - Problems requiring same algorithm
