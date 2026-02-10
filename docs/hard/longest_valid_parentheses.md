@@ -4,7 +4,7 @@
 
 Given a string containing just the characters `'('` and `')'`, return the length of the longest valid (well-formed) parentheses substring.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/longest-valid-parentheses/description/)
 
 ## Approach: Algorithm (Implemented)
 
