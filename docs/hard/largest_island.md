@@ -8,7 +8,7 @@ Return the size of the largest <b>island</b> in `grid` after applying this opera
 
 An <b>island</b> is a 4-directionally connected group of `1`s.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/making-a-large-island/description/)
 
 ## Approach: Algorithm (Implemented)
 
