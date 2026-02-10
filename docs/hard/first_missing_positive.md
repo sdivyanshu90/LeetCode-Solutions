@@ -2,9 +2,11 @@
 
 ## Problem Summary
 
-Find the smallest positive integer that doesn't appear in the array.
+Given an unsorted integer array `nums`. Return the smallest positive integer that is not present in `nums`.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+You must implement an algorithm that runs in `O(n)` time and uses `O(1)` auxiliary space.
+
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/first-missing-positive/)
 
 ## Approach: In-place Array Manipulation (Implemented)
 
@@ -51,26 +53,29 @@ The algorithm executes in the following steps:
 
 1. **Parse and Initialize**: Set up necessary data structures
 2. **Main Algorithm**: Execute the core in-place array manipulation logic
-3. **Handle Edge Cases**: Manage boundary and special conditions  
+3. **Handle Edge Cases**: Manage boundary and special conditions
 4. **Return Result**: Compute and return final answer
 
 **Example Walkthrough**:
 
 Let's trace through the algorithm with concrete examples:
 
-**Example 1**:  
-- Input: `[3,4,-1,1]`  
-- Expected: `2`  
+**Example 1**:
+
+- Input: `[3,4,-1,1]`
+- Expected: `2`
 - The algorithm processes the input step by step
 
-**Example 2**:  
-- Input: `[1,2,0]`  
-- Expected: `3`  
+**Example 2**:
+
+- Input: `[1,2,0]`
+- Expected: `3`
 - The algorithm processes the input step by step
 
-**Example 3**:  
-- Input: `[-1,-2,-3]`  
-- Expected: `1`  
+**Example 3**:
+
+- Input: `[-1,-2,-3]`
+- Expected: `1`
 - The algorithm processes the input step by step
 
 ### Why In-place Array Manipulation Works
@@ -108,6 +113,7 @@ This approach is optimal because:
 ## Alternative Approaches
 
 ### Brute Force Approach
+
 - Check all possibilities exhaustively
 - Time: O(n²) or worse
 - Space: O(1) minimal extra space
@@ -115,6 +121,7 @@ This approach is optimal because:
 - Cons: Too slow for constraints
 
 ### Different Data Structure
+
 - Use alternative data structures
 - May have different complexity trade-offs
 - Could simplify or complicate logic
@@ -156,12 +163,12 @@ solution.solve(reverse_array)  # Reverse order
 
 ## Complexity Comparison
 
-| Approach | Time | Space | Difficulty |
-|----------|------|-------|-----------|
-| In-place Array Manipulation (Implemented) | O(n) - single pass with constant work per element | O(1) - modify array in-place | Hard |
-| Brute Force | O(n²) or worse | O(1) or less | Easy but Slow |
-| Alternative 1 | Higher | Different | Medium |
-| Greedy (if applicable) | Varies | Varies | Medium |
+| Approach                                  | Time                                              | Space                        | Difficulty    |
+| ----------------------------------------- | ------------------------------------------------- | ---------------------------- | ------------- |
+| In-place Array Manipulation (Implemented) | O(n) - single pass with constant work per element | O(1) - modify array in-place | Hard          |
+| Brute Force                               | O(n²) or worse                                    | O(1) or less                 | Easy but Slow |
+| Alternative 1                             | Higher                                            | Different                    | Medium        |
+| Greedy (if applicable)                    | Varies                                            | Varies                       | Medium        |
 
 ## Key Insights & Patterns
 
@@ -176,6 +183,7 @@ This problem teaches important concepts:
 ## Related Problems
 
 Similar LeetCode problems:
+
 - Related problems using in-place array manipulation
 - Variants with different constraints
 - Foundational problems with same patterns
@@ -193,6 +201,7 @@ Similar LeetCode problems:
 6. **Alternatives**: Mention other approaches
 
 **What interviewers evaluate**:
+
 - Problem understanding
 - Algorithm knowledge
 - Code quality
@@ -231,6 +240,7 @@ Avoid these pitfalls:
 ## Problem Variants
 
 This problem connects to:
+
 - Problems with similar constraints
 - Generalized versions with more variables
 - Problems requiring same algorithm
