@@ -6,7 +6,7 @@ For an integer array `nums`, an inverse pair is a pair of integers `[i, j]` wher
 
 Given two integers `n` and `k`, return the number of different arrays consisting of numbers from `1` to `n` such that there are exactly `k` inverse pairs. Since the answer can be huge, return it modulo `10^9 + 7`.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/k-inverse-pairs-array/description/)
 
 ## Approach: Algorithm (Implemented)
 
