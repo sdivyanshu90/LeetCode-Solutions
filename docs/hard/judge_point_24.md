@@ -1,4 +1,4 @@
-# Judge Point 24
+# 24 Game
 
 ## Problem Summary
 
@@ -15,7 +15,7 @@ You are restricted with the following rules:
 
 Return `true` if you can get such expression that evaluates to `24`, and `false` otherwise.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/24-game/description/)
 
 ## Approach: Algorithm (Implemented)
 
