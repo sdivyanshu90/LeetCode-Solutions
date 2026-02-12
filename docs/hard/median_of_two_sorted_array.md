@@ -1,0 +1,264 @@
+# Median of Two Sorted Arrays
+
+## Problem Summary
+
+Find the median of two sorted arrays with different lengths.
+
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+
+## Approach: Array Merge / Simple Approach (Implemented)
+
+### Strategy
+
+Merge arrays and find middle element(s). For optimal solution, use binary search on smaller array to achieve O(log(min(m,n))).
+
+Merge two arrays into one sorted array. If total length is even, return average of two middle elements. If odd, return middle element.
+
+**Code Snippet**:
+
+```python
+import math
+from typing import List
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        nums = sorted(nums1 + nums2)
+        n = len(nums) - 1
+        if len(nums) % 2 == 0:
+            a = ((nums[n//2]) + (math.ceil(nums[(n+1)//2])))/2
+            return a
+        else:
+            b = math.ceil(nums[(n+1)//2])
+            return b
+def test_find_median_sorted_arrays():
+    solution = Solution()
+    nums1 = [1, 3]
+    nums2 = [2]
+    print(solution.findMedianSortedArrays(nums1, nums2))  # Expected output: 2.0
+    nums1 = [1, 2]
+    nums2 = [3, 4]
+    print(solution.findMedianSortedArrays(nums1, nums2))  # Expected output: 2.5
+    nums1 = []
+    nums2 = [1, 2, 3]
+    print(solution.findMedianSortedArrays(nums1, nums2))  # Expected output: 2.0
+    nums1 = [5, 5, 5]
+    nums2 = [5, 5]
+    print(solution.findMedianSortedArrays(nums1, nums2))  # Expected output: 5.0
+    nums1 = [-3, -1]
+    nums2 = [-2]
+    print(solution.findMedianSortedArrays(nums1, nums2))  # Expected output: -2.0
+    nums1 = [1]
+    nums2 = [2]
+    print(solution.findMedianSortedArrays(nums1, nums2))  # Expected output: 1.5
+    nums1 = [1, 2, 3]
+    nums2 = [4, 5, 6]
+    print(solution.findMedianSortedArrays(nums1, nums2))  # Expected output: 3.5
+    nums1 = [1000000, 2000000]
+    nums2 = [3000000, 4000000]
+    print(solution.findMedianSortedArrays(nums1, nums2))  # Expected output: 2500000.0
+    nums1 = [100]
+    nums2 = [200, 300, 400]
+    print(solution.findMedianSortedArrays(nums1, nums2))  # Expected output: 250.0
+    nums1 = [7]
+    nums2 = [3]
+    print(solution.findMedianSortedArrays(nums1, nums2))  # Expected output: 5.0
+test_find_median_sorted_arrays()
+```
+
+### How It Works
+
+The algorithm executes in the following steps:
+
+1. **Parse and Initialize**: Set up necessary data structures
+2. **Main Algorithm**: Execute the core array merge / simple approach logic
+3. **Handle Edge Cases**: Manage boundary and special conditions  
+4. **Return Result**: Compute and return final answer
+
+**Example Walkthrough**:
+
+Let's trace through the algorithm with concrete examples:
+
+**Example 1**:  
+- Input: `[1,3], [2]`  
+- Expected: `2.0`  
+- The algorithm processes the input step by step
+
+**Example 2**:  
+- Input: `[1,2], [3,4]`  
+- Expected: `2.5`  
+- The algorithm processes the input step by step
+
+**Example 3**:  
+- Input: `[], [1]`  
+- Expected: `1.0`  
+- The algorithm processes the input step by step
+
+### Why Array Merge / Simple Approach Works
+
+This approach is optimal because:
+
+1. Simple logic to understand
+2. Straightforward implementation
+3. Works correctly for all cases
+
+### Complexity Analysis
+
+- **Time Complexity**: O(m + n) for merge approach
+  - Each operation is performed efficiently
+  - Avoids redundant computation
+  - Optimal for problem constraints
+
+- **Space Complexity**: O(m + n) for merged array
+  - Uses necessary auxiliary data structures
+  - Memory-efficient implementation
+  - Optimizes storage requirements
+
+### Advantages
+
+- Simple logic to understand
+- Straightforward implementation
+- Works correctly for all cases
+
+### Disadvantages
+
+- Not optimal time complexity
+- Uses extra space for merged array
+- Can be optimized with binary search
+
+## Alternative Approaches
+
+### Brute Force Approach
+- Check all possibilities exhaustively
+- Time: O(n²) or worse
+- Space: O(1) minimal extra space
+- Pros: Simple logic
+- Cons: Too slow for constraints
+
+### Different Data Structure
+- Use alternative data structures
+- May have different complexity trade-offs
+- Could simplify or complicate logic
+- Worth considering but likely slower
+
+## Edge Cases
+
+Important edge cases to test:
+
+1. **Empty Input**: Empty array, string, or null input
+2. **Single Element**: Only one element in input
+3. **Minimum Size**: Smallest valid input
+4. **Maximum Size**: Largest possible input
+5. **All Same Values**: All identical elements
+6. **Duplicates**: Repeated values
+7. **Negative Numbers**: Negative integer handling
+8. **Zero Values**: Zero in input
+9. **Boundary Values**: Minimum/maximum possible values
+10. **Special Patterns**: Sorted, reverse sorted, etc.
+
+## Test Cases
+
+```python
+# Basic cases
+solution.solve(typical_input)  # Standard test
+
+# Edge cases
+solution.solve([])             # Empty
+solution.solve([1])            # Single element
+solution.solve([1, 1])         # Duplicates
+
+# Large inputs
+solution.solve(large_array)    # Performance test
+
+# Special patterns
+solution.solve(sorted_array)   # Already sorted
+solution.solve(reverse_array)  # Reverse order
+```
+
+## Complexity Comparison
+
+| Approach | Time | Space | Difficulty |
+|----------|------|-------|-----------|
+| Array Merge / Simple Approach (Implemented) | O(m + n) for merge approach | O(m + n) for merged array | Hard |
+| Brute Force | O(n²) or worse | O(1) or less | Easy but Slow |
+| Alternative 1 | Higher | Different | Medium |
+| Greedy (if applicable) | Varies | Varies | Medium |
+
+## Key Insights & Patterns
+
+This problem teaches important concepts:
+
+1. **Algorithm Selection**: Choosing array merge / simple approach for efficiency
+2. **Data Structure Choice**: Optimal structure selection
+3. **Complexity Analysis**: Understanding time/space trade-offs
+4. **Edge Case Handling**: Systematic boundary condition testing
+5. **Problem Recognition**: Identifying this problem pattern
+
+## Related Problems
+
+Similar LeetCode problems:
+- Related problems using array merge / simple approach
+- Variants with different constraints
+- Foundational problems with same patterns
+- Generalized versions
+
+## Interview Tips
+
+**When solving in an interview**:
+
+1. **Clarify**: Ask about constraints and edge cases
+2. **Explain**: Describe your approach clearly
+3. **Code**: Write clean, readable code
+4. **Test**: Trace through test cases manually
+5. **Optimize**: Discuss time/space trade-offs
+6. **Alternatives**: Mention other approaches
+
+**What interviewers evaluate**:
+- Problem understanding
+- Algorithm knowledge
+- Code quality
+- Communication
+- Edge case awareness
+- Optimization mindset
+
+## Implementation Checklist
+
+Before submitting solution:
+
+- [ ] Handle empty/null input
+- [ ] Test with single element
+- [ ] Verify with given examples
+- [ ] Check boundary conditions
+- [ ] Test with duplicates
+- [ ] Handle maximum constraints
+- [ ] Consider time complexity
+- [ ] Optimize space if needed
+- [ ] Code is clean and readable
+- [ ] No off-by-one errors
+
+## Common Mistakes
+
+Avoid these pitfalls:
+
+1. **Not handling edge cases** - Always check empty/single element
+2. **Off-by-one errors** - Careful with loop boundaries
+3. **Wrong initialization** - Start values must be correct
+4. **Missing base cases** - Recursion needs proper termination
+5. **Modifying input** - Only modify if explicitly allowed
+6. **Incorrect complexity** - Don't assume linear time works
+7. **Memory leaks** - Proper cleanup in recursive solutions
+8. **Not testing thoroughly** - Always test edge cases
+
+## Problem Variants
+
+This problem connects to:
+- Problems with similar constraints
+- Generalized versions with more variables
+- Problems requiring same algorithm
+- Related data structure problems
+
+---
+
+**Difficulty**: Hard  
+**Topics**: Array Merge / Simple Approach  
+**Companies**: Major tech companies  
+**Frequency**: Medium frequency in interviews  
+**Accept Rate**: Check LeetCode for current rate
