@@ -2,9 +2,11 @@
 
 ## Problem Summary
 
-Find the median of two sorted arrays with different lengths.
+Given two sorted arrays `nums1` and `nums2` of size `m` and `n` respectively, return <b>the median </b> of the two sorted arrays.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+The overall run time complexity should be `O(log (m+n))`.
+
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)
 
 ## Approach: Array Merge / Simple Approach (Implemented)
 
@@ -70,26 +72,29 @@ The algorithm executes in the following steps:
 
 1. **Parse and Initialize**: Set up necessary data structures
 2. **Main Algorithm**: Execute the core array merge / simple approach logic
-3. **Handle Edge Cases**: Manage boundary and special conditions  
+3. **Handle Edge Cases**: Manage boundary and special conditions
 4. **Return Result**: Compute and return final answer
 
 **Example Walkthrough**:
 
 Let's trace through the algorithm with concrete examples:
 
-**Example 1**:  
-- Input: `[1,3], [2]`  
-- Expected: `2.0`  
+**Example 1**:
+
+- Input: `[1,3], [2]`
+- Expected: `2.0`
 - The algorithm processes the input step by step
 
-**Example 2**:  
-- Input: `[1,2], [3,4]`  
-- Expected: `2.5`  
+**Example 2**:
+
+- Input: `[1,2], [3,4]`
+- Expected: `2.5`
 - The algorithm processes the input step by step
 
-**Example 3**:  
-- Input: `[], [1]`  
-- Expected: `1.0`  
+**Example 3**:
+
+- Input: `[], [1]`
+- Expected: `1.0`
 - The algorithm processes the input step by step
 
 ### Why Array Merge / Simple Approach Works
@@ -127,6 +132,7 @@ This approach is optimal because:
 ## Alternative Approaches
 
 ### Brute Force Approach
+
 - Check all possibilities exhaustively
 - Time: O(n²) or worse
 - Space: O(1) minimal extra space
@@ -134,6 +140,7 @@ This approach is optimal because:
 - Cons: Too slow for constraints
 
 ### Different Data Structure
+
 - Use alternative data structures
 - May have different complexity trade-offs
 - Could simplify or complicate logic
@@ -175,12 +182,12 @@ solution.solve(reverse_array)  # Reverse order
 
 ## Complexity Comparison
 
-| Approach | Time | Space | Difficulty |
-|----------|------|-------|-----------|
-| Array Merge / Simple Approach (Implemented) | O(m + n) for merge approach | O(m + n) for merged array | Hard |
-| Brute Force | O(n²) or worse | O(1) or less | Easy but Slow |
-| Alternative 1 | Higher | Different | Medium |
-| Greedy (if applicable) | Varies | Varies | Medium |
+| Approach                                    | Time                        | Space                     | Difficulty    |
+| ------------------------------------------- | --------------------------- | ------------------------- | ------------- |
+| Array Merge / Simple Approach (Implemented) | O(m + n) for merge approach | O(m + n) for merged array | Hard          |
+| Brute Force                                 | O(n²) or worse              | O(1) or less              | Easy but Slow |
+| Alternative 1                               | Higher                      | Different                 | Medium        |
+| Greedy (if applicable)                      | Varies                      | Varies                    | Medium        |
 
 ## Key Insights & Patterns
 
@@ -195,6 +202,7 @@ This problem teaches important concepts:
 ## Related Problems
 
 Similar LeetCode problems:
+
 - Related problems using array merge / simple approach
 - Variants with different constraints
 - Foundational problems with same patterns
@@ -212,6 +220,7 @@ Similar LeetCode problems:
 6. **Alternatives**: Mention other approaches
 
 **What interviewers evaluate**:
+
 - Problem understanding
 - Algorithm knowledge
 - Code quality
@@ -250,6 +259,7 @@ Avoid these pitfalls:
 ## Problem Variants
 
 This problem connects to:
+
 - Problems with similar constraints
 - Generalized versions with more variables
 - Problems requiring same algorithm
