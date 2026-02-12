@@ -1,10 +1,14 @@
-# Max Coins
+# Burst Balloons
 
 ## Problem Summary
 
-This is a LeetCode hard problem: Max Coins
+You are given n balloons, indexed from `0` to `n - 1`. Each balloon is painted with a number on it represented by an array `nums`. You are asked to burst all the balloons.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+If you burst the `i`th balloon, you will get `nums[i - 1] * nums[i] * nums[i + 1]` coins. If `i - 1` or `i + 1` goes out of bounds of the array, then treat it as if there is a balloon with a `1` painted on it.
+
+Return the maximum coins you can collect by bursting the balloons wisely.
+
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/burst-balloons/description/)
 
 ## Approach: Algorithm (Implemented)
 
@@ -45,9 +49,9 @@ def test_max_coins():
     nums = [1, 2]
     print(s.maxCoins(nums))  # Expected: 4 (since we have only two balloons, the answer is nums[0] * nums[1])
     nums = [3, 3, 3, 3]
-    print(s.maxCoins(nums))  # Expected: 66 
+    print(s.maxCoins(nums))  # Expected: 66
     nums = [5, 4, 3, 2, 1]
-    print(s.maxCoins(nums))  # Expected: 110 
+    print(s.maxCoins(nums))  # Expected: 110
     nums = [1, 10, 1, 5, 4]
     print(s.maxCoins(nums))  # Expected: 310
     nums = []
@@ -55,7 +59,7 @@ def test_max_coins():
     nums = [2, 4, 3, 5, 6, 2, 1]
     print(s.maxCoins(nums))  # Expected: 264
     nums = [1, 1, 1, 1, 1]
-    print(s.maxCoins(nums))  # Expected: 5 
+    print(s.maxCoins(nums))  # Expected: 5
     nums = [1,2,3,4,5,6,7,8,9,10]
     print(s.maxCoins(nums)) # Expected: 2420
 test_max_coins()
@@ -67,7 +71,7 @@ The algorithm executes in the following steps:
 
 1. **Parse and Initialize**: Set up necessary data structures
 2. **Main Algorithm**: Execute the core algorithm logic
-3. **Handle Edge Cases**: Manage boundary and special conditions  
+3. **Handle Edge Cases**: Manage boundary and special conditions
 4. **Return Result**: Compute and return final answer
 
 **Example Walkthrough**:
@@ -105,6 +109,7 @@ This approach is optimal because:
 ## Alternative Approaches
 
 ### Brute Force Approach
+
 - Check all possibilities exhaustively
 - Time: O(n²) or worse
 - Space: O(1) minimal extra space
@@ -112,6 +117,7 @@ This approach is optimal because:
 - Cons: Too slow for constraints
 
 ### Different Data Structure
+
 - Use alternative data structures
 - May have different complexity trade-offs
 - Could simplify or complicate logic
@@ -153,12 +159,12 @@ solution.solve(reverse_array)  # Reverse order
 
 ## Complexity Comparison
 
-| Approach | Time | Space | Difficulty |
-|----------|------|-------|-----------|
-| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard |
-| Brute Force | O(n²) or worse | O(1) or less | Easy but Slow |
-| Alternative 1 | Higher | Different | Medium |
-| Greedy (if applicable) | Varies | Varies | Medium |
+| Approach                | Time                      | Space                     | Difficulty    |
+| ----------------------- | ------------------------- | ------------------------- | ------------- |
+| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard          |
+| Brute Force             | O(n²) or worse            | O(1) or less              | Easy but Slow |
+| Alternative 1           | Higher                    | Different                 | Medium        |
+| Greedy (if applicable)  | Varies                    | Varies                    | Medium        |
 
 ## Key Insights & Patterns
 
@@ -173,6 +179,7 @@ This problem teaches important concepts:
 ## Related Problems
 
 Similar LeetCode problems:
+
 - Related problems using algorithm
 - Variants with different constraints
 - Foundational problems with same patterns
@@ -190,6 +197,7 @@ Similar LeetCode problems:
 6. **Alternatives**: Mention other approaches
 
 **What interviewers evaluate**:
+
 - Problem understanding
 - Algorithm knowledge
 - Code quality
@@ -228,6 +236,7 @@ Avoid these pitfalls:
 ## Problem Variants
 
 This problem connects to:
+
 - Problems with similar constraints
 - Generalized versions with more variables
 - Problems requiring same algorithm
