@@ -2,9 +2,19 @@
 
 ## Problem Summary
 
-This is a LeetCode hard problem: Poor Pigs
+There are `buckets` buckets of liquid, where <b>exactly one</b> of the buckets is poisonous. To figure out which one is poisonous, you feed some number of (poor) pigs the liquid to see whether they will die or not. Unfortunately, you only have `minutesToTest` minutes to determine which bucket is poisonous.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+You can feed the pigs according to these steps:
+
+1. Choose some live pigs to feed.
+2. For each pig, choose which buckets to feed it. The pig will consume all the chosen buckets simultaneously and will take no time. Each pig can feed from any number of buckets, and each bucket can be fed from by any number of pigs.
+3. Wait for `minutesToDie` minutes. You may not feed any other pigs during this time.
+4. After `minutesToDie` minutes have passed, any pigs that have been fed the poisonous bucket will die, and all others will survive.
+5. Repeat this process until you run out of time.
+
+Given `buckets`, `minutesToDie`, and `minutesToTest`, return the <b>minimum</b> number of pigs needed to figure out which bucket is poisonous within the allotted time.
+
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/poor-pigs/description/)
 
 ## Approach: Algorithm (Implemented)
 
@@ -55,7 +65,7 @@ The algorithm executes in the following steps:
 
 1. **Parse and Initialize**: Set up necessary data structures
 2. **Main Algorithm**: Execute the core algorithm logic
-3. **Handle Edge Cases**: Manage boundary and special conditions  
+3. **Handle Edge Cases**: Manage boundary and special conditions
 4. **Return Result**: Compute and return final answer
 
 **Example Walkthrough**:
@@ -93,6 +103,7 @@ This approach is optimal because:
 ## Alternative Approaches
 
 ### Brute Force Approach
+
 - Check all possibilities exhaustively
 - Time: O(n²) or worse
 - Space: O(1) minimal extra space
@@ -100,6 +111,7 @@ This approach is optimal because:
 - Cons: Too slow for constraints
 
 ### Different Data Structure
+
 - Use alternative data structures
 - May have different complexity trade-offs
 - Could simplify or complicate logic
@@ -141,12 +153,12 @@ solution.solve(reverse_array)  # Reverse order
 
 ## Complexity Comparison
 
-| Approach | Time | Space | Difficulty |
-|----------|------|-------|-----------|
-| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard |
-| Brute Force | O(n²) or worse | O(1) or less | Easy but Slow |
-| Alternative 1 | Higher | Different | Medium |
-| Greedy (if applicable) | Varies | Varies | Medium |
+| Approach                | Time                      | Space                     | Difficulty    |
+| ----------------------- | ------------------------- | ------------------------- | ------------- |
+| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard          |
+| Brute Force             | O(n²) or worse            | O(1) or less              | Easy but Slow |
+| Alternative 1           | Higher                    | Different                 | Medium        |
+| Greedy (if applicable)  | Varies                    | Varies                    | Medium        |
 
 ## Key Insights & Patterns
 
@@ -161,6 +173,7 @@ This problem teaches important concepts:
 ## Related Problems
 
 Similar LeetCode problems:
+
 - Related problems using algorithm
 - Variants with different constraints
 - Foundational problems with same patterns
@@ -178,6 +191,7 @@ Similar LeetCode problems:
 6. **Alternatives**: Mention other approaches
 
 **What interviewers evaluate**:
+
 - Problem understanding
 - Algorithm knowledge
 - Code quality
@@ -216,6 +230,7 @@ Avoid these pitfalls:
 ## Problem Variants
 
 This problem connects to:
+
 - Problems with similar constraints
 - Generalized versions with more variables
 - Problems requiring same algorithm
