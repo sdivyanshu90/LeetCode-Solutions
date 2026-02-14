@@ -1,10 +1,21 @@
-# Number Of Arithmetic Slices
+# Arithmetic Slices II/2 - Subsequence
 
 ## Problem Summary
 
-This is a LeetCode hard problem: Number Of Arithmetic Slices
+Given an integer array `nums`, return the number of all the <b>arithmetic subsequences</b> of `nums`.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+A sequence of numbers is called arithmetic if it consists of <b>at least three elements</b> and if the difference between any two consecutive elements is the same.
+
+- For example, `[1, 3, 5, 7, 9]`, `[7, 7, 7, 7]`, and `[3, -1, -5, -9]` are arithmetic sequences.
+- For example, `[1, 1, 2, 5, 7]` is not an arithmetic sequence.
+
+A <b>subsequence</b> of an array is a sequence that can be formed by removing some elements (possibly none) of the array.
+
+- For example, `[2,5,10]` is a subsequence of `[1,2,1,2,4,1,5,10]`.
+
+The test cases are generated so that the answer fits in <b>32-bit integer</b>.
+
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/arithmetic-slices-ii-subsequence/description/)
 
 ## Approach: Algorithm (Implemented)
 
@@ -52,7 +63,7 @@ The algorithm executes in the following steps:
 
 1. **Parse and Initialize**: Set up necessary data structures
 2. **Main Algorithm**: Execute the core algorithm logic
-3. **Handle Edge Cases**: Manage boundary and special conditions  
+3. **Handle Edge Cases**: Manage boundary and special conditions
 4. **Return Result**: Compute and return final answer
 
 **Example Walkthrough**:
@@ -90,6 +101,7 @@ This approach is optimal because:
 ## Alternative Approaches
 
 ### Brute Force Approach
+
 - Check all possibilities exhaustively
 - Time: O(n²) or worse
 - Space: O(1) minimal extra space
@@ -97,6 +109,7 @@ This approach is optimal because:
 - Cons: Too slow for constraints
 
 ### Different Data Structure
+
 - Use alternative data structures
 - May have different complexity trade-offs
 - Could simplify or complicate logic
@@ -138,12 +151,12 @@ solution.solve(reverse_array)  # Reverse order
 
 ## Complexity Comparison
 
-| Approach | Time | Space | Difficulty |
-|----------|------|-------|-----------|
-| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard |
-| Brute Force | O(n²) or worse | O(1) or less | Easy but Slow |
-| Alternative 1 | Higher | Different | Medium |
-| Greedy (if applicable) | Varies | Varies | Medium |
+| Approach                | Time                      | Space                     | Difficulty    |
+| ----------------------- | ------------------------- | ------------------------- | ------------- |
+| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard          |
+| Brute Force             | O(n²) or worse            | O(1) or less              | Easy but Slow |
+| Alternative 1           | Higher                    | Different                 | Medium        |
+| Greedy (if applicable)  | Varies                    | Varies                    | Medium        |
 
 ## Key Insights & Patterns
 
@@ -158,6 +171,7 @@ This problem teaches important concepts:
 ## Related Problems
 
 Similar LeetCode problems:
+
 - Related problems using algorithm
 - Variants with different constraints
 - Foundational problems with same patterns
@@ -175,6 +189,7 @@ Similar LeetCode problems:
 6. **Alternatives**: Mention other approaches
 
 **What interviewers evaluate**:
+
 - Problem understanding
 - Algorithm knowledge
 - Code quality
@@ -213,6 +228,7 @@ Avoid these pitfalls:
 ## Problem Variants
 
 This problem connects to:
+
 - Problems with similar constraints
 - Generalized versions with more variables
 - Problems requiring same algorithm
