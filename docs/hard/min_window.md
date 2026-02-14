@@ -2,9 +2,11 @@
 
 ## Problem Summary
 
-Find the minimum window substring that contains all characters from the pattern string.
+Given two strings `s` and `t` of lengths `m` and `n` respectively, return the <b>minimum window substring</b> of `s` such that every character in `t` <b>(including duplicates)</b> is included in the window. If there is no such substring, return the empty string `""`.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+The testcases will be generated such that the answer is <b>unique</b>.
+
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/minimum-window-substring/description/)
 
 ## Approach: Sliding Window with Hash Map (Implemented)
 
@@ -75,26 +77,29 @@ The algorithm executes in the following steps:
 
 1. **Parse and Initialize**: Set up necessary data structures
 2. **Main Algorithm**: Execute the core sliding window with hash map logic
-3. **Handle Edge Cases**: Manage boundary and special conditions  
+3. **Handle Edge Cases**: Manage boundary and special conditions
 4. **Return Result**: Compute and return final answer
 
 **Example Walkthrough**:
 
 Let's trace through the algorithm with concrete examples:
 
-**Example 1**:  
-- Input: `'ADOBECODEBANC', 'ABC'`  
-- Expected: `'BANC'`  
+**Example 1**:
+
+- Input: `'ADOBECODEBANC', 'ABC'`
+- Expected: `'BANC'`
 - The algorithm processes the input step by step
 
-**Example 2**:  
-- Input: `'a', 'a'`  
-- Expected: `'a'`  
+**Example 2**:
+
+- Input: `'a', 'a'`
+- Expected: `'a'`
 - The algorithm processes the input step by step
 
-**Example 3**:  
-- Input: `'a', 'aa'`  
-- Expected: `''`  
+**Example 3**:
+
+- Input: `'a', 'aa'`
+- Expected: `''`
 - The algorithm processes the input step by step
 
 ### Why Sliding Window with Hash Map Works
@@ -132,6 +137,7 @@ This approach is optimal because:
 ## Alternative Approaches
 
 ### Brute Force Approach
+
 - Check all possibilities exhaustively
 - Time: O(n²) or worse
 - Space: O(1) minimal extra space
@@ -139,6 +145,7 @@ This approach is optimal because:
 - Cons: Too slow for constraints
 
 ### Different Data Structure
+
 - Use alternative data structures
 - May have different complexity trade-offs
 - Could simplify or complicate logic
@@ -180,12 +187,12 @@ solution.solve(reverse_array)  # Reverse order
 
 ## Complexity Comparison
 
-| Approach | Time | Space | Difficulty |
-|----------|------|-------|-----------|
-| Sliding Window with Hash Map (Implemented) | O(m + n) where m=len(s), n=len(t) | O(1) - at most 26 lowercase letters in maps | Hard |
-| Brute Force | O(n²) or worse | O(1) or less | Easy but Slow |
-| Alternative 1 | Higher | Different | Medium |
-| Greedy (if applicable) | Varies | Varies | Medium |
+| Approach                                   | Time                              | Space                                       | Difficulty    |
+| ------------------------------------------ | --------------------------------- | ------------------------------------------- | ------------- |
+| Sliding Window with Hash Map (Implemented) | O(m + n) where m=len(s), n=len(t) | O(1) - at most 26 lowercase letters in maps | Hard          |
+| Brute Force                                | O(n²) or worse                    | O(1) or less                                | Easy but Slow |
+| Alternative 1                              | Higher                            | Different                                   | Medium        |
+| Greedy (if applicable)                     | Varies                            | Varies                                      | Medium        |
 
 ## Key Insights & Patterns
 
@@ -200,6 +207,7 @@ This problem teaches important concepts:
 ## Related Problems
 
 Similar LeetCode problems:
+
 - Related problems using sliding window with hash map
 - Variants with different constraints
 - Foundational problems with same patterns
@@ -217,6 +225,7 @@ Similar LeetCode problems:
 6. **Alternatives**: Mention other approaches
 
 **What interviewers evaluate**:
+
 - Problem understanding
 - Algorithm knowledge
 - Code quality
@@ -255,6 +264,7 @@ Avoid these pitfalls:
 ## Problem Variants
 
 This problem connects to:
+
 - Problems with similar constraints
 - Generalized versions with more variables
 - Problems requiring same algorithm
