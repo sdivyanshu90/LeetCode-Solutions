@@ -6,7 +6,7 @@ Given an integer array `nums` and an integer `k`, return the number of <b>good s
 
 A <b>good array</b> is an array where the number of different integers in that array is exactly `k`.
 
-- For example, `[1,2,3,1,2]` has 3 different integers: `1`, `2`, and `3`.
+- For example, `[1,2,3,1,2]` has `3` different integers: `1`, `2`, and `3`.
 
 A <b>subarray</b> is a <b>contiguous</b> part of an array.
 
