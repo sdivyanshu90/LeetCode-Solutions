@@ -1,10 +1,12 @@
-# Word Break2
+# Word Break II/2
 
 ## Problem Summary
 
-This is a LeetCode hard problem: Word Break2
+Given a string `s` and a dictionary of strings `wordDict`, add spaces in `s` to construct a sentence where each word is a valid dictionary word. Return all such possible sentences in <b>any order</b>.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+<b>Note</b> that the same word in the dictionary may be reused multiple times in the segmentation.
+
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/word-break-ii/description/)
 
 ## Approach: Algorithm (Implemented)
 
@@ -38,11 +40,11 @@ class Solution:
         return [" ".join(words) for words in memo[s]]
 def test_wordBreak():
     solution = Solution()
-    print(solution.wordBreak("catsanddog", ["cat", "cats", "and", "sand", "dog"])) 
-    print(solution.wordBreak("pineapplepenapple", ["apple", "pen", "applepen", "pine", "pineapple"])) 
-    print(solution.wordBreak("catsandog", ["cats", "dog", "sand", "and", "cat"])) 
-    print(solution.wordBreak("aaaaaaa", ["aaaa","aa","a"])) 
-    print(solution.wordBreak("leetcode", ["leet", "code"])) 
+    print(solution.wordBreak("catsanddog", ["cat", "cats", "and", "sand", "dog"]))
+    print(solution.wordBreak("pineapplepenapple", ["apple", "pen", "applepen", "pine", "pineapple"]))
+    print(solution.wordBreak("catsandog", ["cats", "dog", "sand", "and", "cat"]))
+    print(solution.wordBreak("aaaaaaa", ["aaaa","aa","a"]))
+    print(solution.wordBreak("leetcode", ["leet", "code"]))
 test_wordBreak()
 ```
 
@@ -52,7 +54,7 @@ The algorithm executes in the following steps:
 
 1. **Parse and Initialize**: Set up necessary data structures
 2. **Main Algorithm**: Execute the core algorithm logic
-3. **Handle Edge Cases**: Manage boundary and special conditions  
+3. **Handle Edge Cases**: Manage boundary and special conditions
 4. **Return Result**: Compute and return final answer
 
 **Example Walkthrough**:
@@ -90,6 +92,7 @@ This approach is optimal because:
 ## Alternative Approaches
 
 ### Brute Force Approach
+
 - Check all possibilities exhaustively
 - Time: O(n²) or worse
 - Space: O(1) minimal extra space
@@ -97,6 +100,7 @@ This approach is optimal because:
 - Cons: Too slow for constraints
 
 ### Different Data Structure
+
 - Use alternative data structures
 - May have different complexity trade-offs
 - Could simplify or complicate logic
@@ -138,12 +142,12 @@ solution.solve(reverse_array)  # Reverse order
 
 ## Complexity Comparison
 
-| Approach | Time | Space | Difficulty |
-|----------|------|-------|-----------|
-| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard |
-| Brute Force | O(n²) or worse | O(1) or less | Easy but Slow |
-| Alternative 1 | Higher | Different | Medium |
-| Greedy (if applicable) | Varies | Varies | Medium |
+| Approach                | Time                      | Space                     | Difficulty    |
+| ----------------------- | ------------------------- | ------------------------- | ------------- |
+| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard          |
+| Brute Force             | O(n²) or worse            | O(1) or less              | Easy but Slow |
+| Alternative 1           | Higher                    | Different                 | Medium        |
+| Greedy (if applicable)  | Varies                    | Varies                    | Medium        |
 
 ## Key Insights & Patterns
 
@@ -158,6 +162,7 @@ This problem teaches important concepts:
 ## Related Problems
 
 Similar LeetCode problems:
+
 - Related problems using algorithm
 - Variants with different constraints
 - Foundational problems with same patterns
@@ -175,6 +180,7 @@ Similar LeetCode problems:
 6. **Alternatives**: Mention other approaches
 
 **What interviewers evaluate**:
+
 - Problem understanding
 - Algorithm knowledge
 - Code quality
@@ -213,6 +219,7 @@ Avoid these pitfalls:
 ## Problem Variants
 
 This problem connects to:
+
 - Problems with similar constraints
 - Generalized versions with more variables
 - Problems requiring same algorithm
