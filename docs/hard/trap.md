@@ -1,10 +1,10 @@
-# Trapping Rain Water
+# Trapping Rain Water II
 
 ## Problem Summary
 
-Given an elevation map, calculate how much water can be trapped after raining.
+Given an `m x n` integer matrix `heightMap` representing the height of each unit cell in a 2D elevation map, return <i>the volume of water it can trap after raining</i>.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/trapping-rain-water-ii/description/)
 
 ## Approach: Two Pointers (Implemented)
 
@@ -61,26 +61,29 @@ The algorithm executes in the following steps:
 
 1. **Parse and Initialize**: Set up necessary data structures
 2. **Main Algorithm**: Execute the core two pointers logic
-3. **Handle Edge Cases**: Manage boundary and special conditions  
+3. **Handle Edge Cases**: Manage boundary and special conditions
 4. **Return Result**: Compute and return final answer
 
 **Example Walkthrough**:
 
 Let's trace through the algorithm with concrete examples:
 
-**Example 1**:  
-- Input: `[0,1,0,2,1,0,1,3,2,1,2,1]`  
-- Expected: `6`  
+**Example 1**:
+
+- Input: `[0,1,0,2,1,0,1,3,2,1,2,1]`
+- Expected: `6`
 - The algorithm processes the input step by step
 
-**Example 2**:  
-- Input: `[4,2,3]`  
-- Expected: `1`  
+**Example 2**:
+
+- Input: `[4,2,3]`
+- Expected: `1`
 - The algorithm processes the input step by step
 
-**Example 3**:  
-- Input: `[5,4,3,2,1]`  
-- Expected: `0`  
+**Example 3**:
+
+- Input: `[5,4,3,2,1]`
+- Expected: `0`
 - The algorithm processes the input step by step
 
 ### Why Two Pointers Works
@@ -119,6 +122,7 @@ This approach is optimal because:
 ## Alternative Approaches
 
 ### Brute Force Approach
+
 - Check all possibilities exhaustively
 - Time: O(n²) or worse
 - Space: O(1) minimal extra space
@@ -126,6 +130,7 @@ This approach is optimal because:
 - Cons: Too slow for constraints
 
 ### Different Data Structure
+
 - Use alternative data structures
 - May have different complexity trade-offs
 - Could simplify or complicate logic
@@ -167,12 +172,12 @@ solution.solve(reverse_array)  # Reverse order
 
 ## Complexity Comparison
 
-| Approach | Time | Space | Difficulty |
-|----------|------|-------|-----------|
-| Two Pointers (Implemented) | O(n) - single pass with two pointers | O(1) - only using pointer variables | Hard |
-| Brute Force | O(n²) or worse | O(1) or less | Easy but Slow |
-| Alternative 1 | Higher | Different | Medium |
-| Greedy (if applicable) | Varies | Varies | Medium |
+| Approach                   | Time                                 | Space                               | Difficulty    |
+| -------------------------- | ------------------------------------ | ----------------------------------- | ------------- |
+| Two Pointers (Implemented) | O(n) - single pass with two pointers | O(1) - only using pointer variables | Hard          |
+| Brute Force                | O(n²) or worse                       | O(1) or less                        | Easy but Slow |
+| Alternative 1              | Higher                               | Different                           | Medium        |
+| Greedy (if applicable)     | Varies                               | Varies                              | Medium        |
 
 ## Key Insights & Patterns
 
@@ -187,6 +192,7 @@ This problem teaches important concepts:
 ## Related Problems
 
 Similar LeetCode problems:
+
 - Related problems using two pointers
 - Variants with different constraints
 - Foundational problems with same patterns
@@ -204,6 +210,7 @@ Similar LeetCode problems:
 6. **Alternatives**: Mention other approaches
 
 **What interviewers evaluate**:
+
 - Problem understanding
 - Algorithm knowledge
 - Code quality
@@ -242,6 +249,7 @@ Avoid these pitfalls:
 ## Problem Variants
 
 This problem connects to:
+
 - Problems with similar constraints
 - Generalized versions with more variables
 - Problems requiring same algorithm
