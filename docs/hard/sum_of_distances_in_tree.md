@@ -1,10 +1,14 @@
-# Sum Of Distances In Tree
+# Sum of Distances in Tree
 
 ## Problem Summary
 
-This is a LeetCode hard problem: Sum Of Distances In Tree
+There is an undirected connected tree with `n` nodes labeled from `0` to `n - 1` and `n - 1` edges.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+You are given the integer `n` and the array `edges` where `edges[i] = [ai, bi]` indicates that there is an edge between nodes $a_{i}$ and $b_{i}$ in the tree.
+
+Return an array `answer` of length `n` where `answer[i]` is the sum of the distances between the $i^{th}$ node in the tree and all other nodes.
+
+**LeetCode Problem**: [View on LeetCode](http://leetcode.com/problems/sum-of-distances-in-tree/description/)
 
 ## Approach: Algorithm (Implemented)
 
@@ -21,15 +25,15 @@ from typing import List
 class Solution:
     def sumOfDistancesInTree(self, n: int, edges: List[List[int]]) -> List[int]:
         graph = {}
-        for u, v in edges: 
+        for u, v in edges:
             graph.setdefault(u, []).append(v)
             graph.setdefault(v, []).append(u)
         size = [0]*n
-        def fn(x, par): 
+        def fn(x, par):
             """Return size and sum of distances in sub-tree."""
             c = s = 0
-            for xx in graph.get(x, []): 
-                if xx != par: 
+            for xx in graph.get(x, []):
+                if xx != par:
                     cc, ss = fn(xx, x)
                     c, s = c + cc, s + ss + cc
             size[x] = c + 1
@@ -37,10 +41,10 @@ class Solution:
         ans = [0]*n
         ans[0] = fn(0, -1)[1]
         stack = [0]
-        while stack: 
+        while stack:
             x = stack.pop()
-            for xx in graph.get(x, []): 
-                if not ans[xx]: 
+            for xx in graph.get(x, []):
+                if not ans[xx]:
                     ans[xx] = ans[x] + n - 2*size[xx]
                     stack.append(xx)
         return ans
@@ -70,7 +74,7 @@ The algorithm executes in the following steps:
 
 1. **Parse and Initialize**: Set up necessary data structures
 2. **Main Algorithm**: Execute the core algorithm logic
-3. **Handle Edge Cases**: Manage boundary and special conditions  
+3. **Handle Edge Cases**: Manage boundary and special conditions
 4. **Return Result**: Compute and return final answer
 
 **Example Walkthrough**:
@@ -108,6 +112,7 @@ This approach is optimal because:
 ## Alternative Approaches
 
 ### Brute Force Approach
+
 - Check all possibilities exhaustively
 - Time: O(n²) or worse
 - Space: O(1) minimal extra space
@@ -115,6 +120,7 @@ This approach is optimal because:
 - Cons: Too slow for constraints
 
 ### Different Data Structure
+
 - Use alternative data structures
 - May have different complexity trade-offs
 - Could simplify or complicate logic
@@ -156,12 +162,12 @@ solution.solve(reverse_array)  # Reverse order
 
 ## Complexity Comparison
 
-| Approach | Time | Space | Difficulty |
-|----------|------|-------|-----------|
-| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard |
-| Brute Force | O(n²) or worse | O(1) or less | Easy but Slow |
-| Alternative 1 | Higher | Different | Medium |
-| Greedy (if applicable) | Varies | Varies | Medium |
+| Approach                | Time                      | Space                     | Difficulty    |
+| ----------------------- | ------------------------- | ------------------------- | ------------- |
+| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard          |
+| Brute Force             | O(n²) or worse            | O(1) or less              | Easy but Slow |
+| Alternative 1           | Higher                    | Different                 | Medium        |
+| Greedy (if applicable)  | Varies                    | Varies                    | Medium        |
 
 ## Key Insights & Patterns
 
@@ -176,6 +182,7 @@ This problem teaches important concepts:
 ## Related Problems
 
 Similar LeetCode problems:
+
 - Related problems using algorithm
 - Variants with different constraints
 - Foundational problems with same patterns
@@ -193,6 +200,7 @@ Similar LeetCode problems:
 6. **Alternatives**: Mention other approaches
 
 **What interviewers evaluate**:
+
 - Problem understanding
 - Algorithm knowledge
 - Code quality
@@ -231,6 +239,7 @@ Avoid these pitfalls:
 ## Problem Variants
 
 This problem connects to:
+
 - Problems with similar constraints
 - Generalized versions with more variables
 - Problems requiring same algorithm
