@@ -1,10 +1,16 @@
-# Subarrays With K Distinct
+# Subarrays with K Different Integers
 
 ## Problem Summary
 
-This is a LeetCode hard problem: Subarrays With K Distinct
+Given an integer array `nums` and an integer `k`, return the number of <b>good subarrays</b> of `nums`.
 
-**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/)
+A <b>good array</b> is an array where the number of different integers in that array is exactly `k`.
+
+- For example, `[1,2,3,1,2]` has 3 different integers: `1`, `2`, and `3`.
+
+A <b>subarray</b> is a <b>contiguous</b> part of an array.
+
+**LeetCode Problem**: [View on LeetCode](https://leetcode.com/problems/subarrays-with-k-different-integers/description/)
 
 ## Approach: Algorithm (Implemented)
 
@@ -70,7 +76,7 @@ The algorithm executes in the following steps:
 
 1. **Parse and Initialize**: Set up necessary data structures
 2. **Main Algorithm**: Execute the core algorithm logic
-3. **Handle Edge Cases**: Manage boundary and special conditions  
+3. **Handle Edge Cases**: Manage boundary and special conditions
 4. **Return Result**: Compute and return final answer
 
 **Example Walkthrough**:
@@ -108,6 +114,7 @@ This approach is optimal because:
 ## Alternative Approaches
 
 ### Brute Force Approach
+
 - Check all possibilities exhaustively
 - Time: O(n²) or worse
 - Space: O(1) minimal extra space
@@ -115,6 +122,7 @@ This approach is optimal because:
 - Cons: Too slow for constraints
 
 ### Different Data Structure
+
 - Use alternative data structures
 - May have different complexity trade-offs
 - Could simplify or complicate logic
@@ -156,12 +164,12 @@ solution.solve(reverse_array)  # Reverse order
 
 ## Complexity Comparison
 
-| Approach | Time | Space | Difficulty |
-|----------|------|-------|-----------|
-| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard |
-| Brute Force | O(n²) or worse | O(1) or less | Easy but Slow |
-| Alternative 1 | Higher | Different | Medium |
-| Greedy (if applicable) | Varies | Varies | Medium |
+| Approach                | Time                      | Space                     | Difficulty    |
+| ----------------------- | ------------------------- | ------------------------- | ------------- |
+| Algorithm (Implemented) | Varies based on algorithm | Varies based on algorithm | Hard          |
+| Brute Force             | O(n²) or worse            | O(1) or less              | Easy but Slow |
+| Alternative 1           | Higher                    | Different                 | Medium        |
+| Greedy (if applicable)  | Varies                    | Varies                    | Medium        |
 
 ## Key Insights & Patterns
 
@@ -176,6 +184,7 @@ This problem teaches important concepts:
 ## Related Problems
 
 Similar LeetCode problems:
+
 - Related problems using algorithm
 - Variants with different constraints
 - Foundational problems with same patterns
@@ -193,6 +202,7 @@ Similar LeetCode problems:
 6. **Alternatives**: Mention other approaches
 
 **What interviewers evaluate**:
+
 - Problem understanding
 - Algorithm knowledge
 - Code quality
@@ -231,6 +241,7 @@ Avoid these pitfalls:
 ## Problem Variants
 
 This problem connects to:
+
 - Problems with similar constraints
 - Generalized versions with more variables
 - Problems requiring same algorithm
