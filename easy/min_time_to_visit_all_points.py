@@ -26,10 +26,10 @@ def test_min_time_to_visit_all_points():
 
     # Test case 4
     points = [[0,0],[2,2],[3,3]]
-    print(solution.minTimeToVisitAllPoints(points))  # Expected output: 4
+    print(solution.minTimeToVisitAllPoints(points))  # Expected output: 3
 
     # Test case 5
     points = [[0,0],[1,1],[2,2],[3,3]]
-    print(solution.minTimeToVisitAllPoints(points))  # Expected output: 6
+    print(solution.minTimeToVisitAllPoints(points))  # Expected output: 3
 
 test_min_time_to_visit_all_points()
