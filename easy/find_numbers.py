@@ -27,7 +27,7 @@ def test_find_numbers():
 
     # Test case 4
     nums = [1234,56789,10]
-    print(solution.findNumbers(nums))  # Expected output: 1
+    print(solution.findNumbers(nums))  # Expected output: 2
 
     # Test case 5
     nums = [0,11,222,3333]
