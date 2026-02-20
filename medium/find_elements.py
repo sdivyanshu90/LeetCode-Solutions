@@ -33,7 +33,7 @@ def test_find_elements():
     obj = FindElements(root)
     print(obj.find(1))  # Expected output: True
     print(obj.find(2))  # Expected output: True
-    print(obj.find(3))  # Expected output: True
+    print(obj.find(3))  # Expected output: False
     print(obj.find(4))  # Expected output: False
 
     # Test case 2
