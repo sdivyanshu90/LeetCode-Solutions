@@ -29,7 +29,7 @@ def test_max_side_length():
     # Test case 1
     mat = [[1,1,3],[2,2,4],[1,1,5]]
     threshold = 4
-    print(solution.maxSideLength(mat, threshold))  # Expected output: 2
+    print(solution.maxSideLength(mat, threshold))  # Expected output: 1
 
     # Test case 2
     mat = [[2,2,2],[2,2,2],[2,2,2]]
@@ -39,7 +39,7 @@ def test_max_side_length():
     # Test case 3
     mat = [[1,1,1],[1,0,1],[1,1,1]]
     threshold = 6
-    print(solution.maxSideLength(mat, threshold))  # Expected output: 3
+    print(solution.maxSideLength(mat, threshold))  # Expected output: 2
 
     # Test case 4
     mat = [[18,70],[61,1],[25,85],[14,40],[11,96],[97,96],[63,45]]
