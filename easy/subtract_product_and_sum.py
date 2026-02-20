@@ -28,6 +28,6 @@ def test_subtract_product_and_sum():
 
     # Test case 5
     n = 12345
-    print(solution.subtractProductAndSum(n))  # Expected output: 101
+    print(solution.subtractProductAndSum(n))  # Expected output: 105
 
 test_subtract_product_and_sum()
