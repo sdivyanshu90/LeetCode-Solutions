@@ -45,6 +45,6 @@ def test_num_ways():
     # Test case 5
     steps = 7
     arrLen = 3
-    print(solution.numWays(steps, arrLen))  # Expected output: 28
+    print(solution.numWays(steps, arrLen))  # Expected output: 120
 
 test_num_ways()
