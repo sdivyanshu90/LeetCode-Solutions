@@ -14,7 +14,7 @@ def test_min_falling_path_sum():
 
     # Test case 1
     grid = [[1,2,3],[4,5,6],[7,8,9]]
-    print(solution.minFallingPathSum(grid))  # Expected output: 12
+    print(solution.minFallingPathSum(grid))  # Expected output: 13
 
     # Test case 2
     grid = [[7]]
@@ -22,7 +22,7 @@ def test_min_falling_path_sum():
 
     # Test case 3
     grid = [[-10, -20, -30], [-5, -15, -25], [-1, -2, -3]]
-    print(solution.minFallingPathSum(grid))  # Expected output: -60
+    print(solution.minFallingPathSum(grid))  # Expected output: -48
 
     # Test case 4
     grid = [[1,2],[3,4]]
@@ -30,6 +30,6 @@ def test_min_falling_path_sum():
 
     # Test case 5
     grid = [[-1,-2,-3],[-4,-5,-6],[-7,-8,-9]]
-    print(solution.minFallingPathSum(grid))  # Expected output: -60
+    print(solution.minFallingPathSum(grid))  # Expected output: -17
 
 test_min_falling_path_sum()
