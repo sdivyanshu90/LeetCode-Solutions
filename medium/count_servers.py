@@ -42,7 +42,7 @@ def test_count_servers():
 
     # Test case 3
     grid = [[1,1,0],[0,0,1],[1,0,1]]
-    print(solution.countServers(grid))  # Expected output: 4
+    print(solution.countServers(grid))  # Expected output: 5
 
     # Test case 4
     grid = [[1,0,0],[0,1,0],[0,0,1]]
