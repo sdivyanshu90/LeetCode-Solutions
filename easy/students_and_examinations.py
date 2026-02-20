@@ -1,10 +1,24 @@
 import pandas as pd
 
 def students_and_examinations(students: pd.DataFrame, subjects: pd.DataFrame, examinations: pd.DataFrame) -> pd.DataFrame:
-    all_combinations = pd.merge(students, subjects, how='cross')
-    exam_counts = examinations.groupby(['student_id', 'subject_name']).size().reset_index(name='attended_exams')
-    result = pd.merge(all_combinations, exam_counts, how='outer', on=['student_id', 'subject_name']).fillna(0).sort_values(['student_id', 'subject_name'], ascending=True)
-    return result[['student_id', 'student_name', 'subject_name', 'attended_exams']]
+    
+    all_combinations = students.merge(subjects, how='cross')    
+    exam_counts = (
+        examinations
+        .groupby(['student_id', 'subject_name'])
+        .size()
+        .reset_index(name='attended_exams')
+    )
+    
+    result = (
+        all_combinations
+        .merge(exam_counts, how='left', on=['student_id', 'subject_name'])
+    )
+    
+    result['attended_exams'] = result['attended_exams'].fillna(0).astype(int)
+    
+    return result.sort_values(['student_id', 'subject_name'])
+
 
 def test_students_and_examinations():
     students = pd.DataFrame({
