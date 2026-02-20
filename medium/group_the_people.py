@@ -22,11 +22,11 @@ def test_group_the_people():
 
     # Test case 1
     groupSizes = [3,3,3,3,3,1,3]
-    print(solution.groupThePeople(groupSizes))  # Expected output: [[5], [0, 1, 2], [3, 4, 6]]
+    print(solution.groupThePeople(groupSizes))  # Expected output: [[0, 1, 2], [5], [3, 4, 6]]
 
     # Test case 2
     groupSizes = [2,1,3,3,3,2]
-    print(solution.groupThePeople(groupSizes))  # Expected output: [[1], [0, 5], [2, 3, 4]]
+    print(solution.groupThePeople(groupSizes))  # Expected output: [[1], [2, 3, 4], [0, 5]]
 
     # Test case 3
     groupSizes = [1]
