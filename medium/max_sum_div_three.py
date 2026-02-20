@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def maxSumDivThree(self, nums: List[int]) -> int:
         f = [0, -float("inf"), -float("inf")]
