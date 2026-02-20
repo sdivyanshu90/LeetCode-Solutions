@@ -33,6 +33,6 @@ def test_find_special_integer():
 
     # Test case 5
     arr = [1,2,3]
-    print(solution.findSpecialInteger(arr))  # Expected output: -1
+    print(solution.findSpecialInteger(arr))  # Expected output: 1
 
 test_find_special_integer()
