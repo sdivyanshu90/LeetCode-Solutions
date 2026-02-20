@@ -21,18 +21,18 @@ def test_sequential_digits():
 
     # Test case 2
     low, high = 1000, 13000
-    print(solution.sequentialDigits(low, high))  # Expected output: [1234, 2345, 3456, 4567, 5678, 6789]
+    print(solution.sequentialDigits(low, high))  # Expected output: [1234, 2345, 3456, 4567, 5678, 6789, 12345]
 
     # Test case 3
     low, high = 10, 1000000000
-    print(solution.sequentialDigits(low, high))  # Expected output: [12, 23, 34, 45, 56, 67, 78, 89, 123, ..., 123456789]
+    print(solution.sequentialDigits(low, high))  # Expected output: [12, 23, 34, 45, 56, 67, 78, 89, 123, 234, 345, 456, 567, 678, 789, 1234, 2345, 3456, 4567, 5678, 6789, 12345, 23456, 34567, 45678, 56789, 123456, 234567, 345678, 456789, 1234567, 2345678, 3456789, 12345678, 23456789, 123456789]
 
     # Test case 4
     low, high = 58, 155
-    print(solution.sequentialDigits(low, high))  # Expected output: [67, 78, 89]
+    print(solution.sequentialDigits(low, high))  # Expected output: [67, 78, 89, 123]
 
     # Test case 5
     low, high = 10, 99
-    print(solution.sequentialDigits(low, high))  # Expected output: [12, 23, ..., 89]
+    print(solution.sequentialDigits(low, high))  # Expected output: [12, 23, 34, 45, 56, 67, 78, 89]
 
 test_sequential_digits()
