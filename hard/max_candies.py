@@ -81,6 +81,6 @@ def test_max_candies():
     keys = [[],[0,2],[],[]]
     containedBoxes = [[1],[2],[],[]]
     initialBoxes = [0,3]
-    print(solution.maxCandies(status, candies, keys, containedBoxes, initialBoxes))  # Expected output: 100
+    print(solution.maxCandies(status, candies, keys, containedBoxes, initialBoxes))  # Expected output: 50
 
 test_max_candies()
