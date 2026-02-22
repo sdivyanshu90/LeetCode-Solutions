@@ -1,3 +1,7 @@
+from typing import List
+import functools
+from math import inf
+
 class Solution:
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         n = len(jobDifficulty)
