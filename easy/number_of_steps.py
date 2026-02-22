@@ -13,7 +13,7 @@ class Solution:
 
 def test_number_Of_Steps():
     solution = Solution()
-    
+
     # Test case 1
     num = 14
     expected = 6
