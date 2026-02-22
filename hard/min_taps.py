@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def minTaps(self, n: int, ranges: List[int]) -> int:
         max_ranges = [0] * (n+1)
@@ -43,6 +45,6 @@ def test_minTaps():
     n = 8
     ranges = [4,0,0,0,4,0,0,0,2]
     expected = 2
-    print(solution.minTaps(n, ranges))  # Expected Output: 2
+    print(solution.minTaps(n, ranges))  # Expected Output: 1
 
 test_minTaps()
