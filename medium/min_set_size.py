@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
         freq = {}
