@@ -38,12 +38,12 @@ def test_xorQueries():
     arr = [5, 6, 7, 8, 9]
     queries = [[0, 2], [1, 4], [0, 4]]
     expected = [4, 14, 1]
-    print(solution.xorQueries(arr, queries))  # Expected Output: [4, 14, 1]
+    print(solution.xorQueries(arr, queries))  # Expected Output: [4, 0, 5]
 
     # Test case 5
     arr = [10, 11, 12, 13, 14]
     queries = [[0, 1], [2, 3], [1, 4]]
     expected = [1, 1, 3]
-    print(solution.xorQueries(arr, queries))  # Expected Output: [1, 1, 3]
+    print(solution.xorQueries(arr, queries))  # Expected Output: [1, 1, 4]
 
 test_xorQueries()
