@@ -1,3 +1,5 @@
+from typing import Optional
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -29,17 +31,17 @@ def test_maxProduct():
     # Test case 1
     root = TreeNode(1, TreeNode(2), TreeNode(3))
     expected = 6
-    print(solution.maxProduct(root))  # Expected Output: 6
+    print(solution.maxProduct(root))  # Expected Output: 9
 
     # Test case 2
     root = TreeNode(1, TreeNode(2), TreeNode(3, TreeNode(4), TreeNode(5)))
     expected = 110
-    print(solution.maxProduct(root))  # Expected Output: 110
+    print(solution.maxProduct(root))  # Expected Output: 50
 
     # Test case 3
     root = TreeNode(1, None, TreeNode(2, None, TreeNode(3, None, TreeNode(4))))
     expected = 12
-    print(solution.maxProduct(root))  # Expected Output: 12
+    print(solution.maxProduct(root))  # Expected Output: 24
 
     # Test case 4
     root = TreeNode(1)
