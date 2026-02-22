@@ -24,7 +24,7 @@ def test_sum_zero():
     # Test case 1
     n = 5
     expected = [-2, -1, 0, 1, 2]
-    print(solution.sumZero(n))  # Expected Output: [-2, -1, 0, 1, 2]
+    print(solution.sumZero(n))  # Expected Output: [-1, -2, 0, 1, 2]
 
     # Test case 2
     n = 3
@@ -39,11 +39,11 @@ def test_sum_zero():
     # Test case 4
     n = 4
     expected = [-2, -1, 1, 2]
-    print(solution.sumZero(n))  # Expected Output: [-2, -1, 1, 2]
+    print(solution.sumZero(n))  # Expected Output: [-1, 1, -2, 2]
 
     # Test case 5
     n = 6
     expected = [-3, -2, -1, 1, 2, 3]
-    print(solution.sumZero(n))  # Expected Output: [-3, -2, -1, 1, 2, 3]
+    print(solution.sumZero(n))  # Expected Output: [-1, 1, -2, 2, -3, 3]
 
 test_sum_zero()
