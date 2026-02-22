@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def findTheCity(
         self, n: int, edges: List[List[int]], distanceThreshold: int
@@ -85,7 +87,7 @@ def test_findTheCity():
     ]
     distanceThreshold = 2
     expected = 5
-    print(solution.findTheCity(n, edges, distanceThreshold))  # Expected Output: 5
+    print(solution.findTheCity(n, edges, distanceThreshold))  # Expected Output: 0
 
     # Test case 4
     n = 4
