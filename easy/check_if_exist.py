@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def checkIfExist(self, arr: List[int]) -> bool:
         for i in range(len(arr)):
