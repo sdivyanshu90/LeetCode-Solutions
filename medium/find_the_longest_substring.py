@@ -37,6 +37,6 @@ def test_findTheLongestSubstring():
 
     # Test case 5
     s5 = "abcdeiouxyz"
-    print(solution.findTheLongestSubstring(s5)) # Expected output: 6
+    print(solution.findTheLongestSubstring(s5)) # Expected output: 3
 
 test_findTheLongestSubstring()
