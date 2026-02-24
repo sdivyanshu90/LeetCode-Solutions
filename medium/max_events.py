@@ -1,3 +1,6 @@
+from typing import List
+import heapq
+
 class Solution:
     def maxEvents(self, events: List[List[int]]) -> int:
         n = len(events)
