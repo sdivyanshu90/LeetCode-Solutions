@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         def find_root():
