@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
         count = [0] * 101
