@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def minCost(self, grid: List[List[int]]) -> int:
         num_rows, num_cols = len(grid), len(grid[0])
@@ -63,6 +65,6 @@ def test_minCost():
 
     # Test case 5
     grid5 = [[1, 1], [1, 1]]
-    print(solution.minCost(grid5)) # Expected output: 2
+    print(solution.minCost(grid5)) # Expected output: 1
 
 test_minCost()
