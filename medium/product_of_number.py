@@ -18,11 +18,6 @@ class ProductOfNumbers:
             self.prefix_product[self.size] // self.prefix_product[self.size - k]
         )
 
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)
-
 def test_ProductOfNumbers():
     obj = ProductOfNumbers()
 
