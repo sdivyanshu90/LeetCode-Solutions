@@ -1,10 +1,11 @@
 class Solution:
     def countOrders(self, n: int) -> int:
         result = 1
+        MOD = 10 ** 9 + 7
         
         for i in range(2, n + 1):
-            result *= i * (2 * i - 1) % (10 ** 9 + 7)
-            result %= (10 ** 9 + 7)
+            result *= i * (2 * i - 1) % MOD
+            result %= MOD
         return result
 
 def test_countOrders():
