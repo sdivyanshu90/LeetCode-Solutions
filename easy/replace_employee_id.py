@@ -28,7 +28,6 @@ def test_replace_employee_id():
     employees3 = pd.DataFrame({'id': [6], 'name': ['Frank']})
     employee_uni3 = pd.DataFrame({'id': [6], 'unique_id': ['F678']})
     print(replace_employee_id(employees3, employee_uni3))
-
     # Expected output:
     #   unique_id   name
     # 0      F678  Frank
