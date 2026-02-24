@@ -30,6 +30,6 @@ def test_numberOfSubstrings():
 
     # Test case 5
     s5 = "abccba"
-    print(solution.numberOfSubstrings(s5)) # Expected output: 9
+    print(solution.numberOfSubstrings(s5)) # Expected output: 7
 
 test_numberOfSubstrings()
