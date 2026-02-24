@@ -1,14 +1,18 @@
+from typing import Optional
+
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 class Solution:
     def isSubPath(
         self, head: Optional[ListNode], root: Optional[TreeNode]
@@ -43,7 +47,7 @@ def test_isSubPath():
         TreeNode(4, TreeNode(2), TreeNode(1)),
         TreeNode(4, None, TreeNode(2, None, TreeNode(6))),
     )
-    print(solution.isSubPath(head1, root1)) # Expected output: True
+    print(solution.isSubPath(head1, root1)) # Expected output: False
 
     # Test case 2
     head2 = ListNode(1, ListNode(4, ListNode(2)))
