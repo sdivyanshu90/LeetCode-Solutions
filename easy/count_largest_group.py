@@ -1,3 +1,5 @@
+from collections import Counter
+
 class Solution:
     def countLargestGroup(self, n: int) -> int:
         hashMap = Counter()
@@ -29,6 +31,6 @@ def test_count_largest_group():
 
     # Test case 5
     n5 = 1000
-    print(solution.countLargestGroup(n5))  # Expected output: 117
+    print(solution.countLargestGroup(n5))  # Expected output: 2
 
 test_count_largest_group()
