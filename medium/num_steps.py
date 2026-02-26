@@ -31,10 +31,10 @@ def test_num_steps():
 
     # Test case 4
     s4 = "111"
-    print(solution.numSteps(s4))  # Expected output: 5
+    print(solution.numSteps(s4))  # Expected output: 4
 
     # Test case 5
     s5 = "1010"
-    print(solution.numSteps(s5))  # Expected output: 5
+    print(solution.numSteps(s5))  # Expected output: 6
 
 test_num_steps()
