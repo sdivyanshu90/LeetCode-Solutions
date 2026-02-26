@@ -1,9 +1,12 @@
+from typing import Optional
+
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 class Solution:
     def balanceBST(self, root: TreeNode) -> TreeNode:
         def inorder(node):
@@ -30,7 +33,7 @@ def test_balance_bst():
     # Test case 2
     root2 = TreeNode(1, None, TreeNode(2, None, TreeNode(3, None, TreeNode(4))))
     balanced_root2 = solution.balanceBST(root2)
-    print(balanced_root2.val)  # Expected output: 3
+    print(balanced_root2.val)  # Expected output: 2
 
     # Test case 3
     root3 = TreeNode(1)
