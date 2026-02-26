@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def luckyNumbers(self, matrix: List[List[int]]) -> List[int]:
         N, M = len(matrix), len(matrix[0])
@@ -22,7 +24,7 @@ def test_lucky_numbers():
 
     # Test case 1
     matrix1 = [[3, 7], [8, 5]]
-    print(solution.luckyNumbers(matrix1))  # Expected output: [5]
+    print(solution.luckyNumbers(matrix1))  # Expected output: []
 
     # Test case 2
     matrix2 = [[1, 10, 4, 2], [9, 3, 8, 7], [15, 16, 17, 12]]
@@ -30,7 +32,7 @@ def test_lucky_numbers():
 
     # Test case 3
     matrix3 = [[7, 8], [1, 2]]
-    print(solution.luckyNumbers(matrix3))  # Expected output: []
+    print(solution.luckyNumbers(matrix3))  # Expected output: [7]
 
     # Test case 4
     matrix4 = [[5]]
@@ -38,6 +40,6 @@ def test_lucky_numbers():
 
     # Test case 5
     matrix5 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-    print(solution.luckyNumbers(matrix5))  # Expected output: [9]
+    print(solution.luckyNumbers(matrix5))  # Expected output: [7]
 
 test_lucky_numbers()
