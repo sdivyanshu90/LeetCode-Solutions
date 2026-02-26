@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def sumFourDivisors(self, nums: List[int]) -> int:
         total_sum = 0
@@ -34,10 +36,10 @@ def test_sum_four_divisors():
 
     # Test case 4
     nums4 = [6, 28, 496]
-    print(solution.sumFourDivisors(nums4))  # Expected output: 0
+    print(solution.sumFourDivisors(nums4))  # Expected output: 12
 
     # Test case 5
     nums5 = [12, 18, 20]
-    print(solution.sumFourDivisors(nums5))  # Expected output: 78
+    print(solution.sumFourDivisors(nums5))  # Expected output: 0
 
 test_sum_four_divisors()
