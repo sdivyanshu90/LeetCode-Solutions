@@ -2,29 +2,39 @@ from typing import List
 
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
-        n = len(rating)
+        if not rating:
+            return 0
+            
+        max_val = max(rating)
+        left_tree = [0] * (max_val + 1)
+        right_tree = [0] * (max_val + 1)
+        
+        def update(tree: List[int], index: int, val: int):
+            while index < len(tree):
+                tree[index] += val
+                index += index & (-index)
+                
+        def query(tree: List[int], index: int) -> int:
+            total_sum = 0
+            while index > 0:
+                total_sum += tree[index]
+                index -= index & (-index)
+            return total_sum
+            
+        for r in rating:
+            update(right_tree, r, 1)
+            
         teams = 0
-
-        increasing_teams = [[0] * 4 for _ in range(n)]
-        decreasing_teams = [[0] * 4 for _ in range(n)]
-        for i in range(n):
-            increasing_teams[i][1] = 1
-            decreasing_teams[i][1] = 1
-        for count in range(2, 4):
-            for i in range(n):
-                for j in range(i + 1, n):
-                    if rating[j] > rating[i]:
-                        increasing_teams[j][count] += increasing_teams[i][
-                            count - 1
-                        ]
-                    if rating[j] < rating[i]:
-                        decreasing_teams[j][count] += decreasing_teams[i][
-                            count - 1
-                        ]
-
-        for i in range(n):
-            teams += increasing_teams[i][3] + decreasing_teams[i][3]
-
+        
+        for r in rating:
+            update(right_tree, r, -1)
+            less_left = query(left_tree, r - 1)
+            greater_left = query(left_tree, max_val) - query(left_tree, r)
+            less_right = query(right_tree, r - 1)
+            greater_right = query(right_tree, max_val) - query(right_tree, r)
+            teams += (less_left * greater_right) + (greater_left * less_right)
+            update(left_tree, r, 1)     
+                   
         return teams
 
 def test_num_teams():
