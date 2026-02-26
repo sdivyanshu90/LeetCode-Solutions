@@ -71,7 +71,7 @@ def test_custom_stack():
     customStack5.push(5)
     customStack5.increment(3, 100)  # Increment the bottom 3 elements by 100
     print(customStack5.pop())  # Expected output: 5 (not incremented)
-    print(customStack5.pop())  # Expected output: 104 (4 + 100)
+    print(customStack5.pop())  # Expected output: 4 (not incremented)
     print(customStack5.pop())  # Expected output: 103 (3 + 100)
     print(customStack5.pop())  # Expected output: 102 (2 + 100)
     print(customStack5.pop())  # Expected output: 101 (1 + 100)
