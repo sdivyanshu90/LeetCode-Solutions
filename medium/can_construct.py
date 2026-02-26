@@ -1,14 +1,15 @@
 class Solution:
     def canConstruct(self, s: str, k: int) -> bool:
-        if len(s) < k:
+        if k > len(s):
             return False
-        if len(s) == k:
-            return True
-        odd_count = 0
-
-        for chr in s:
-            odd_count ^= 1 << (ord(chr) - ord("a"))
-        return bin(odd_count).count("1") <= k
+        
+        bitmask = 0
+        
+        for char in s:
+            bit_index = ord(char) - ord('a')
+            bitmask ^= (1 << bit_index)
+            
+        return bitmask.bit_count() <= k
 
 def test_can_construct():
     solution = Solution()
