@@ -45,7 +45,7 @@ def test_longest_diverse_string():
 
     # Test case 2
     a2, b2, c2 = 2, 2, 1
-    print(solution.longestDiverseString(a2, b2, c2))  # Expected output: "aabbc"
+    print(solution.longestDiverseString(a2, b2, c2))  # Expected output: "ababc"
 
     # Test case 3
     a3, b3, c3 = 7, 1, 0
