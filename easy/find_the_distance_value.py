@@ -1,3 +1,4 @@
+from typing import List
 from bisect import bisect_left, bisect_right
 
 class Solution:
@@ -39,7 +40,7 @@ def test_find_the_distance_value():
     arr1_4 = [1, 2, 3]
     arr2_4 = [4, 5, 6]
     d4 = 1
-    print(solution.findTheDistanceValue(arr1_4, arr2_4, d4))  # Expected output: 0
+    print(solution.findTheDistanceValue(arr1_4, arr2_4, d4))  # Expected output: 2
 
     # Test case 5
     arr1_5 = [1, 2, 3]
