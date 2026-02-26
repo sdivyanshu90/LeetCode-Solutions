@@ -1,3 +1,6 @@
+from typing import List
+from collections import Counter
+
 class Solution:
     def findLucky(self, arr: List[int]) -> int:
         freq = Counter(arr) 
@@ -22,14 +25,14 @@ def test_find_lucky():
 
     # Test case 3
     arr3 = [1, 1, 1, 3, 3, 3]
-    print(solution.findLucky(arr3))  # Expected output: -1
+    print(solution.findLucky(arr3))  # Expected output: 3
 
     # Test case 4
     arr4 = [1, 1, 1, 3, 3, 3, 7]
-    print(solution.findLucky(arr4))  # Expected output: -1
+    print(solution.findLucky(arr4))  # Expected output: 3
 
     # Test case 5
     arr5 = [1, 2, 2, 3]
-    print(solution.findLucky(arr5))  # Expected output: -1
+    print(solution.findLucky(arr5))  # Expected output: 2
 
 test_find_lucky()
