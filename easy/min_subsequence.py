@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def minSubsequence(self, nums: List[int]) -> List[int]:
         nums.sort(reverse=True)
@@ -28,10 +30,10 @@ def test_min_subsequence():
 
     # Test case 4
     nums4 = [1, 2, 3]
-    print(solution.minSubsequence(nums4))  # Expected output: [3]
+    print(solution.minSubsequence(nums4))  # Expected output: [3, 2]
 
     # Test case 5
     nums5 = [1, 1, 1, 1]
-    print(solution.minSubsequence(nums5))  # Expected output: [1, 1]
+    print(solution.minSubsequence(nums5))  # Expected output: [1, 1, 1]
 
 test_min_subsequence()
