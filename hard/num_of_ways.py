@@ -19,22 +19,22 @@ def test_num_of_ways():
 
     # Test case 1
     n1 = 1
-    print(solution.numOfWays(n1))  # Expected output: 6
+    print(solution.numOfWays(n1))  # Expected output: 12
 
     # Test case 2
     n2 = 2
-    print(solution.numOfWays(n2))  # Expected output: 36
+    print(solution.numOfWays(n2))  # Expected output: 54
 
     # Test case 3
     n3 = 3
-    print(solution.numOfWays(n3))  # Expected output: 150
+    print(solution.numOfWays(n3))  # Expected output: 246
 
     # Test case 4
     n4 = 4
-    print(solution.numOfWays(n4))  # Expected output: 780
+    print(solution.numOfWays(n4))  # Expected output: 1122
 
     # Test case 5
     n5 = 5
-    print(solution.numOfWays(n5))  # Expected output: 3906
+    print(solution.numOfWays(n5))  # Expected output: 5118
 
 test_num_of_ways()
