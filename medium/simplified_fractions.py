@@ -1,3 +1,6 @@
+from typing import List
+from math import gcd
+
 class Solution:
     def simplifiedFractions(self, n: int) -> List[str]:
         return [f"{a}/{b}" for b in range(2, n + 1) for a in range(1, b) if gcd(a, b) == 1]
@@ -23,6 +26,6 @@ def test_simplified_fractions():
 
     # Test case 5
     n5 = 6
-    print(solution.simplifiedFractions(n5))  # Expected output: ["1/2", "1/3", "1/4", "1/5", "1/6", "2/3", "2/5", "2/6", "3/4", "3/5", "3/6", "4/5", "4/6", "5/6"]
+    print(solution.simplifiedFractions(n5))  # Expected output: ['1/2', '1/3', '2/3', '1/4', '3/4', '1/5', '2/5', '3/5', '4/5', '1/6', '5/6']
 
 test_simplified_fractions()
