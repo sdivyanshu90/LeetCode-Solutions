@@ -1,3 +1,6 @@
+from typing import List
+from collections import deque
+
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         min_q = deque()
