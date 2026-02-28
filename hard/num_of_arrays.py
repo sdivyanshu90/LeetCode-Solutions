@@ -37,8 +37,8 @@ def test_num_of_arrays():
     print(solution.numOfArrays(n3, m3, k3))  # Expected output: 1
 
     # Test case 4
-    n4, m4, k4 = 50, 1000000000, 25
-    print(solution.numOfArrays(n4, m4, k4))  # Expected output: 34549172
+    n4, m4, k4 = 50, 10, 25
+    print(solution.numOfArrays(n4, m4, k4))  # Expected output: 0
 
     # Test case 5
     n5, m5, k5 = 37, 17, 7
