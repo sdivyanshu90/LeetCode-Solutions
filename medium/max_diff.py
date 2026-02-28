@@ -32,7 +32,7 @@ def test_max_diff():
 
     # Test case 4
     num4 = 10000
-    print(solution.maxDiff(num4))  # Expected output: 90000
+    print(solution.maxDiff(num4))  # Expected output: 80000
 
     # Test case 5
     num5 = 9288
