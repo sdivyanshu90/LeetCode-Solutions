@@ -23,7 +23,7 @@ def test_reformat():
 
     # Test case 1
     s1 = "a0b1c2"
-    print(solution.reformat(s1))  # Expected output: "a0b1c2" or "0a1b2c"
+    print(solution.reformat(s1))  # Expected output: "c2b1a0"
 
     # Test case 2
     s2 = "leetcode"
@@ -35,10 +35,10 @@ def test_reformat():
 
     # Test case 4
     s4 = "covid2019"
-    print(solution.reformat(s4))  # Expected output: "c2o0v1i9d" or similar
+    print(solution.reformat(s4))  # Expected output: "d9i1v0o2c"
 
     # Test case 5
     s5 = "ab123"
-    print(solution.reformat(s5))  # Expected output: "a1b23"
+    print(solution.reformat(s5))  # Expected output: "3b2a1"
 
 test_reformat()
