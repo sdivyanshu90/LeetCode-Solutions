@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def getHappyString(self, n: int, k: int) -> str:
         current_string = ""
