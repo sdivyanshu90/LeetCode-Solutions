@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def kLengthApart(self, nums: List[int], k: int) -> bool:
         last_index = -1
