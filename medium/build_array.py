@@ -39,6 +39,6 @@ def test_build_array():
     # Test case 5
     target5 = [1, 4]
     n5 = 4
-    print(solution.buildArray(target5, n5))  # Expected output: ["Push", "Pop", "Push", "Pop", "Push", "Push"]
+    print(solution.buildArray(target5, n5))  # Expected output: ['Push', 'Push', 'Pop', 'Push', 'Pop', 'Push']
 
 test_build_array()
