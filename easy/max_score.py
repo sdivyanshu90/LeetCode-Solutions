@@ -34,6 +34,6 @@ def test_max_score():
 
     # Test case 5
     s5 = "101010"
-    print(solution.maxScore(s5))  # Expected output: 5
+    print(solution.maxScore(s5))  # Expected output: 3
 
 test_max_score()
