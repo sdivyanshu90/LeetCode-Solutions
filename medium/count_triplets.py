@@ -1,3 +1,6 @@
+from typing import List
+from collections import defaultdict
+
 class Solution:
     def countTriplets(self, arr: List[int]) -> int:
         size = len(arr)
@@ -33,10 +36,10 @@ def test_count_triplets():
 
     # Test case 4
     arr4 = [1, 3, 5, 7]
-    print(solution.countTriplets(arr4))  # Expected output: 0
+    print(solution.countTriplets(arr4))  # Expected output: 3
 
     # Test case 5
     arr5 = [1, 2, 3, 4]
-    print(solution.countTriplets(arr5))  # Expected output: 0
+    print(solution.countTriplets(arr5))  # Expected output: 2
 
 test_count_triplets()
