@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def destCity(self, paths: List[List[str]]) -> str:
         right = set()
