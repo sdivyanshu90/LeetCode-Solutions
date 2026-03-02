@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
         if max(nums1) < 0 and min(nums2) > 0:
@@ -41,11 +43,11 @@ def test_max_dot_product():
     # Test case 4
     nums1 = [5, -4, -1]
     nums2 = [-3, -4, 1]
-    print(solution.maxDotProduct(nums1, nums2))  # Expected output: 12
+    print(solution.maxDotProduct(nums1, nums2))  # Expected output: 16
 
     # Test case 5
     nums1 = [1, -1]
     nums2 = [-1, 1]
-    print(solution.maxDotProduct(nums1, nums2))  # Expected output: -1
+    print(solution.maxDotProduct(nums1, nums2))  # Expected output: 1
 
 test_max_dot_product()
