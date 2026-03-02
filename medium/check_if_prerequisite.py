@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def isPrerequisite(
         self, adjList: dict, visited: List[bool], src: int, target: int
