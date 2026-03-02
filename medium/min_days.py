@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
 
@@ -62,6 +64,6 @@ def test_min_days():
     bloomDay = [1,10,2,9,3,8,4,7,5,6]
     m = 4
     k = 2
-    print(solution.minDays(bloomDay, m, k))  # Expected output: -1
+    print(solution.minDays(bloomDay, m, k))  # Expected output: 9
 
 test_min_days()
