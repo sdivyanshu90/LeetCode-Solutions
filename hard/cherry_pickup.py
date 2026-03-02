@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def cherryPickup(self, grid: List[List[int]]) -> int:
         m, n = len(grid), len(grid[0])
@@ -26,11 +28,11 @@ def test_cherry_pickup():
 
     # Test case 2
     grid = [[1,0,0,0,0,0,1],[2,0,0,0,0,3,0],[2,0,9,0,0,0,0],[0,3,0,5,4,0,0],[1,0,2,3,0,0,6]]
-    print(solution.cherryPickup(grid)) # Expected output: 10
+    print(solution.cherryPickup(grid)) # Expected output: 28
 
     # Test case 3
     grid = [[1, 0, 0, 3], [1, 0, 0, 0], [1, 9, 0, 0], [0, 0, 0, 0]]
-    print(solution.cherryPickup(grid))  # Expected output: 13
+    print(solution.cherryPickup(grid))  # Expected output: 15
 
     # Test case 4
     grid = [[1, 1], [1, 1]]
