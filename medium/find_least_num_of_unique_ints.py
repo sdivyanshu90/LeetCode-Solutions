@@ -1,3 +1,6 @@
+from collections import Counter
+from typing import List
+
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         freq_map = Counter(arr)
@@ -33,7 +36,7 @@ def test_find_least_num_of_unique_ints():
     # Test case 4
     arr = [1, 1, 1]
     k = 2
-    print(solution.findLeastNumOfUniqueInts(arr, k))  # Expected output: 0
+    print(solution.findLeastNumOfUniqueInts(arr, k))  # Expected output: 1
 
     # Test case 5
     arr = [1, 2, 3]
