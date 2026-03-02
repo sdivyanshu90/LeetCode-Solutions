@@ -1,20 +1,19 @@
+from typing import Optional
+
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 class Solution:
     def pseudoPalindromicPaths (self, root: TreeNode) -> int:
         def preorder(node, path):
             nonlocal count
             if node:
-                # compute occurences of each digit 
-                # in the corresponding register
                 path = path ^ (1 << node.val)
-                # if it's a leaf, check if the path is pseudo-palindromic
                 if node.left is None and node.right is None:
-                    # check if at most one digit has an odd frequency
                     if path & (path - 1) == 0:
                         count += 1
                 else:                    
@@ -34,7 +33,7 @@ def test_pseudo_palindromic_paths():
     root.right = TreeNode(1)
     root.left.left = TreeNode(3)
     root.left.right = TreeNode(1)
-    print(solution.pseudoPalindromicPaths(root))  # Expected output: 2
+    print(solution.pseudoPalindromicPaths(root))  # Expected output: 1
 
     # Test case 2
     root = TreeNode(2)
@@ -44,7 +43,7 @@ def test_pseudo_palindromic_paths():
     root.left.right = None
     root.right.left = None
     root.right.right = None
-    print(solution.pseudoPalindromicPaths(root))  # Expected output: 1
+    print(solution.pseudoPalindromicPaths(root))  # Expected output: 0
 
     # Test case 3
     root = TreeNode(9)
