@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def finalPrices(self, prices: List[int]) -> List[int]:
         n = len(prices)
@@ -24,7 +26,7 @@ def test_final_prices():
 
     # Test case 3
     prices = [10, 1, 1, 6]
-    print(solution.finalPrices(prices))  # Expected output: [9, 0, 0, 6]
+    print(solution.finalPrices(prices))  # Expected output: [9, 0, 1, 6]
 
     # Test case 4
     prices = [5]
