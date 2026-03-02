@@ -29,6 +29,6 @@ def test_arrange_words():
 
     # Test case 5
     text = "A b C d E"
-    print(solution.arrangeWords(text))  # Expected output: "A b C d E
+    print(solution.arrangeWords(text))  # Expected output: "A b c d e"
 
 test_arrange_words()
