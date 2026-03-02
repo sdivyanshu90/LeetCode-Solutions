@@ -1,3 +1,6 @@
+from collections import defaultdict
+from typing import List
+
 class Solution:
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
         arr_hash = defaultdict(int)
