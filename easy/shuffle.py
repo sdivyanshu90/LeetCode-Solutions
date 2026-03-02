@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def shuffle(self, nums: List[int], n: int) -> List[int]:
         res = []
@@ -26,11 +28,11 @@ def test_shuffle():
     # Test case 4
     nums = [1]
     n = 0
-    print(solution.shuffle(nums, n))  # Expected output: [1]
+    print(solution.shuffle(nums, n))  # Expected output: []
 
     # Test case 5
     nums = [0]
     n = 0
-    print(solution.shuffle(nums, n))  # Expected output: [0]
+    print(solution.shuffle(nums, n))  # Expected output: []
 
 test_shuffle()
