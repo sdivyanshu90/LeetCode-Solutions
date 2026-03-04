@@ -1,3 +1,6 @@
+from typing import List
+import heapq
+
 class Solution:
     def minDifference(self, nums: List[int]) -> int:
         nums_size = len(nums)
