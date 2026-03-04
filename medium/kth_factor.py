@@ -8,7 +8,7 @@ class Solution:
         if len(factors) < k:
             return -1
         else:
-            return factors[k - 1])
+            return factors[k - 1]
 
 def test_kth_factor():
     solution = Solution()
@@ -36,6 +36,6 @@ def test_kth_factor():
     # Test Case 5
     n5 = 100
     k5 = 9
-    print(solution.kthFactor(n5, k5))  # Expected output: 25
+    print(solution.kthFactor(n5, k5))  # Expected output: 100
 
 test_kth_factor()
