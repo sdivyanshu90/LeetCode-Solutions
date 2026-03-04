@@ -1,3 +1,7 @@
+from collections import defaultdict
+import heapq
+from typing import List
+
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
         n = len(rains)
