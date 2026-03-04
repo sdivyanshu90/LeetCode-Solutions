@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def longestSubarray(self, nums: List[int]) -> int:
         left = 0
@@ -34,10 +36,10 @@ def test_longest_subarray():
 
     # Test Case 4
     nums4 = [0, 0, 0]
-    print(solution.longestSubarray(nums4))  # Expected output: -1
+    print(solution.longestSubarray(nums4))  # Expected output: 0
 
     # Test Case 5
     nums5 = [1, 0, 1, 0, 1]
-    print(solution.longestSubarray(nums5))  # Expected output: 3
+    print(solution.longestSubarray(nums5))  # Expected output: 2
 
 test_longest_subarray()
