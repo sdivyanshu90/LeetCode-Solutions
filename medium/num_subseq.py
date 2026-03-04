@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def numSubseq(self, nums: List[int], target: int) -> int:
         MOD = 10 ** 9 + 7
@@ -41,6 +43,6 @@ def test_num_subseq():
     # Test Case 5
     nums5 = [1] * (10 ** 5)
     target5 = 2
-    print(solution.numSubseq(nums5, target5))  # Expected output: (2^100000 - 1) % (10^9 + 7)
+    print(solution.numSubseq(nums5, target5))  # Expected output: 607723519
 
 test_num_subseq()
