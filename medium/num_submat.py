@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
         m, n = len(mat), len(mat[0])
@@ -38,7 +40,7 @@ def test_num_submat():
     print(solution.numSubmat(mat4))  # Expected output: 0
 
     # Test Case 5
-    mat5 = [[1] * (10 ** 5)]
-    print(solution.numSubmat(mat5))  # Expected output: (10^5 * (10^5 + 1)) // 2 = 5000050000
+    mat5 = [[1] * (10 ** 1) for _ in range(10 ** 5)]
+    print(solution.numSubmat(mat5))  # Expected output: 275002750000
 
 test_num_submat()
