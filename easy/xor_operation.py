@@ -30,7 +30,7 @@ def test_xor_operation():
     # Test Case 4
     n4 = 10
     start4 = 3
-    print(solution.xorOperation(n4, start4))  # Expected output: 8
+    print(solution.xorOperation(n4, start4))  # Expected output: 22
 
     # Test Case 5
     n5 = 0
