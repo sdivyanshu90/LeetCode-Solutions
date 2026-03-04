@@ -89,7 +89,7 @@ def test_find_critical_and_pseudo_critical_edges():
               [2, 3, -5], [2,4,-6],[2 ,5 ,-7],
               [3 ,4 ,-8],[3 ,5 ,-9],
               [4 ,5 ,-10]]
-    print(solution.findCriticalAndPseudoCriticalEdges(n3 ,edges3)) # Expected output: [[9 ,10 ,11 ,12 ,13 ,14] ,[6 ,7 ,8]]
+    print(solution.findCriticalAndPseudoCriticalEdges(n3 ,edges3)) # Expected output: [[14, 13, 11, 8, 0], []]
 
     # Test Case 4
     n4 = 3
@@ -99,6 +99,6 @@ def test_find_critical_and_pseudo_critical_edges():
     # Test Case 5
     n5 = 7
     edges5 = [[0, 1, 3], [0, 2, 1], [0, 3, 4], [1, 2, 2], [1, 4, 5], [2, 3, 6], [2, 5, 7], [3, 4, 8], [3, 6, 9], [4, 5, 10], [4, 6, 11], [5, 6, 12]]
-    print(solution.findCriticalAndPseudoCriticalEdges(n5, edges5))  # Expected output: [[0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11], []]
+    print(solution.findCriticalAndPseudoCriticalEdges(n5, edges5))  # Expected output: [[1, 3, 2, 4, 6, 8], []]
 
 test_find_critical_and_pseudo_critical_edges()
