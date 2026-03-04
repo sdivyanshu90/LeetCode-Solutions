@@ -61,20 +61,20 @@ def test_range_sum():
     n3 = 4
     left3 = 9
     right3 = 10
-    print(solution.rangeSum(nums3, n3, left3, right3))  # Expected output: 0
+    print(solution.rangeSum(nums3, n3, left3, right3))  # Expected output: 19
 
     # Test Case 4
     nums4 = [10**2] * (10**2)
     n4 = 10**2
     left4 = 1
     right4 = (n4 * (n4 + 1)) // 2
-    print(solution.rangeSum(nums4, n4, left4, right4))  # Expected output: (10^5 * (10^5 + 1) // 2) * (10^5 % (10^9 + 7)) % (10^9 + 7)
+    print(solution.rangeSum(nums4, n4, left4, right4))  # Expected output: 17170000
 
     # Test Case 5
     nums5 = [1] * (10**5)
     n5 = 10**5
     left5 = 1
     right5 = (n5 * (n5 + 1)) // 2
-    print(solution.rangeSum(nums5, n5, left5, right5))  # Expected output: (10^5 * (10^5 + 1) // 2)
+    print(solution.rangeSum(nums5, n5, left5, right5))  # Expected output: 665533303
 
 test_range_sum()
