@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def canArrange(self, arr: List[int], k: int) -> bool:
         arr = sorted(arr, key=lambda x: (k + x % k) % k)
@@ -30,7 +32,7 @@ def test_can_arrange():
     # Test Case 2
     arr2 = [1, 2, 3, 4, 5, 6]
     k2 = 7
-    print(solution.canArrange(arr2, k2))  # Expected output: False
+    print(solution.canArrange(arr2, k2))  # Expected output: True
 
     # Test Case 3
     arr3 = [-10, 10]
@@ -40,7 +42,7 @@ def test_can_arrange():
     # Test Case 4
     arr4 = [-1, -2, -3, -4, -5]
     k4 = 5
-    print(solution.canArrange(arr4, k4))  # Expected output: True
+    print(solution.canArrange(arr4, k4))  # Expected output: False
 
     # Test Case 5
     arr5 = [1, -1]
