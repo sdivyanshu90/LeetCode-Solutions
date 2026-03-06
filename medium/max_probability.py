@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def maxProbability(self, n: int, edges: List[List[int]], succProb: List[float], start: int, end: int) -> float:
         max_prob = [0] * n
@@ -52,7 +54,7 @@ def test_max_probability():
     succProb4 = [0.2, 0.3, 0.4, 0.5, 0.6, 0.7]
     start4 = 0
     end4 = 4
-    print(solution.maxProbability(n4, edges4, succProb4, start4, end4))  # Expected output: 0.084
+    print(solution.maxProbability(n4, edges4, succProb4, start4, end4))  # Expected output: 0.126
 
     # Test case 5
     n5 = 4
