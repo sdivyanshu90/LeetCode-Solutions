@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
         n=len(s)
@@ -38,7 +40,7 @@ def test_get_length_of_optimal_compression():
     # Test case 3
     s3 = "aaaaaaaaaaa"
     k3 = 0
-    print(solution.getLengthOfOptimalCompression(s3, k3))  # Expected output: 4
+    print(solution.getLengthOfOptimalCompression(s3, k3))  # Expected output: 3
 
     # Test case 4
     s4 = "abcde"
