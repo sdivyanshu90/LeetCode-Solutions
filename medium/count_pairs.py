@@ -1,9 +1,12 @@
+from typing import List
+
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 class Solution:
     def _post_order(self, currentNode, distance):
         if currentNode is None:
@@ -58,7 +61,7 @@ def test_count_pairs():
     root2.left.left = TreeNode(4)
     root2.left.right = TreeNode(5)
     distance2 = 3
-    print(solution.countPairs(root2, distance2))  # Expected output: 2
+    print(solution.countPairs(root2, distance2))  # Expected output: 3
 
     # Test case 3
     root3 = TreeNode(1)
@@ -67,7 +70,7 @@ def test_count_pairs():
     root3.left.left = TreeNode(4)
     root3.left.right = TreeNode(5)
     distance3 = 2
-    print(solution.countPairs(root3, distance3))  # Expected output: 0
+    print(solution.countPairs(root3, distance3))  # Expected output: 1
 
     # Test case 4
     root4 = TreeNode(1)
@@ -77,7 +80,7 @@ def test_count_pairs():
     root4.left.right = TreeNode(5)
     root4.right.left = TreeNode(6)
     distance4 = 3
-    print(solution.countPairs(root4, distance4))  # Expected output: 3
+    print(solution.countPairs(root4, distance4))  # Expected output: 1
 
     # Test case 5
     root5 = TreeNode(1)
@@ -88,6 +91,6 @@ def test_count_pairs():
     root5.right.left = TreeNode(6)
     root5.right.right = TreeNode(7)
     distance5 = 3
-    print(solution.countPairs(root5, distance5))  # Expected output: 4
+    print(solution.countPairs(root5, distance5))  # Expected output: 2
 
 test_count_pairs()
