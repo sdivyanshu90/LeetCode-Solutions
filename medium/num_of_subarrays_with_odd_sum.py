@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def numOfSubarrays(self, arr: List[int]) -> int:
         MOD = 1e9 + 7
@@ -45,7 +47,7 @@ def test_num_of_subarrays():
 
     # Test case 4
     arr4 = [1, 1, 1]
-    print(solution.numOfSubarrays(arr4))  # Expected output: 7
+    print(solution.numOfSubarrays(arr4))  # Expected output: 4
 
     # Test case 5
     arr5 = [2, 2, 2]
