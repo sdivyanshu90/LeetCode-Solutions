@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def minNumberOperations(self, target: List[int]) -> int:
         res, prev = 0, 0
