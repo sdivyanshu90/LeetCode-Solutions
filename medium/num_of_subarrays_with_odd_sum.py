@@ -1,5 +1,6 @@
 from typing import List
 
+# Approach 1: Dynamic Programming
 class Solution:
     def numOfSubarrays(self, arr: List[int]) -> int:
         MOD = 1e9 + 7
@@ -29,6 +30,27 @@ class Solution:
             count %= MOD
 
         return int(count)
+
+# Approach 2: Prefix Sum
+class Solution:
+    def numOfSubarrays(self, arr: List[int]) -> int:
+        MOD = 10**9 + 7
+
+        prefix = 0
+        odd = 0
+        even = 1
+        res = 0
+
+        for num in arr:
+            prefix += num
+            if prefix % 2 == 0:
+                res += odd
+                even += 1
+            else:
+                res += even
+                odd += 1
+
+        return res % MOD
 
 def test_num_of_subarrays():
     solution = Solution()
