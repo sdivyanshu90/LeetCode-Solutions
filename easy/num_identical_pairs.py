@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
         res = 0
@@ -29,6 +31,6 @@ def test_num_identical_pairs():
 
     # Test case 5
     nums5 = [1, 1, 2, 2, 3, 3]
-    print(solution.numIdenticalPairs(nums5))  # Expected output: 6
+    print(solution.numIdenticalPairs(nums5))  # Expected output: 3
 
 test_num_identical_pairs()
