@@ -15,7 +15,12 @@ def test_valid_emails():
     }
     df1 = pd.DataFrame(data1)
     result1 = valid_emails(df1)
-    print(result1)  # Expected output: All rows
+    print(result1)  # Expected output:    id            mail
+                                        # 0   1  a@leetcode.com
+                                        # 1   2  b@leetcode.com
+                                        # 2   3  c@leetcode.com
+                                        # 3   4  d@leetcode.com
+                                        # 4   5  e@leetcode.com
 
     # Test case 2
     data2 = {
@@ -24,6 +29,11 @@ def test_valid_emails():
     }
     df2 = pd.DataFrame(data2)
     result2 = valid_emails(df2)
-    print(result2)  # Expected output: All rows
+    print(result2)  # Expected output:    id            mail
+                                    # 0   1  a@leetcode.com
+                                    # 1   2  b@leetcode.com
+                                    # 2   3  c@leetcode.com
+                                    # 3   4  d@leetcode.com
+                                    # 4   5  e@leetcode.com
 
 test_valid_emails()
