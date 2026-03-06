@@ -34,6 +34,6 @@ def test_num_sub():
 
     # Test case 5
     s5 = "110100111"
-    print(solution.numSub(s5))  # Expected output: 20
+    print(solution.numSub(s5))  # Expected output: 10
 
 test_num_sub()
