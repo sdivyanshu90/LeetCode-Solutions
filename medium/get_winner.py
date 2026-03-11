@@ -1,3 +1,6 @@
+from collections import deque
+from typing import List
+
 class Solution:
     def getWinner(self, arr: List[int], k: int) -> int:
         max_element = max(arr)
