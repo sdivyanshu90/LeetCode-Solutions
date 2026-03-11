@@ -33,7 +33,7 @@ def test_min_operations():
     print(solution.minOperations(n4))  # Expected output: 25
 
     # Test case 5
-    n5 = 15
-    print(solution.minOperations(n5))  # Expected output: 56
+    n5 = 5555
+    print(solution.minOperations(n5))  # Expected output: 7714506
 
 test_min_operations()
