@@ -24,8 +24,8 @@ def test_thousand_separator():
     print(solution.thousandSeparator(n3))  # Expected output: "123.456.789"
 
     # Test case 4
-    n4 = 0
-    print(solution.thousandSeparator(n4))  # Expected output: "0"
+    n4 = 0.100000
+    print(solution.thousandSeparator(n4))  # Expected output: "0.1"
 
     # Test case 5
     n5 = 1000000
