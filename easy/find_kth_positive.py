@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def findKthPositive(self, arr: List[int], k: int) -> int:
         low, high = 0, len(arr)
