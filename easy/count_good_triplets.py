@@ -42,5 +42,4 @@ def test_count_good_triplets():
     a5, b5, c5 = 2, 2, 2
     print(solution.countGoodTriplets(arr5, a5, b5, c5))  # Expected output: 1
 
-
 test_count_good_triplets()
