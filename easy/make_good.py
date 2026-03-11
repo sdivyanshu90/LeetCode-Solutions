@@ -25,8 +25,8 @@ def test_make_good():
     print(solution.makeGood(s3))  # Expected output: "s"
 
     # Test case 4
-    s4 = "Pp"
-    print(solution.makeGood(s4))  # Expected output: ""
+    s4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    print(solution.makeGood(s4))  # Expected output: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     # Test case 5
     s5 = "aAbBcCdD"
