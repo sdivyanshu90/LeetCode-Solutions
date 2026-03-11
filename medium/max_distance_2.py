@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def can_place_balls(self, x, position, m):
         prev_ball_pos = position[0]
