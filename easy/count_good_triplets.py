@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
         count = 0
@@ -28,17 +30,17 @@ def test_count_good_triplets():
     # Test case 3
     arr3 = [1, 2, 3, 4, 5]
     a3, b3, c3 = 1, 1, 1
-    print(solution.countGoodTriplets(arr3, a3, b3, c3))  # Expected output: 3 (triplets are (1, 2, 3), (2, 3, 4), (3, 4, 5))
+    print(solution.countGoodTriplets(arr3, a3, b3, c3))  # Expected output: 0
 
     # Test case 4
     arr4 = [1, 1, 1]
     a4, b4, c4 = 0, 0, 0
-    print(solution.countGoodTriplets(arr4, a4, b4, c4))  # Expected output: 1 (triplet is (1, 1, 1))
+    print(solution.countGoodTriplets(arr4, a4, b4, c4))  # Expected output: 1
 
     # Test case 5
     arr5 = [1, 2, 3]
     a5, b5, c5 = 2, 2, 2
-    print(solution.countGoodTriplets(arr5, a5, b5, c5))  # Expected output: 1 (triplet is (1, 2, 3))
+    print(solution.countGoodTriplets(arr5, a5, b5, c5))  # Expected output: 1
 
 
 test_count_good_triplets()
