@@ -22,7 +22,7 @@ def test_find_kth_bit():
 
     # Test case 4
     n4, k4 = 5, 16
-    print(solution.findKthBit(n4, k4))  # Expected output: "0"
+    print(solution.findKthBit(n4, k4))  # Expected output: "1"
 
     # Test case 5
     n5, k5 = 6, 63
