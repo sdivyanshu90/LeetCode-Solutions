@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def dfs(self,vis,li,com,i):
         if(vis[i]):
@@ -78,7 +80,7 @@ def test_max_num_edges_to_remove():
     # Test case 2
     n = 4
     e = [[3, 1, 2], [3, 2, 3], [1, 1, 4], [2, 1, 4]]
-    print(solution.maxNumEdgesToRemove(n, e))  # Expected output: -1
+    print(solution.maxNumEdgesToRemove(n, e))  # Expected output: 0
 
     # Test case 3
     n = 4
@@ -88,11 +90,11 @@ def test_max_num_edges_to_remove():
     # Test case 4
     n = 5
     e = [[3,1,2],[3,2,3],[3,3,4],[3,4,5],[1,1,5],[2,2,5]]
-    print(solution.maxNumEdgesToRemove(n,e)) # Expected output:0
+    print(solution.maxNumEdgesToRemove(n,e)) # Expected output: 2
 
     # Test case 5
     n = 4
     e = [[3,1,2],[3,2,3],[1,1,4],[2,1,4],[1,1,3],[2,2,3]]
-    print(solution.maxNumEdgesToRemove(n,e)) # Expected output:2
+    print(solution.maxNumEdgesToRemove(n,e)) # Expected output: 2
 
 test_max_num_edges_to_remove()
