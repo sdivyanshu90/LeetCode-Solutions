@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         def find(parent, x):
@@ -53,7 +55,7 @@ def test_min_cost_connect_points():
 
     # Test case 4
     points = [[1, 1], [3, 4], [6, 1]]
-    print(solution.minCostConnectPoints(points))  # Expected output: 7
+    print(solution.minCostConnectPoints(points))  # Expected output: 10
 
     # Test case 5
     points = [[-1, -1], [-2, -2], [-3, -3]]
