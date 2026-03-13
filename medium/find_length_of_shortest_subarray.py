@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
         right = len(arr) - 1
