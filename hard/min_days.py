@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     DIRECTIONS = [[0, 1], [1, 0], [0, -1], [-1, 0]]
     def minDays(self, grid: List[List[int]]) -> int:
@@ -78,11 +80,11 @@ def test_min_days():
 
     # Test case 1
     grid = [[0, 1, 0], [0, 1, 0], [0, 1, 0]]
-    print(solution.minDays(grid))  # Expected output: 2
+    print(solution.minDays(grid))  # Expected output: 1
 
     # Test case 2
     grid = [[1, 1]]
-    print(solution.minDays(grid))  # Expected output: 1
+    print(solution.minDays(grid))  # Expected output: 2
 
     # Test case 3
     grid = [[1, 0], [0, 1]]
