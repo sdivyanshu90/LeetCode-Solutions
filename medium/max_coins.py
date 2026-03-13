@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
         piles.sort(reverse = True)
@@ -20,10 +22,10 @@ def test_max_coins():
 
     # Test case 4
     piles = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    print(solution.maxCoins(piles))  # Expected output: 30
+    print(solution.maxCoins(piles))  # Expected output: 21
 
     # Test case 5
     piles = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-    print(solution.maxCoins(piles))  # Expected output: 30
+    print(solution.maxCoins(piles))  # Expected output: 21
 
 test_max_coins()
