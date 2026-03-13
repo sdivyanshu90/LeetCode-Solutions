@@ -1,3 +1,5 @@
+from typing import Set
+
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
         seen = set()
@@ -39,6 +41,6 @@ def test_max_unique_split():
 
     # Test case 5
     s = "abcabc"
-    print(solution.maxUniqueSplit(s))  # Expected output: 3
+    print(solution.maxUniqueSplit(s))  # Expected output: 4
 
 test_max_unique_split()
