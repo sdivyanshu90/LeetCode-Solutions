@@ -1,19 +1,31 @@
 from math import gcd
+from collections import deque
 
 class Solution:
     def findLexSmallestString(self, s: str, a: int, b: int) -> str:
-        n = len(s)
+        seen = set()
+        q = deque([s])
         res = s
-        visited = set()
+        n = len(s)
 
-        for shift in range(0, n, gcd(n, b)):
-            rotated = s[-shift:] + s[:-shift]
-            for add_times in range(10):
-                temp = list(rotated)
-                for i in range(1, n, 2):
-                    temp[i] = str((int(temp[i]) + add_times * a) % 10)
-                t = "".join(temp)
-                res = min(res, t)
+        while q:
+            cur = q.popleft()
+            if cur in seen:
+                continue
+            seen.add(cur)
+            res = min(res, cur)
+
+            lst = list(cur)
+            for i in range(1, n, 2):
+                lst[i] = str((int(lst[i]) + a) % 10)
+            added = "".join(lst)
+
+            rotated = cur[-b:] + cur[:-b]
+
+            if added not in seen:
+                q.append(added)
+            if rotated not in seen:
+                q.append(rotated)
         return res
 
 def test_find_lex_smallest_string():
