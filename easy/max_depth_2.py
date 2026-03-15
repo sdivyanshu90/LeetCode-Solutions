@@ -32,6 +32,6 @@ def test_max_depth():
 
     # Test case 5
     s = "(((((1+2)+3)+4)+5)+6)+7)+8)+9)"
-    print(solution.maxDepth(s))  # Expected output: 6
+    print(solution.maxDepth(s))  # Expected output: 5
 
 test_max_depth()
