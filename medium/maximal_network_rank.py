@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def maximalNetworkRank(self, n: int, roads: List[List[int]]) -> int:
         connections = [0] * n
@@ -36,7 +38,7 @@ def test_maximal_network_rank():
     # Test case 3
     n = 8
     roads = [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 7]]
-    print(solution.maximalNetworkRank(n, roads))  # Expected output: 2
+    print(solution.maximalNetworkRank(n, roads))  # Expected output: 4
 
     # Test case 4
     n = 2
@@ -46,6 +48,6 @@ def test_maximal_network_rank():
     # Test case 5
     n = 3
     roads = [[0, 1], [0, 2], [1, 2]]
-    print(solution.maximalNetworkRank(n, roads))  # Expected output: 2
+    print(solution.maximalNetworkRank(n, roads))  # Expected output: 3
 
 test_maximal_network_rank()
