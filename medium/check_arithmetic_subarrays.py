@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def checkArithmeticSubarrays(self, nums: List[int], l: List[int], r: List[int]) -> List[bool]:
         answer = []
@@ -31,7 +33,7 @@ def test_check_arithmetic_subarrays():
     nums = [-12, -9, -3, -6, -15, -21, -18]
     l = [0, 1, 6]
     r = [1, 4, 6]
-    print(solution.checkArithmeticSubarrays(nums, l, r))  # Expected output: [True, False, True]
+    print(solution.checkArithmeticSubarrays(nums, l, r))  # Expected output: [True, False, False]
 
     # Test case 3
     nums = [1]
@@ -43,12 +45,12 @@ def test_check_arithmetic_subarrays():
     nums = [1, 2, 3, 4, 5]
     l = [0, 1, 2]
     r = [4, 3, 2]
-    print(solution.checkArithmeticSubarrays(nums, l, r))  # Expected output: [True, True, True]
+    print(solution.checkArithmeticSubarrays(nums, l, r))  # Expected output: [True, True, False]
 
     # Test case 5
     nums = [1, 3, 5, 7, 9]
     l = [0, 1, 2]
     r = [4, 3, 2]
-    print(solution.checkArithmeticSubarrays(nums, l, r))  # Expected output: [True, True, True]
+    print(solution.checkArithmeticSubarrays(nums, l, r))  # Expected output: [True, True, False]
 
 test_check_arithmetic_subarrays()
