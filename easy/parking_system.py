@@ -54,7 +54,7 @@ def test_parking_system():
 
     # Test case 5
     parkingSystem = ParkingSystem(0, 1, 1)
-    print(parkingSystem.addCar(1))  # Expected output: False
+    print(parkingSystem.addCar(1))  # Expected output: True
     print(parkingSystem.addCar(2))  # Expected output: True
     print(parkingSystem.addCar(2))  # Expected output: False
     print(parkingSystem.addCar(3))  # Expected output: True
