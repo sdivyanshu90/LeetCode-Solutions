@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def slowestKey(self, releaseTimes: List[int], keysPressed: str) -> str:
         alpha = [(keysPressed[0], releaseTimes[0])]
