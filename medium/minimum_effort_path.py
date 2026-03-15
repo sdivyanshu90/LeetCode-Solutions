@@ -1,3 +1,6 @@
+from typing import List
+import heapq
+
 class Solution:
     def minimumEffortPath(self, heights: List[List[int]]) -> int:
         m, n = len(heights), len(heights[0])
@@ -39,6 +42,6 @@ def test_minimum_effort_path():
 
     # Test case 5
     heights = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-    print(solution.minimumEffortPath(heights))  # Expected output: 1
+    print(solution.minimumEffortPath(heights))  # Expected output: 3
 
 test_minimum_effort_path()
