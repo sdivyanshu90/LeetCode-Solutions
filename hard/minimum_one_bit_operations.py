@@ -25,10 +25,10 @@ def test_minimum_one_bit_operations():
 
     # Test case 4
     n = 9
-    print(solution.minimumOneBitOperations(n))  # Expected output: 6
+    print(solution.minimumOneBitOperations(n))  # Expected output: 14
 
     # Test case 5
     n = 500000000
-    print(solution.minimumOneBitOperations(n))  # Expected output: 999999999
+    print(solution.minimumOneBitOperations(n))  # Expected output: 378124799
 
 test_minimum_one_bit_operations()
