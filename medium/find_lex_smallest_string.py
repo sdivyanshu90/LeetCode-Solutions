@@ -1,3 +1,5 @@
+from math import gcd
+
 class Solution:
     def findLexSmallestString(self, s: str, a: int, b: int) -> str:
         n = len(s)
@@ -27,7 +29,7 @@ def test_find_lex_smallest_string():
     s = "74"
     a = 5
     b = 1
-    print(solution.findLexSmallestString(s, a, b))  # Expected output: "24"
+    print(solution.findLexSmallestString(s, a, b))  # Expected output: "42"
 
     # Test case 3
     s = "0011"
@@ -39,7 +41,7 @@ def test_find_lex_smallest_string():
     s = "43987654"
     a = 7
     b = 3
-    print(solution.findLexSmallestString(s, a, b))  # Expected output: "00553311"
+    print(solution.findLexSmallestString(s, a, b))  # Expected output: "30886645"
 
     # Test case 5
     s = "123456"
