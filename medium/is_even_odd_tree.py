@@ -1,3 +1,7 @@
+from collections import deque
+from sys import maxsize
+from typing import Optional
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -52,7 +56,7 @@ def test_is_even_odd_tree():
     root = TreeNode(5)
     root.left = TreeNode(4)
     root.right = TreeNode(2)
-    print(solution.isEvenOddTree(root))  # Expected output: False
+    print(solution.isEvenOddTree(root))  # Expected output: True
 
     # Test case 3
     root = TreeNode(1)
@@ -65,7 +69,7 @@ def test_is_even_odd_tree():
     root.left.left = TreeNode(3)
     root.left.right = TreeNode(5)
     root.right.right = TreeNode(9)
-    print(solution.isEvenOddTree(root))  # Expected output: False
+    print(solution.isEvenOddTree(root))  # Expected output: True
 
     # Test case 5
     root = TreeNode(1)
