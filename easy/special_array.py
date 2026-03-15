@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def specialArray(self, nums: List[int]) -> int:
         N = len(nums)
@@ -31,10 +33,10 @@ def test_special_array():
 
     # Test case 4
     nums = [1, 1, 3]
-    print(solution.specialArray(nums))  # Expected output: 2
+    print(solution.specialArray(nums))  # Expected output: -1
 
     # Test case 5
     nums = [1, 2, 3, 4, 5]
-    print(solution.specialArray(nums))  # Expected output: -1
+    print(solution.specialArray(nums))  # Expected output: 3
 
 test_special_array()
