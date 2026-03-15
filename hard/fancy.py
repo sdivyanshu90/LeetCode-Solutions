@@ -1,3 +1,5 @@
+from typing import List
+
 class Fancy:
     def __init__(self):
         self.items = []
