@@ -21,7 +21,7 @@ def test_get_maximum_generated():
 
     # Test case 2
     n2 = 2
-    print(solution.getMaximumGenerated(n2))  # Expected output: 9
+    print(solution.getMaximumGenerated(n2))  # Expected output: 1
 
     # Test case 3
     n3 = 3
@@ -33,6 +33,6 @@ def test_get_maximum_generated():
 
     # Test case 5
     n5 = 15
-    print(solution.getMaximumGenerated(n5))  # Expected output: 4
+    print(solution.getMaximumGenerated(n5))  # Expected output: 5
 
 test_get_maximum_generated()
