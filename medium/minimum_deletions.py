@@ -32,7 +32,7 @@ def test_minimum_deletions():
 
     # Test case 3
     s3 = "ababab"
-    print(solution.minimumDeletions(s3))  # Expected output: 3
+    print(solution.minimumDeletions(s3))  # Expected output: 2
 
     # Test case 4
     s4 = "aaaaa"
