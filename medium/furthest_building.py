@@ -1,3 +1,6 @@
+from typing import List
+import heapq
+
 class Solution:
     def furthestBuilding(self, heights: List[int], bricks: int, ladders: int) -> int:
         alloc_ladders = []
