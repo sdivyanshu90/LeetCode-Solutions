@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def decrypt(self, code: List[int], k: int) -> List[int]:
         result = [0 for _ in range(len(code))]
@@ -41,11 +43,11 @@ def test_decrypt():
     # Test case 4
     code4 = [1, 2, 3, 4, 5]
     k4 = 2
-    print(solution.decrypt(code4, k4))  # Expected output: [9, 12, 15, 6, 7]
+    print(solution.decrypt(code4, k4))  # Expected output: [5, 7, 9, 6, 3]
 
     # Test case 5
     code5 = [10, 20, 30, 40, 50]
     k5 = -3
-    print(solution.decrypt(code5, k5))  # Expected output: [120, 90, 100, 110, 80]
+    print(solution.decrypt(code5, k5))  # Expected output: [120, 100, 80, 60, 90]
 
 test_decrypt()
