@@ -1,3 +1,6 @@
+from typing import List
+import collections
+
 class Solution:
     def minDeletions(self, s: str) -> int:
         char_count = collections.Counter(s)
@@ -27,7 +30,7 @@ def test_min_deletions():
 
     # Test case 4
     s4 = "abcde"
-    print(solution.minDeletions(s4))  # Expected output: 0
+    print(solution.minDeletions(s4))  # Expected output: 4
 
     # Test case 5
     s5 = "aaabbbcccddd"
