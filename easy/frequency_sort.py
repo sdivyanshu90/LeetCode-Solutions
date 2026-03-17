@@ -1,3 +1,6 @@
+from collections import Counter
+from typing import List
+
 class Solution:
     def frequencySort(self, nums: List[int]) -> List[int]:
         freq = Counter(nums)
@@ -12,7 +15,7 @@ def test_frequency_sort():
 
     # Test case 2
     nums2 = [2, 3, 1, 3, 2]
-    print(solution.frequencySort(nums2))  # Expected output: [1, 2, 2, 3, 3]
+    print(solution.frequencySort(nums2))  # Expected output: [1, 3, 3, 2, 2]
 
     # Test case 3
     nums3 = [-1, 1, -6, 4, 5, -6, 1, 4, 1]
@@ -20,7 +23,7 @@ def test_frequency_sort():
 
     # Test case 4
     nums4 = [1, 2, 3, 4, 5]
-    print(solution.frequencySort(nums4))  # Expected output: [1, 2, 3, 4, 5]
+    print(solution.frequencySort(nums4))  # Expected output: [5, 4, 3, 2, 1]
 
     # Test case 5
     nums5 = [1, 1, 1, 2, 2, 3]
