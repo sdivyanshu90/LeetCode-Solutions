@@ -25,6 +25,10 @@ def test_concatenated_binary():
 
     # Test case 4
     n = 1000
+    print(solution.concatenatedBinary(n))  # Expected output: 499361981
+
+    # Test case 5
+    n = 100000
     print(solution.concatenatedBinary(n))  # Expected output: 757631812
 
 test_concatenated_binary()
