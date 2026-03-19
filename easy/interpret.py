@@ -1,3 +1,5 @@
+import re
+
 class Solution:
     def interpret(self, command: str) -> str:
         return re.sub(r'\(\)|\(al\)', lambda m: 'o' if m.group(0) == '()' else 'al', command)
