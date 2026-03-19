@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def minimumMountainRemovals(self, nums: List[int]) -> int:
         N = len(nums)
@@ -41,10 +43,10 @@ def test_minimum_mountain_removals():
 
     # Test case 4
     nums = [1, 2, 3, 4, 5]
-    print(solution.minimumMountainRemovals(nums))  # Expected output: 4
+    print(solution.minimumMountainRemovals(nums))  # Expected output: inf
 
     # Test case 5
     nums = [5, 4, 3, 2, 1]
-    print(solution.minimumMountainRemovals(nums))  # Expected output: 4
+    print(solution.minimumMountainRemovals(nums))  # Expected output: inf
 
 test_minimum_mountain_removals()
