@@ -15,8 +15,8 @@ def test_number_of_matches():
     solution = Solution()
 
     # Test case 1
-    n = 7
-    print(solution.numberOfMatches(n))  # Expected output: 6
+    n = 191
+    print(solution.numberOfMatches(n))  # Expected output: 190
 
     # Test case 2
     n = 14
