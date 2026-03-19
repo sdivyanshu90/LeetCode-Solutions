@@ -9,6 +9,11 @@ class Solution:
             str2 += i
         return str1 == str2
 
+# Appraoch 2
+# class Solution:
+#     def arrayStringsAreEqual(self, word1: List[str], word2: List[str]) -> bool:
+#         return "".join(word1) == "".join(word2)
+
 def test_array_strings_are_equal():
     solution = Solution()
 
