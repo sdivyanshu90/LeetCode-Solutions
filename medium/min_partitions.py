@@ -22,7 +22,7 @@ def test_min_partitions():
     print(solution.minPartitions(n))  # Expected output: 0
 
     # Test case 5
-    n = "99999999999999999999"
+    n = "1234567891011121314151617181920"
     print(solution.minPartitions(n))  # Expected output: 9
 
 test_min_partitions()
