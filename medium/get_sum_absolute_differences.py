@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def getSumAbsoluteDifferences(self, nums: list[int]) -> list[int]:
         first_sum = 0
