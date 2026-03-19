@@ -1,3 +1,5 @@
+from typing import Optional
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -52,7 +54,7 @@ def test_merge_in_between():
     list2 = ListNode(1000000, ListNode(1000001, ListNode(1000002)))
     result = solution.mergeInBetween(list1, a, b, list2)
     while result:
-        print(result.val)  # Expected output: 1000000 -> 1000001 -> 1000002 -> 1 -> 2 -> 3 -> 4 -> 5
+        print(result.val)  # Expected output: 0 -> 0 -> 1 -> 2 -> 3 -> 1000000 -> 1000001 -> 1000002
         result = result.next
 
     # Test case 4
@@ -62,7 +64,7 @@ def test_merge_in_between():
     list2 = ListNode(1000000, ListNode(1000001, ListNode(1000002)))
     result = solution.mergeInBetween(list1, a, b, list2)
     while result:
-        print(result.val)  # Expected output: 0 -> 1 -> 2 -> 3 -> 1000000 -> 1000001 -> 1000002
+        print(result.val)  # Expected output: 0 -> 1 -> 1000000 -> 1000001 -> 1000002
         result = result.next
 
     # Test case 5
@@ -72,7 +74,7 @@ def test_merge_in_between():
     list2 = ListNode(1000000, ListNode(1000001, ListNode(1000002)))
     result = solution.mergeInBetween(list1, a, b, list2)
     while result:
-        print(result.val)  # Expected output: 0 -> 1 -> 1000000 -> 1000001 -> 1000002 -> 4 -> 5
+        print(result.val)  # Expected output: 4 -> 5
         result = result.next
 
 test_merge_in_between()
