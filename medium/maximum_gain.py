@@ -40,18 +40,18 @@ def test_maximum_gain():
     str3 = "ababa"
     x3 = 10
     y3 = 20
-    print(s.maximumGain(str3, x3, y3)) # Expected Output: 30
+    print(s.maximumGain(str3, x3, y3)) # Expected Output: 40
 
     # Test Case 4
     str4 = "abcde"
     x4 = 1
     y4 = 1
-    print(s.maximumGain(str4, x4, y4)) # Expected Output: 0
+    print(s.maximumGain(str4, x4, y4)) # Expected Output: 1
 
     # Test Case 5
     str5 = "aaabbb"
     x5 = 10
     y5 = 20
-    print(s.maximumGain(str5, x5, y5)) # Expected Output: 50
+    print(s.maximumGain(str5, x5, y5)) # Expected Output: 30
 
 test_maximum_gain()
