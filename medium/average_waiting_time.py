@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def averageWaitingTime(self, customers: List[List[int]]) -> float:
         next_idle_time = 0
@@ -26,10 +28,10 @@ def test_average_waiting_time():
 
     # Test Case 4
     customers4 = [[0,3],[1,9],[2,6]]
-    print(s.averageWaitingTime(customers4)) # Expected Output: 9.00000
+    print(s.averageWaitingTime(customers4)) # Expected Output: 10.00000
 
     # Test Case 5
     customers5 = [[7,10],[7,12],[7,5],[7,4],[7,2]]
-    print(s.averageWaitingTime(customers5)) # Expected Output: 11.20000
+    print(s.averageWaitingTime(customers5)) # Expected Output: 24.60000
 
 test_average_waiting_time()
