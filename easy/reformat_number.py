@@ -31,8 +31,8 @@ def test_reformat_number():
     print(s.reformatNumber(number3)) # Expected Output: "123-456-78"
 
     # Test Case 4
-    number4 = "12"
-    print(s.reformatNumber(number4)) # Expected Output: "12"
+    number4 = "10000100000100"
+    print(s.reformatNumber(number4)) # Expected Output: "100-001-000-001-00"
 
     # Test Case 5
     number5 = "--17-5 229 35-39475 "
