@@ -20,10 +20,10 @@ def test_total_money():
 
     # Test Case 4
     n4 = 25
-    print(s.totalMoney(n4)) # Expected Output: 138
+    print(s.totalMoney(n4)) # Expected Output: 127
 
     # Test Case 5
     n5 = 30
-    print(s.totalMoney(n5)) # Expected Output: 210
+    print(s.totalMoney(n5)) # Expected Output: 165
 
 test_total_money()
