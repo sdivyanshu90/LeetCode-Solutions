@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def decode(self, encoded: List[int], first: int) -> List[int]:
         n = len(encoded) + 1
