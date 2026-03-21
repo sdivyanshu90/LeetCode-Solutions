@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def maximumUniqueSubarray(self, nums: List[int]) -> int:
         seen = set()
