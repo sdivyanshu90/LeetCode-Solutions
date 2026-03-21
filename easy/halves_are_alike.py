@@ -21,8 +21,8 @@ def test_halves_are_alike():
     s = Solution()
 
     # Test Case 1
-    str1 = "book"
-    print(s.halvesAreAlike(str1)) # Expected Output: True
+    str1 = "dad"
+    print(s.halvesAreAlike(str1)) # Expected Output: False
 
     # Test Case 2
     str2 = "textbook"
