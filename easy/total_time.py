@@ -62,7 +62,7 @@ def test_total_time():
     print(total_time(employees))
     # Expected output:
     #    day  emp_id  total_time
-    # 0    1       1          12
+    # 0    1       1          11
 
     # Test case 5
     employees = pd.DataFrame({
