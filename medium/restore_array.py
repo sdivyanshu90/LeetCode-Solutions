@@ -1,3 +1,6 @@
+from collections import defaultdict
+from typing import List
+
 class Solution:
     def restoreArray(self, adjacentPairs: List[List[int]]) -> List[int]:
         dict = defaultdict(list)
@@ -42,7 +45,7 @@ def test_restore_array():
 
     # Test case 4
     adjacentPairs = [[-1, -2], [-2, -3], [-3, -4], [-4, -5]]
-    print(solution.restoreArray(adjacentPairs))  # Expected output: [-5, -4, -3, -2, -1]
+    print(solution.restoreArray(adjacentPairs))  # Expected output: [-1, -2, -3, -4, -5]
 
     # Test case 5
     adjacentPairs = [[0, 1], [1, 2], [2, 3], [3, 4]]
