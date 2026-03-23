@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def largestSubmatrix(self, matrix: List[List[int]]) -> int:
         m = len(matrix)
@@ -28,7 +30,7 @@ def test_largest_submatrix():
 
     # Test case 2
     matrix = [[1, 0, 1, 0, 0], [1, 0, 1, 1, 1], [1, 1, 1, 1, 1], [1, 0, 0, 1, 0]]
-    print(solution.largestSubmatrix(matrix))  # Expected output: 6
+    print(solution.largestSubmatrix(matrix))  # Expected output: 8
 
     # Test case 3
     matrix = [[0]]
