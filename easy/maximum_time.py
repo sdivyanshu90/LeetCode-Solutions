@@ -36,7 +36,7 @@ def test_maximum_time():
     print(solution.maximumTime(time))  # Expected output: "23:59"
 
     # Test case 5
-    time = "?4:5?"
-    print(solution.maximumTime(time))  # Expected output: "14:59"
+    time = "?0:?6"
+    print(solution.maximumTime(time))  # Expected output: "20:56"
 
 test_maximum_time()
