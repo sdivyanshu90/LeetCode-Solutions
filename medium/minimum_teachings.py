@@ -1,3 +1,6 @@
+from collections import defaultdict
+from typing import List
+
 class Solution:
     def minimumTeachings(self, n: int, languages: List[List[int]], friendships: List[List[int]]) -> int:
         m = len(languages)
@@ -33,7 +36,7 @@ def test_minimum_teachings():
     n = 3
     languages = [[2], [1, 3], [1, 2], [3]]
     friendships = [[1, 4], [4, 2], [1, 3], [2, 3]]
-    print(solution.minimumTeachings(n, languages, friendships))  # Expected output: 2
+    print(solution.minimumTeachings(n, languages, friendships))  # Expected output: 1
 
     # Test case 3
     n = 5
