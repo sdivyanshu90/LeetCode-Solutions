@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def largestAltitude(self, gain: List[int]) -> int:
         res = [0, gain[0]]
@@ -27,6 +29,5 @@ def test_largest_altitude():
     # Test case 5
     gain = [-1, -2, -3, -4]
     print(solution.largestAltitude(gain))  # Expected output: 0
-
 
 test_largest_altitude()
