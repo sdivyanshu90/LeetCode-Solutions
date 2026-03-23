@@ -34,11 +34,11 @@ def test_count_balls():
     # Test case 4
     lowLimit = 1
     highLimit = 1000
-    print(solution.countBalls(lowLimit, highLimit))  # Expected output: 3
+    print(solution.countBalls(lowLimit, highLimit))  # Expected output: 75
 
     # Test case 5
     lowLimit = 123
     highLimit = 321
-    print(solution.countBalls(lowLimit, highLimit))  # Expected output: 3
+    print(solution.countBalls(lowLimit, highLimit))  # Expected output: 20
 
 test_count_balls()
