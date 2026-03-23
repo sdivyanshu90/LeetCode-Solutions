@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def tupleSameProduct(self, nums: List[int]) -> int:
         nums_length = len(nums)
@@ -38,7 +40,7 @@ def test_tuple_same_product():
 
     # Test case 4
     nums = [1, 1, 1, 1]
-    print(solution.tupleSameProduct(nums))  # Expected output: 24
+    print(solution.tupleSameProduct(nums))  # Expected output: 120
 
     # Test case 5
     nums = [2, 3, 5, 7]
