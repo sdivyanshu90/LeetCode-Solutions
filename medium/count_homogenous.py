@@ -1,3 +1,5 @@
+from math import comb
+
 class Solution:
     def countHomogenous(self, s: str) -> int:
         blocks = []
