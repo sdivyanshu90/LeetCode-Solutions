@@ -37,7 +37,7 @@ def test_merge_alternately():
 
     # Test Case 5
     word1 = "hello"
-    word2 = ""
-    print(solution.mergeAlternately(word1, word2)) # Expected Output: "hello"
+    word2 = "abcd"
+    print(solution.mergeAlternately(word1, word2)) # Expected Output: "habcldlo"
 
 test_merge_alternately()
