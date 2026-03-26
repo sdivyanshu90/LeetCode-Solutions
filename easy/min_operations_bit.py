@@ -37,7 +37,7 @@ def test_min_operations():
     print(solution.minOperations(s4)) # Expected Output: 2
 
     # Test Case 5
-    s5 = "101010"
-    print(solution.minOperations(s5)) # Expected Output: 0
+    s5 = "001001001110"
+    print(solution.minOperations(s5)) # Expected Output: 5
 
 test_min_operations()
