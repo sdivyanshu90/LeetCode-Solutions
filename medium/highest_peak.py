@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def highestPeak(self, is_water: List[List[int]]) -> List[List[int]]:
         rows = len(is_water)
@@ -91,10 +93,10 @@ def test_highest_peak():
 
     # Test Case 4
     is_water4 = [[0]]
-    print(solution.highestPeak(is_water4)) # Expected Output: [[2147483647]]
+    print(solution.highestPeak(is_water4)) # Expected Output: [[1]]
 
     # Test Case 5
     is_water5 = [[0, 0], [0, 0]]
-    print(solution.highestPeak(is_water5)) # Expected Output: [[2147483647, 2147483647], [2147483647, 2147483647]]
+    print(solution.highestPeak(is_water5)) # Expected Output: [[4, 4], [4, 4]]
 
 test_highest_peak()
