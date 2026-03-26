@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def minOperations(self, boxes: str) -> List[int]:
         n = len(boxes)
@@ -41,6 +43,6 @@ def test_min_operations():
 
     # Test Case 5
     boxes5 = "101"
-    print(solution.minOperations(boxes5)) # Expected Output: [1, 2, 1]
+    print(solution.minOperations(boxes5)) # Expected Output: [2, 2, 2]
 
 test_min_operations()
