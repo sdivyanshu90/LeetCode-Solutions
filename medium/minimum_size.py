@@ -1,3 +1,6 @@
+from typing import List
+import math
+
 class Solution:
     def minimumSize(self, nums: List[int], maxOperations: int) -> int:
         left = 1
@@ -6,7 +9,7 @@ class Solution:
         while left < right:
             middle = (left + right) // 2
 
-            if self._is_possible(middle, nums, max_operations):
+            if self._is_possible(middle, nums, maxOperations):
                 right = middle
             else:
                 left = middle + 1
