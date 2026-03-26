@@ -32,7 +32,7 @@ def test_minimum_length():
     print(solution.minimumLength(s4)) # Expected Output: 5
 
     # Test Case 5
-    s5 = "aaaaaa"
+    s5 = "aabbccaabbcceeee"
     print(solution.minimumLength(s5)) # Expected Output: 0
 
 test_minimum_length()
