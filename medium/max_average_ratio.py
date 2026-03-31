@@ -1,3 +1,6 @@
+import heapq
+from typing import List
+
 class Solution:
     def maxAverageRatio(
         self, classes: List[List[int]], extraStudents: int
@@ -33,26 +36,26 @@ def test_max_average_ratio():
     # Test case 1
     classes1 = [[1, 2], [3, 5], [2, 2]]
     extraStudents1 = 2
-    print(solution.maxAverageRatio(classes1, extraStudents1))  # Expected output: 0.78333
+    print(solution.maxAverageRatio(classes1, extraStudents1))  # Expected output: 0.7833333333333333
 
     # Test case 2
     classes2 = [[2, 4], [3, 9], [4, 5], [2, 10]]
     extraStudents2 = 4
-    print(solution.maxAverageRatio(classes2, extraStudents2))  # Expected output: 0.53485
+    print(solution.maxAverageRatio(classes2, extraStudents2))  # Expected output: 0.5348484848484849
 
     # Test case 3
     classes3 = [[1, 3], [2, 5], [3, 7]]
     extraStudents3 = 10
-    print(solution.maxAverageRatio(classes3, extraStudents3))  # Expected output: 0.78333
+    print(solution.maxAverageRatio(classes3, extraStudents3))  # Expected output: 0.6464285714285715
 
     # Test case 4
     classes4 = [[5, 10], [10, 20], [15, 30]]
     extraStudents4 = 5
-    print(solution.maxAverageRatio(classes4, extraStudents4))  # Expected output: 0.66667
+    print(solution.maxAverageRatio(classes4, extraStudents4))  # Expected output: 0.5555555555555556
 
     # Test case 5
     classes5 = [[0, 1], [0, 2], [0, 3]]
     extraStudents5 = 6
-    print(solution.maxAverageRatio(classes5, extraStudents5))  # Expected output: 0.83333
+    print(solution.maxAverageRatio(classes5, extraStudents5))  # Expected output: 0.5222222222222223
 
 test_max_average_ratio()
