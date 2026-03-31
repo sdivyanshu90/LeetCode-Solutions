@@ -22,8 +22,8 @@ def test_check_powers_of_three():
     print(solution.checkPowersOfThree(n3))  # Expected output: False
 
     # Test case 4
-    n4 = 1
-    print(solution.checkPowersOfThree(n4))  # Expected output: True
+    n4 = 99999
+    print(solution.checkPowersOfThree(n4))  # Expected output: False
 
     # Test case 5
     n5 = 3
