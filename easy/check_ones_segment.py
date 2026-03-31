@@ -26,7 +26,7 @@ def test_check_ones_segment():
     print(solution.checkOnesSegment(s4))  # Expected output: True
 
     # Test case 5
-    s5 = "0000"
-    print(solution.checkOnesSegment(s5))  # Expected output: True
+    s5 = "10101110110101"
+    print(solution.checkOnesSegment(s5))  # Expected output: False
 
 test_check_ones_segment()
