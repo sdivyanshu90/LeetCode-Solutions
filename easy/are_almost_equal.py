@@ -44,8 +44,8 @@ def test_are_almost_equal():
     print(solution.areAlmostEqual(s1_4, s2_4))  # Expected output: False
 
     # Test case 5
-    s1_5 = "abcde"
-    s2_5 = "abced"
-    print(solution.areAlmostEqual(s1_5, s2_5))  # Expected output: True
+    s1_5 = "same"
+    s2_5 = "equal"
+    print(solution.areAlmostEqual(s1_5, s2_5))  # Expected output: False
 
 test_are_almost_equal()
