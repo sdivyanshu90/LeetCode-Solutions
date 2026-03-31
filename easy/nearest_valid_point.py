@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def nearestValidPoint(self, x: int, y: int, points: List[List[int]]) -> int:
         valid = []
@@ -35,6 +37,6 @@ def test_nearest_valid_point():
     # Test case 5
     x5, y5 = 3, 4
     points5 = [[1,2],[3,1],[2,4],[2,3],[4,4],[3,4]]
-    print(solution.nearestValidPoint(x5, y5, points5))  # Expected output: 2
+    print(solution.nearestValidPoint(x5, y5, points5))  # Expected output: 5
 
 test_nearest_valid_point()
