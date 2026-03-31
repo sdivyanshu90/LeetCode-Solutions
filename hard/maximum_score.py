@@ -1,3 +1,7 @@
+from bisect import bisect_left
+from math import inf
+from typing import List
+
 class Solution:
     def maximumScore(self, nums: List[int], k: int) -> int:
         def solve(nums, k):
@@ -46,11 +50,11 @@ def test_maximum_score():
     # Test case 4
     nums4 = [1] * 100000
     k4 = 50000
-    print(solution.maximumScore(nums4, k4))  # Expected output: 50001
+    print(solution.maximumScore(nums4, k4))  # Expected output: 100000
 
     # Test case 5
     nums5 = [i for i in range(1, 100001)]
     k5 = 99999
-    print(solution.maximumScore(nums5, k5))  # Expected output: 100000
+    print(solution.maximumScore(nums5, k5))  # Expected output: 2500050000
 
 test_maximum_score()
