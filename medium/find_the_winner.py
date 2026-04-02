@@ -1,3 +1,5 @@
+from collections import deque
+
 class Solution:
     def findTheWinner(self, n: int, k: int) -> int:
         circle = deque(range(1, n + 1))
@@ -25,10 +27,10 @@ def test_find_the_winner():
 
     # Test Case 4
     n4, k4 = 7, 7
-    print(solution.findTheWinner(n4, k4))  # Expected Output: 7
+    print(solution.findTheWinner(n4, k4))  # Expected Output: 5
 
     # Test Case 5
     n5, k5 = 8, 4
-    print(solution.findTheWinner(n5, k5))  # Expected Output: 1
+    print(solution.findTheWinner(n5, k5))  # Expected Output: 6
 
 test_find_the_winner()
