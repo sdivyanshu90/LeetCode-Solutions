@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def countNicePairs(self, nums: List[int]) -> int:
         num_ct = {}
@@ -29,11 +31,11 @@ def test_count_nice_pairs():
 
     # Test Case 3
     nums3 = [1,2,3,4,5]
-    print(solution.countNicePairs(nums3))  # Expected Output: 0
+    print(solution.countNicePairs(nums3))  # Expected Output: 10
 
     # Test Case 4
     nums4 = [123,321,213,132]
-    print(solution.countNicePairs(nums4))  # Expected Output: 6
+    print(solution.countNicePairs(nums4))  # Expected Output: 1
 
     # Test Case 5
     nums5 = [1000,1,10,100]
