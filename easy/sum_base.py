@@ -23,10 +23,10 @@ def test_sum_base():
 
     # Test Case 4
     n4, k4 = 50, 5
-    print(solution.sumBase(n4, k4))  # Expected Output: 5
+    print(solution.sumBase(n4, k4))  # Expected Output: 2
 
     # Test Case 5
     n5, k5 = 25, 2
-    print(solution.sumBase(n5, k5))  # Expected Output: 7
+    print(solution.sumBase(n5, k5))  # Expected Output: 3
 
 test_sum_base()
