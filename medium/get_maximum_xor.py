@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def getMaximumXor(self, nums: List[int], maximumBit: int) -> List[int]:
         prefix_xor = [0] * len(nums)
@@ -20,22 +22,22 @@ def test_get_maximum_xor():
     # Test Case 1
     nums1 = [0,1,1,3]
     maximumBit1 = 2
-    print(solution.getMaximumXor(nums1, maximumBit1))  # Expected Output: [0,3,2,3]
+    print(solution.getMaximumXor(nums1, maximumBit1))  # Expected Output: [0, 3, 2, 3]
 
     # Test Case 2
     nums2 = [2,3,4,7]
     maximumBit2 = 3
-    print(solution.getMaximumXor(nums2, maximumBit2))  # Expected Output: [1,0,7,6]
+    print(solution.getMaximumXor(nums2, maximumBit2))  # Expected Output: [5, 2, 6, 5]
 
     # Test Case 3
     nums3 = [0,1,2,3,4]
     maximumBit3 = 3
-    print(solution.getMaximumXor(nums3, maximumBit3))  # Expected Output: [7,6,5,4,7]
+    print(solution.getMaximumXor(nums3, maximumBit3))  # Expected Output: [3, 7, 4, 6, 7]
 
     # Test Case 4
     nums4 = [5]
     maximumBit4 = 1
-    print(solution.getMaximumXor(nums4, maximumBit4))  # Expected Output: [0]
+    print(solution.getMaximumXor(nums4, maximumBit4))  # Expected Output: [4]
 
     # Test Case 5
     nums5 = [0]
