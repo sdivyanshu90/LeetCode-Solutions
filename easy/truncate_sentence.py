@@ -29,6 +29,6 @@ def test_truncate_sentence():
     # Test Case 5
     s5 = "The quick brown fox jumps over the lazy dog"
     k5 = 9
-    print(solution.truncateSentence(s5, k5))  # Expected Output: "The quick brown fox jumps over the lazy"
+    print(solution.truncateSentence(s5, k5))  # Expected Output: "The quick brown fox jumps over the lazy dog"
 
 test_truncate_sentence()
