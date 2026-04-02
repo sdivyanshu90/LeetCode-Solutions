@@ -20,8 +20,8 @@ def test_check_if_pangram():
     print(solution.checkIfPangram(sentence2))  # Expected Output: False
 
     # Test Case 3
-    sentence3 = "abcdefghijklmnopqrstuvwxyz"
-    print(solution.checkIfPangram(sentence3))  # Expected Output: True
+    sentence3 = "abcefghjklmnopqrstuwxyz"
+    print(solution.checkIfPangram(sentence3))  # Expected Output: False
 
     # Test Case 4
     sentence4 = "thequickbrownfoxjumpsoverthelazydo"
