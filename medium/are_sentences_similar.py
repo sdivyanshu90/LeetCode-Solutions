@@ -1,3 +1,5 @@
+from collections import deque
+
 class Solution:
     def areSentencesSimilar(self, s1: str, s2: str) -> bool:
         deque1 = list(s1.split())
@@ -17,7 +19,7 @@ def test_are_sentences_similar():
     # Test Case 1
     s1_1 = "My name is Haley"
     s2_1 = "Me Haley"
-    print(solution.areSentencesSimilar(s1_1, s2_1))  # Expected Output: True
+    print(solution.areSentencesSimilar(s1_1, s2_1))  # Expected Output: False
 
     # Test Case 2
     s1_2 = "of"
