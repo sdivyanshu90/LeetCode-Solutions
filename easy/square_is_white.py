@@ -33,6 +33,6 @@ def test_square_is_white():
 
     # Test Case 5
     coordinates5 = "e5"
-    print(solution.squareIsWhite(coordinates5))  # Expected Output: True
+    print(solution.squareIsWhite(coordinates5))  # Expected Output: False
 
 test_square_is_white()
