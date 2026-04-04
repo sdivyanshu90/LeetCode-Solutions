@@ -1,3 +1,5 @@
+import heapq
+
 class SeatManager:
 
     def __init__(self, n: int):
@@ -55,7 +57,7 @@ def test_seat_manager():
     print(seat_manager4.reserve())  # Expected output: 2
     seat_manager4.unreserve(1)
     print(seat_manager4.reserve())  # Expected output: 1
-    print(seat_manager4.reserve())  # Expected output: 2
+    print(seat_manager4.reserve())  # Expected output: 3
 
     # Test case 5
     seat_manager5 = SeatManager(6)
