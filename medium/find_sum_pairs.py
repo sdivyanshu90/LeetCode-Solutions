@@ -1,3 +1,6 @@
+from collections import Counter
+from typing import List
+
 class FindSumPairs:
 
     def __init__(self, nums1: List[int], nums2: List[int]):
@@ -32,9 +35,9 @@ def test_find_sum_pairs():
     nums1_1 = [1, 1, 2, 2, 2]
     nums2_1 = [1, 4, 5, 2, 5]
     obj1 = FindSumPairs(nums1_1, nums2_1)
-    print(obj1.count(7))  # Expected output: 8
+    print(obj1.count(7))  # Expected output: 6
     obj1.add(3, 2)
-    print(obj1.count(7))  # Expected output: 5
+    print(obj1.count(7))  # Expected output: 6
 
     # Test case 2
     nums1_2 = [1, 2, 3]
@@ -42,35 +45,35 @@ def test_find_sum_pairs():
     obj2 = FindSumPairs(nums1_2, nums2_2)
     print(obj2.count(7))  # Expected output: 3
     obj2.add(0, 1)
-    print(obj2.count(7))  # Expected output: 2
+    print(obj2.count(7))  # Expected output: 3
     obj2.add(1, 1)
-    print(obj2.count(7))  # Expected output: 1
+    print(obj2.count(7))  # Expected output: 3
     obj2.add(2, 1)
-    print(obj2.count(7))  # Expected output: 0
+    print(obj2.count(7))  # Expected output: 2
 
     # Test case 3
     nums1_3 = [1, 2, 3]
     nums2_3 = [4, 5, 6]
     obj3 = FindSumPairs(nums1_3, nums2_3)
-    print(obj3.count(8))  # Expected output: 1
+    print(obj3.count(8))  # Expected output: 2
     obj3.add(0, 1)
-    print(obj3.count(8))  # Expected output: 0
+    print(obj3.count(8))  # Expected output: 3
     obj3.add(1, 1)
-    print(obj3.count(8))  # Expected output: 0
+    print(obj3.count(8))  # Expected output: 3
     obj3.add(2, 1)
-    print(obj3.count(8))  # Expected output: 0
+    print(obj3.count(8))  # Expected output: 3
 
     # Test case 4
     nums1_4 = [1, 2, 3]
     nums2_4 = [4, 5, 6]
     obj4 = FindSumPairs(nums1_4, nums2_4)
-    print(obj4.count(9))  # Expected output: 0
+    print(obj4.count(9))  # Expected output: 1
     obj4.add(0, 1)
-    print(obj4.count(9))  # Expected output: 0
+    print(obj4.count(9))  # Expected output: 1
     obj4.add(1, 1)
-    print(obj4.count(9))  # Expected output: 0
+    print(obj4.count(9))  # Expected output: 2
     obj4.add(2, 1)
-    print(obj4.count(9))  # Expected output: 0
+    print(obj4.count(9))  # Expected output: 2
 
     # Test case 5
     nums1_5 = [1, 2, 3]
@@ -82,6 +85,6 @@ def test_find_sum_pairs():
     obj5.add(1, 1)
     print(obj5.count(10))  # Expected output: 0
     obj5.add(2, 1)
-    print(obj5.count(10))  # Expected output: 0
+    print(obj5.count(10))  # Expected output: 1
 
 test_find_sum_pairs()
