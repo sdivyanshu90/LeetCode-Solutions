@@ -1,3 +1,5 @@
+import string
+
 class Solution:
     def replaceDigits(self, s: str) -> str:
         temp = []
@@ -26,18 +28,18 @@ def test_replace_digits():
 
     # Test case 2
     s2 = "a1b2c3d4e"
-    print(solution.replaceDigits(s2))  # Expected output: "abbdcdefe"
+    print(solution.replaceDigits(s2))  # Expected output: "abbdcfdhe"
 
     # Test case 3
     s3 = "a0b0c0"
-    print(solution.replaceDigits(s3))  # Expected output: "abc"
+    print(solution.replaceDigits(s3))  # Expected output: "aabbcc"
 
     # Test case 4
-    s4 = "z9"
-    print(solution.replaceDigits(s4))  # Expected output: "zj"
+    s4 = "a1s2d3f5j8"
+    print(solution.replaceDigits(s4))  # Expected output: "absudgfkjr"
 
     # Test case 5
-    s5 = "a1z9"
-    print(solution.replaceDigits(s5))  # Expected output: "abzj"
+    s5 = "q9z0a0"
+    print(solution.replaceDigits(s5))  # Expected output: "qzzzaa"
 
 test_replace_digits()
