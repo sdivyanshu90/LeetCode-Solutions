@@ -25,7 +25,7 @@ def test_sort_sentence():
 
     # Test case 4
     s4 = "a1b2c3d4e5f6g7h8i9j10"
-    print(solution.sortSentence(s4))  # Expected output: "a b c d e f g h i j"
+    print(solution.sortSentence(s4))  # Expected output: "a1b2c3d4e5f6g7h8i9j1"
 
     # Test case 5
     s5 = "sentence4 This1 is2 a3"
