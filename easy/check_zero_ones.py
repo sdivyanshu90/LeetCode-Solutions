@@ -44,7 +44,7 @@ def test_check_zero_ones():
 
     # Test case 4
     s4 = "10101"
-    print(solution.checkZeroOnes(s4))  # Expected output: True
+    print(solution.checkZeroOnes(s4))  # Expected output: False
 
     # Test case 5
     s5 = "000111000"
