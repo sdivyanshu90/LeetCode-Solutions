@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def rotateTheBox(self, boxGrid: List[List[str]]) -> List[List[str]]:
         ROWS, COLS = len(boxGrid), len(boxGrid[0])
@@ -21,22 +23,22 @@ def test_rotate_the_box():
 
     # Test case 1
     boxGrid1 = [["#",".","#"]]
-    print(solution.rotateTheBox(boxGrid1))  # Expected output: [["."],["#"],["#"]]
+    print(solution.rotateTheBox(boxGrid1))  # Expected output: [['.'], ['#'], ['#']]
 
     # Test case 2
     boxGrid2 = [["#",".","*"],["#","#","*"]]
-    print(solution.rotateTheBox(boxGrid2))  # Expected output: [["."],["#"],["#"],["*"],["*"]]
+    print(solution.rotateTheBox(boxGrid2))  # Expected output: [['#', '.'], ['#', '#'], ['*', '*']]
 
     # Test case 3
     boxGrid3 = [["#","#","*",".","*","."],["#","#","#","*",".","."],["#","#","#",".","#","."]]
-    print(solution.rotateTheBox(boxGrid3))  # Expected output: [["."],["#"],["#"],["#"],["*"],["."]]
+    print(solution.rotateTheBox(boxGrid3))  # Expected output: [['.', '#', '#'], ['.', '#', '#'], ['#', '#', '*'], ['#', '*', '.'], ['#', '.', '*'], ['#', '.', '.']]
 
     # Test case 4
     boxGrid4 = [["*",".","*"],["#","#","*"]]
-    print(solution.rotateTheBox(boxGrid4))  # Expected output: [["."],["#"],["*"],["*"]]
+    print(solution.rotateTheBox(boxGrid4))  # Expected output: [['#', '*'], ['#', '.'], ['*', '*']]
 
     # Test case 5
     boxGrid5 = [["#","#","#"],["#","#","#"]]
-    print(solution.rotateTheBox(boxGrid5))  # Expected output: [["."],["."],["."],["#"],["#"],["#"]]
+    print(solution.rotateTheBox(boxGrid5))  # Expected output: [['#', '#'], ['#', '#'], ['#', '#']]
 
 test_rotate_the_box()
