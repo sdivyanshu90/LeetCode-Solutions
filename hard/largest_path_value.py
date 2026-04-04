@@ -1,3 +1,6 @@
+from collections import defaultdict, deque
+from typing import List
+
 class Solution:
     def largestPathValue(self, colors: str, edges: List[List[int]]) -> int:
         n = len(colors)
@@ -51,7 +54,7 @@ def test_largest_path_value():
     # Test case 4
     colors4 = "aaab"
     edges4 = [[0,1],[0,2],[1,3]]
-    print(solution.largestPathValue(colors4, edges4))  # Expected output: 3
+    print(solution.largestPathValue(colors4, edges4))  # Expected output: 2
 
     # Test case 5
     colors5 = "abcde"
