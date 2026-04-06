@@ -33,7 +33,7 @@ def test_min_flips():
 
     # Test case 1
     s1 = "111000"
-    print(solution.minFlips(s1))  # Expected output: 1
+    print(solution.minFlips(s1))  # Expected output: 2
 
     # Test case 2
     s2 = "010"
@@ -45,7 +45,7 @@ def test_min_flips():
 
     # Test case 4
     s4 = "0000"
-    print(solution.minFlips(s4))  # Expected output: 0
+    print(solution.minFlips(s4))  # Expected output: 2
 
     # Test case 5
     s5 = "101010"
