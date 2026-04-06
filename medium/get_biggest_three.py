@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def getBiggestThree(self, grid: List[List[int]]) -> List[int]:
         R = len(grid)
@@ -45,7 +47,7 @@ def test_get_biggest_three():
 
     # Test case 3
     grid3 = [[3, 4, 5, 1], [3, 3, 4, 2], [20, 30, 200, 10], [1, 1, 1, 1]]
-    print(solution.getBiggestThree(grid3))  # Expected output: [228, 216, 211]
+    print(solution.getBiggestThree(grid3))  # Expected output: [224, 210, 200]
 
     # Test case 4
     grid4 = [[1]]
@@ -53,6 +55,6 @@ def test_get_biggest_three():
 
     # Test case 5
     grid5 = [[9,9],[9,9]]
-    print(solution.getBiggestThree(grid5))  # Expected output: [36]
+    print(solution.getBiggestThree(grid5))  # Expected output: [9]
 
 test_get_biggest_three()
