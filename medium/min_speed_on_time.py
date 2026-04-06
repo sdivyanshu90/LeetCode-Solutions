@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def minSpeedOnTime(self, dist: List[int], hour: float) -> int:
         def calculate_total_time(speed):
@@ -46,6 +48,6 @@ def test_min_speed_on_time():
     # Test case 5
     dist5 = [1, 3, 2]
     hour5 = 5.5
-    print(solution.minSpeedOnTime(dist5, hour5))  # Expected output: 1
+    print(solution.minSpeedOnTime(dist5, hour5))  # Expected output: 2
 
 test_min_speed_on_time()
