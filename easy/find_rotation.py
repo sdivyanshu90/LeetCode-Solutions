@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def findRotation(self, mat: List[List[int]], target: List[List[int]]) -> bool:
         n = len(mat)
