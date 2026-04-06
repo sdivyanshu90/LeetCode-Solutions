@@ -20,13 +20,13 @@ def test_is_sum_equal():
     firstWord2 = "aaa"
     secondWord2 = "a"
     targetWord2 = "aaaa"
-    print(solution.isSumEqual(firstWord2, secondWord2, targetWord2))  # Expected output: False
+    print(solution.isSumEqual(firstWord2, secondWord2, targetWord2))  # Expected output: True
 
     # Test case 3
     firstWord3 = "aaa"
     secondWord3 = "a"
     targetWord3 = "aaaaa"
-    print(solution.isSumEqual(firstWord3, secondWord3, targetWord3))  # Expected output: False
+    print(solution.isSumEqual(firstWord3, secondWord3, targetWord3))  # Expected output: True
 
     # Test case 4
     firstWord4 = "abc"
