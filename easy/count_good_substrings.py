@@ -27,8 +27,8 @@ def test_count_good_substrings():
     print(solution.countGoodSubstrings(s2))  # Expected output: 4
 
     # Test case 3
-    s3 = "abc"
-    print(solution.countGoodSubstrings(s3))  # Expected output: 1
+    s3 = "abcdefghijklmnopqrstuvwxyz"
+    print(solution.countGoodSubstrings(s3))  # Expected output: 24
 
     # Test case 4
     s4 = "aaa"
