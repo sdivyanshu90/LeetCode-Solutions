@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def chalkReplacer(self, chalk: List[int], k: int) -> int:
         sum_chalk = 0
@@ -29,7 +31,7 @@ def test_chalk_replacer():
     # Test case 3
     chalk = [1, 2, 3]
     k = 10
-    print(solution.chalkReplacer(chalk, k))  # Expected output: 0
+    print(solution.chalkReplacer(chalk, k))  # Expected output: 2
 
     # Test case 4
     chalk = [10, 20, 30]
@@ -39,6 +41,6 @@ def test_chalk_replacer():
     # Test case 5
     chalk = [2, 3, 4]
     k = 15
-    print(solution.chalkReplacer(chalk, k))  # Expected output: 0
+    print(solution.chalkReplacer(chalk, k))  # Expected output: 2
 
 test_chalk_replacer()
