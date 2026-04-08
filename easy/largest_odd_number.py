@@ -14,8 +14,8 @@ def test_largest_odd_number():
     print(solution.largestOddNumber(num))  # Expected output: "5"
 
     # Test case 2
-    num = "4206"
-    print(solution.largestOddNumber(num))  # Expected output: ""
+    num = "999999992211100111222"
+    print(solution.largestOddNumber(num))  # Expected output: "999999992211100111"
 
     # Test case 3
     num = "35427"
