@@ -71,7 +71,7 @@ def test_remove_occurrences():
     # Test case 3
     s = "aababaab"
     part = "aab"
-    print(solution.removeOccurrences(s, part))  # Expected output: "ba"
+    print(solution.removeOccurrences(s, part))  # Expected output: "ab"
 
     # Test case 4
     s = "abcde"
