@@ -1,3 +1,6 @@
+from collections import defaultdict
+from typing import List
+
 class Solution:
     def makeEqual(self, words: List[str]) -> bool:
         counts = defaultdict(int)
@@ -25,7 +28,7 @@ def test_make_equal():
 
     # Test case 3
     words = ["aa", "bb", "cc"]
-    print(solution.makeEqual(words))  # Expected output: True
+    print(solution.makeEqual(words))  # Expected output: False
 
     # Test case 4
     words = ["abc", "def", "ghi"]
