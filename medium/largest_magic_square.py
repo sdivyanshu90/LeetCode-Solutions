@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def largestMagicSquare(self, grid: List[List[int]]) -> int:
         rows, cols = len(grid), len(grid[0])
@@ -42,7 +44,7 @@ def test_largest_magic_square():
 
     # Test case 2
     grid = [[5,1,3],[9,3,1],[1,3,9]]
-    print(solution.largestMagicSquare(grid))  # Expected output: 2
+    print(solution.largestMagicSquare(grid))  # Expected output: 1
 
     # Test case 3
     grid = [[1]]
@@ -54,6 +56,6 @@ def test_largest_magic_square():
 
     # Test case 5
     grid = [[3,10,5,1],[3,2,4,5],[3,15,6,7],[3,2,4,5]]
-    print(solution.largestMagicSquare(grid))  # Expected output: 3
+    print(solution.largestMagicSquare(grid))  # Expected output: 1
 
 test_largest_magic_square()
