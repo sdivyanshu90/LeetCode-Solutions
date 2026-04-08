@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def countSubIslands(self, grid1: List[List[int]], grid2: List[List[int]]) -> int:
         def dfs(grid, sub_grid, lin, col):
@@ -54,7 +56,7 @@ def test_count_sub_islands():
     # Test case 4
     grid1 = [[1,0,1,0,1],[1,1,1,1,1],[0,1,0,1,0],[1,1,1,1,1],[1,0,1,0,1]]
     grid2 = [[0,0,0,0,0],[1,1,1,1,1],[0,1,0,1,0],[1,1,1,1,1],[0,0,0,0,0]]
-    print(solution.countSubIslands(grid1, grid2))  # Expected output: 2
+    print(solution.countSubIslands(grid1, grid2))  # Expected output: 1
 
     # Test case 5
     grid1 = [[1,1,1,1,0],[0,1,1,1,0],[0,0,0,0,0],[1,1,1,1,1],[0,0,0,0,0]]
