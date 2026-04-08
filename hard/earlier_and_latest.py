@@ -1,3 +1,6 @@
+from functools import cache
+from typing import List
+
 class Solution:
     def earliestAndLatest(
         self, n: int, firstPlayer: int, secondPlayer: int
@@ -62,12 +65,12 @@ def test_earliest_and_latest():
     n = 12
     firstPlayer = 2
     secondPlayer = 11
-    print(solution.earliestAndLatest(n, firstPlayer, secondPlayer))  # Expected output: [2, 2]
+    print(solution.earliestAndLatest(n, firstPlayer, secondPlayer))  # Expected output: [1, 1]
 
     # Test case 5
     n = 10
     firstPlayer = 3
     secondPlayer = 7
-    print(solution.earliestAndLatest(n, firstPlayer, secondPlayer))  # Expected output: [3, 4]
+    print(solution.earliestAndLatest(n, firstPlayer, secondPlayer))  # Expected output: [2, 4]
 
 test_earliest_and_latest()
