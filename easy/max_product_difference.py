@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def maxProductDifference(self, nums: List[int]) -> int:
         nums = sorted(nums)
@@ -16,7 +18,7 @@ def test_max_product_difference():
 
     # Test case 3
     nums = [10, 2, 5, 2]
-    print(solution.maxProductDifference(nums))  # Expected output: 16
+    print(solution.maxProductDifference(nums))  # Expected output: 46
 
     # Test case 4
     nums = [1, 1, 1, 1]
