@@ -1,3 +1,7 @@
+from collections import defaultdict
+import bisect
+from typing import List
+
 class MovieRentingSystem:
     def __init__(self, n: int, entries: List[List[int]]):
         self.price_map = {}
