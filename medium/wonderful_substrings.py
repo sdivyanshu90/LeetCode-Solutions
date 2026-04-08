@@ -35,7 +35,7 @@ def test_wonderful_substrings():
 
     # Test case 4
     word = "ihhih"
-    print(solution.wonderfulSubstrings(word))  # Expected output: 6
+    print(solution.wonderfulSubstrings(word))  # Expected output: 11
 
     # Test case 5
     word = "jj"
