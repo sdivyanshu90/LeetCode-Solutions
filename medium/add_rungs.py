@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def addRungs(self, rungs: List[int], dist: int) -> int:
         lvl = 0
