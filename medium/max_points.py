@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def maxPoints(self, points: List[List[int]]) -> int:
         cols = len(points[0])
@@ -34,10 +36,10 @@ def test_max_points():
 
     # Test case 4
     points4 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-    print(solution.maxPoints(points4))  # Expected output: 29
+    print(solution.maxPoints(points4))  # Expected output: 18
 
     # Test case 5
     points5 = [[1, 1000], [1000, 1]]
-    print(solution.maxPoints(points5))  # Expected output: 1000
+    print(solution.maxPoints(points5))  # Expected output: 1999
 
 test_max_points()
