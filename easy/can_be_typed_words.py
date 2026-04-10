@@ -27,8 +27,8 @@ def test_can_be_typed_words():
 
     # Test case 4
     text4 = "hello world"
-    brokenLetters4 = "xyz"
-    print(solution.canBeTypedWords(text4, brokenLetters4))  # Expected output: 2
+    brokenLetters4 = "abcdefghijklmnopqrstuvwxyz"
+    print(solution.canBeTypedWords(text4, brokenLetters4))  # Expected output: 0
 
     # Test case 5
     text5 = "a b c d e f g h i j k l m n o p q r s t u v w x y z"
