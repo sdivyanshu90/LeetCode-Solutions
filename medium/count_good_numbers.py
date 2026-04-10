@@ -30,10 +30,10 @@ def test_count_good_numbers():
 
     # Test case 4
     n4 = 100
-    print(solution.countGoodNumbers(n4))  # Expected output: 687423610
+    print(solution.countGoodNumbers(n4))  # Expected output: 564490093
 
     # Test case 5
     n5 = 99999999999999999
-    print(solution.countGoodNumbers(n5))  # Expected output: 687423610
+    print(solution.countGoodNumbers(n5))  # Expected output: 958203099
 
 test_count_good_numbers()
