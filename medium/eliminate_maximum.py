@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def eliminateMaximum(self, dist: List[int], speed: List[int]) -> int:
         arrival = []
@@ -26,7 +28,7 @@ def test_eliminate_maximum():
     # Test case 2
     dist2 = [1, 1, 2]
     speed2 = [1, 1, 1]
-    print(solution.eliminateMaximum(dist2, speed2))  # Expected output: 2
+    print(solution.eliminateMaximum(dist2, speed2))  # Expected output: 1
 
     # Test case 3
     dist3 = [3, 2, 4]
@@ -36,7 +38,7 @@ def test_eliminate_maximum():
     # Test case 4
     dist4 = [10, 8, 0, 5, 3]
     speed4 = [2, 4, 11, 1, 1]
-    print(solution.eliminateMaximum(dist4, speed4))  # Expected output: 3
+    print(solution.eliminateMaximum(dist4, speed4))  # Expected output: 0
 
     # Test case 5
     dist5 = [1, 2, 3]
