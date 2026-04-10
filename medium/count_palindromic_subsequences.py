@@ -19,10 +19,10 @@ def test_count_palindromic_subsequence():
 
     # Test case 4
     s4 = "aaaaa"
-    print(solution.countPalindromicSubsequence(s4))  # Expected output: 0
+    print(solution.countPalindromicSubsequence(s4))  # Expected output: 1
 
     # Test case 5
     s5 = "abcba"
-    print(solution.countPalindromicSubsequence(s5))  # Expected output: 2
+    print(solution.countPalindromicSubsequence(s5))  # Expected output: 3
 
 test_count_palindromic_subsequence()
