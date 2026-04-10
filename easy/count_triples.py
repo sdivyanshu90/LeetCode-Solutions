@@ -33,6 +33,6 @@ def test_count_triples():
 
     # Test case 5
     n5 = 199
-    print(solution.countTriples(n5))  # Expected output: 16
+    print(solution.countTriples(n5))  # Expected output: 250
 
 test_count_triples()
