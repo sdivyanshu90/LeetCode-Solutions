@@ -19,8 +19,8 @@ def test_is_three():
     print(solution.isThree(n2))  # Expected output: True
 
     # Test Case 3
-    n3 = 9
-    print(solution.isThree(n3))  # Expected output: True
+    n3 = 98769
+    print(solution.isThree(n3))  # Expected output: False
 
     # Test Case 4
     n4 = 16
