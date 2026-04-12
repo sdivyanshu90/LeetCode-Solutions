@@ -1,3 +1,5 @@
+from collections import deque
+
 class Solution:
     def minSwaps(self, s: str) -> int:
         stack = deque()
@@ -17,7 +19,7 @@ def test_min_swaps():
 
     # Test Case 1
     s1 = "]]][[["
-    print(solution.minSwaps(s1))  # Expected output: 3
+    print(solution.minSwaps(s1))  # Expected output: 2
 
     # Test Case 2
     s2 = "[]"
@@ -33,6 +35,6 @@ def test_min_swaps():
 
     # Test Case 5
     s5 = "[[[]]"
-    print(solution.minSwaps(s5))  # Expected output: 1
+    print(solution.minSwaps(s5))  # Expected output: 0
 
 test_min_swaps()
