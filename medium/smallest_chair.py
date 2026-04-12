@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def smallestChair(self, times: List[List[int]], targetFriend: int) -> int:
         target_time = times[targetFriend]
@@ -26,21 +28,21 @@ def test_smallest_chair():
     # Test Case 2
     times2 = [[3, 10], [1, 5], [2, 6]]
     targetFriend2 = 0
-    print(solution.smallestChair(times2, targetFriend2))  # Expected output: 0
+    print(solution.smallestChair(times2, targetFriend2))  # Expected output: 2
 
     # Test Case 3
     times3 = [[0, 10], [1, 5], [2, 6]]
     targetFriend3 = 0
-    print(solution.smallestChair(times3, targetFriend3))  # Expected output: 1
+    print(solution.smallestChair(times3, targetFriend3))  # Expected output: 0
 
     # Test Case 4
     times4 = [[0, 10], [1, 5], [2, 6]]
     targetFriend4 = 1
-    print(solution.smallestChair(times4, targetFriend4))  # Expected output: 0
+    print(solution.smallestChair(times4, targetFriend4))  # Expected output: 1
 
     # Test Case 5
     times5 = [[0, 10], [1, 5], [2, 6]]
     targetFriend5 = 2
-    print(solution.smallestChair(times5, targetFriend5))  # Expected output: 0
+    print(solution.smallestChair(times5, targetFriend5))  # Expected output: 2
 
 test_smallest_chair()
