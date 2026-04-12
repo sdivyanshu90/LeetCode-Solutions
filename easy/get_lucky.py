@@ -34,11 +34,11 @@ def test_get_lucky():
     # Test Case 4
     s4 = "z"
     k4 = 1
-    print(solution.getLucky(s4, k4))  # Expected output: 26
+    print(solution.getLucky(s4, k4))  # Expected output: 8
 
     # Test Case 5
     s5 = "hello"
     k5 = 3
-    print(solution.getLucky(s5, k5))  # Expected output: 2
+    print(solution.getLucky(s5, k5))  # Expected output: 7
 
 test_get_lucky()
