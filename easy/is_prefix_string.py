@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def isPrefixString(self, s: str, words: List[str]) -> bool:
         prefix = ""
@@ -38,7 +40,7 @@ def test_is_prefix_string():
 
     # Test Case 5
     s5 = "abc"
-    words5 = ["a", "bc"]
-    print(solution.isPrefixString(s5, words5))  # Expected output: True
+    words5 = ["a", "b", "d", "c"]
+    print(solution.isPrefixString(s5, words5))  # Expected output: False
 
 test_is_prefix_string()
