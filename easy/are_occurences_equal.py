@@ -24,8 +24,8 @@ def test_are_occurences_equal():
     print(solution.areOccurrencesEqual(s2))  # Expected output: False
 
     # Test Case 3
-    s3 = "abc"
-    print(solution.areOccurrencesEqual(s3))  # Expected output: True
+    s3 = "abseda"
+    print(solution.areOccurrencesEqual(s3))  # Expected output: False
 
     # Test Case 4
     s4 = "aabbcc"
