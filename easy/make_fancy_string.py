@@ -22,7 +22,7 @@ def test_make_fancy_string():
 
     # Test Case 2
     s2 = "aaabaaaa"
-    print(solution.makeFancyString(s2))  # Expected output: "aba"
+    print(solution.makeFancyString(s2))  # Expected output: "aabaa"
 
     # Test Case 3
     s3 = "aab"
@@ -30,7 +30,7 @@ def test_make_fancy_string():
 
     # Test Case 4
     s4 = "aaaaa"
-    print(solution.makeFancyString(s4))  # Expected output: "a"
+    print(solution.makeFancyString(s4))  # Expected output: "aa"
 
     # Test Case 5
     s5 = "abc"
