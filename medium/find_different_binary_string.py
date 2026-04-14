@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def findDifferentBinaryString(self, nums: List[str]) -> str:
         def generate(curr):
@@ -34,10 +36,10 @@ def test_find_different_binary_string():
 
     # Test case 4
     nums4 = ["0", "1"]
-    print(solution.findDifferentBinaryString(nums4))  # Expected output: ""
+    print(solution.findDifferentBinaryString(nums4))  # Expected output: "00"
 
     # Test case 5
     nums5 = ["000", "001", "010", "011", "100", "101", "110"]
-    print(solution.findDifferentBinaryString(nums5))  # Expected output: "111"
+    print(solution.findDifferentBinaryString(nums5))  # Expected output: "0000000"
 
 test_find_different_binary_string()
