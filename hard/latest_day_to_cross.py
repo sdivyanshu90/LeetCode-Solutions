@@ -1,3 +1,6 @@
+from collections import deque
+from typing import List
+
 class Solution:
     def latestDayToCross(self, row: int, col: int, cells: List[List[int]]) -> int:
         def canCross(day):
@@ -57,13 +60,13 @@ def test_latest_day_to_cross():
     row3 = 1
     col3 = 1
     cells3 = [[1, 1]]
-    print(solution.latestDayToCross(row3, col3, cells3))  # Expected output: 1
+    print(solution.latestDayToCross(row3, col3, cells3))  # Expected output: 0
 
     # Test case 4
     row4 = 2
     col4 = 3
     cells4 = [[1, 1], [1, 2], [1, 3], [2, 1], [2, 2], [2, 3]]
-    print(solution.latestDayToCross(row4, col4, cells4))  # Expected output: 3
+    print(solution.latestDayToCross(row4, col4, cells4))  # Expected output: 2
 
     # Test case 5
     row5 = 3
