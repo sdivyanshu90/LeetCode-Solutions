@@ -24,9 +24,9 @@ def test_reverse_prefix():
     print(solution.reversePrefix(word3, ch3))  # Expected output: "abcd"
 
     # Test case 4
-    word4 = "a"
+    word4 = "abcdefghijklmnopqrstuvwxyz"
     ch4 = "a"
-    print(solution.reversePrefix(word4, ch4))  # Expected output: "a"
+    print(solution.reversePrefix(word4, ch4))  # Expected output: "abcdefghijklmnopqrstuvwxyz"
 
     # Test case 5
     word5 = "hello"
