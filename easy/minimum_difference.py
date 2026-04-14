@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def minimumDifference(self, nums: List[int], k: int) -> int:
         nums.sort()
@@ -31,7 +33,7 @@ def test_minimum_difference():
     # Test case 4
     nums4 = [10, 100, 300, 200, 1000]
     k4 = 3
-    print(solution.minimumDifference(nums4, k4))  # Expected output: 20
+    print(solution.minimumDifference(nums4, k4))  # Expected output: 190
 
     # Test case 5
     nums5 = [1, 2, 3, 4, 10]
