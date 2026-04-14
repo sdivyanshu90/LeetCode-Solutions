@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     MOD = 1_000_000_007
     def countPaths(self, n: int, roads: list[list[int]]) -> int:
@@ -54,16 +56,16 @@ def test_count_paths():
     # Test case 3
     n3 = 3
     roads3 = [[0, 1, 1], [0, 2, 1], [1, 2, 1]]
-    print(solution.countPaths(n3, roads3))  # Expected output: 2
+    print(solution.countPaths(n3, roads3))  # Expected output: 1
 
     # Test case 4
     n4 = 4
     roads4 = [[0, 1, 1], [0, 2, 1], [1, 2, 1], [1, 3, 1], [2, 3, 1]]
-    print(solution.countPaths(n4, roads4))  # Expected output: 4
+    print(solution.countPaths(n4, roads4))  # Expected output: 2
 
     # Test case 5
     n5 = 5
     roads5 = [[0, 1, 2], [0, 2, 3], [1, 2, 1], [1, 3, 4], [2, 3, 1], [3, 4, 2]]
-    print(solution.countPaths(n5, roads5))  # Expected output: 3
+    print(solution.countPaths(n5, roads5))  # Expected output: 2
 
 test_count_paths()
