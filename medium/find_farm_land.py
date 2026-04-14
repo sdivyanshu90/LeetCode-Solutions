@@ -2,25 +2,25 @@ from typing import List
 
 class Solution:
     def findFarmland(self, land: List[List[int]]) -> List[List[int]]:
-        n=len(land)
-        m=len(land[0])
-        ans=[]
+        n = len(land)
+        m = len(land[0])
+        ans = []
         for i in range(n):
             for j in range(m):
                 if land[i][j]:
-                    min_i,min_j=i,j
-                    max_i,max_j=i,j
-                    stack=[(i,j)]
-                    land[i][j]=0
+                    min_i, min_j = i, j
+                    max_i, max_j = i, j
+                    stack = [(i, j)]
+                    land[i][j] = 0
                     while stack:
-                        i,j=stack.pop()
-                        for x,y in (i-1,j),(i,j-1),(i,j+1),(i+1,j):
-                            if 0<=x<n and 0<=y<m and land[x][y]:
-                                stack.append((x,y))
-                                land[x][y]=0
-                                max_i=max(max_i,x)
-                                max_j=max(max_j,y)
-                    ans.append([min_i,min_j,max_i,max_j])
+                        r, c = stack.pop()
+                        for x, y in (r-1, c), (r, c-1), (r, c+1), (r+1, c):
+                            if 0 <= x < n and 0 <= y < m and land[x][y]:
+                                stack.append((x, y))
+                                land[x][y] = 0
+                                max_i = max(max_i, x)
+                                max_j = max(max_j, y)
+                    ans.append([min_i, min_j, max_i, max_j])
         return ans
 
 def test_find_farm_land():
