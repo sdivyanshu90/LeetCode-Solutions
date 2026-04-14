@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def maxMatrixSum(self, matrix: List[List[int]]) -> int:
         total_sum = 0
@@ -25,11 +27,11 @@ def test_max_matrix_sum():
 
     # Test case 2
     matrix2 = [[1, 2, 3], [-1, -2, -3], [4, 5, 6]]
-    print(solution.maxMatrixSum(matrix2))  # Expected output: 36
+    print(solution.maxMatrixSum(matrix2))  # Expected output: 25
 
     # Test case 3
     matrix3 = [[-1]]
-    print(solution.maxMatrixSum(matrix3))  # Expected output: 1
+    print(solution.maxMatrixSum(matrix3))  # Expected output: -1
 
     # Test case 4
     matrix4 = [[-1, -2], [-3, -4]]
@@ -37,6 +39,6 @@ def test_max_matrix_sum():
 
     # Test case 5
     matrix5 = [[0, -1], [1, -2]]
-    print(solution.maxMatrixSum(matrix5))  # Expected output: 6
+    print(solution.maxMatrixSum(matrix5))  # Expected output: 4
 
 test_max_matrix_sum()
