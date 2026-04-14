@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def findFarmland(self, land: List[List[int]]) -> List[List[int]]:
         n=len(land)
@@ -43,6 +45,6 @@ def test_find_farm_land():
     # Test case 5
     land5 = [[1, 0, 1], [0, 1, 0], [1, 0, 1]]
     print(solution.findFarmland(land5))  
-    # Expected output: [[0, 0, 0, 0], [0, 2, 0, 2], [2, 0, 2, 0]]
+    # Expected output: [[0, 0, 0, 0], [0, 2, 0, 2], [1, 1, 1, 1], [2, 0, 2, 0], [2, 2, 2, 2]]
 
 test_find_farm_land()
