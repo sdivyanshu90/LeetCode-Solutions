@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def findGCD(self, nums: List[int]) -> int:
         a, b = min(nums), max(nums)
@@ -22,7 +24,7 @@ def test_find_gcd():
 
     # Test case 4
     nums4 = [12, 15, 18]
-    print(solution.findGCD(nums4))  # Expected output: 3
+    print(solution.findGCD(nums4))  # Expected output: 6
 
     # Test case 5
     nums5 = [100, 75, 25]
