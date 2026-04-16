@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def twoOutOfThree(self, nums1: List[int], nums2: List[int], nums3: List[int]) -> List[int]:
         return list(set(nums1) & set(nums2) | set(nums1) & set(nums3) | set(nums2) & set(nums3))
@@ -15,7 +17,7 @@ def test_two_out_of_three():
     nums1 = [3, 1]
     nums2 = [2, 3]
     nums3 = [1, 2]
-    print(solution.twoOutOfThree(nums1, nums2, nums3))  # Expected output: [2, 3, 1]
+    print(solution.twoOutOfThree(nums1, nums2, nums3))  # Expected output: [1, 2, 3]
 
     # Test case 3
     nums1 = [1, 2, 2]
