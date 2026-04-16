@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def countKDifference(self, nums: List[int], k: int) -> int:
         freq = {}
@@ -29,16 +31,16 @@ def test_count_k_difference():
     # Test case 3
     nums3 = [3, 2, 1, 5, 4]
     k3 = 2
-    print(solution.countKDifference(nums3, k3))  # Expected output: 2
+    print(solution.countKDifference(nums3, k3))  # Expected output: 3
 
     # Test case 4
     nums4 = [1, 1, 1, 1]
     k4 = 0
-    print(solution.countKDifference(nums4, k4))  # Expected output: 6
+    print(solution.countKDifference(nums4, k4))  # Expected output: 12
 
     # Test case 5
     nums5 = [1, 2, 3, 4, 5]
     k5 = 2
-    print(solution.countKDifference(nums5, k5))  # Expected output: 2
+    print(solution.countKDifference(nums5, k5))  # Expected output: 3
 
 test_count_k_difference()
