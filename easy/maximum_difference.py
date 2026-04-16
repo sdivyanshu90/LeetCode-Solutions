@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def maximumDifference(self, nums: List[int]) -> int:
         if not nums or len(nums) < 2:
