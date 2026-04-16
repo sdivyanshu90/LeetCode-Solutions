@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def finalValueAfterOperations(self, operations: List[str]) -> int:
         return sum(1 if "+" in op else -1 for op in operations)
@@ -19,10 +21,10 @@ def test_final_value_after_operations():
 
     # Test case 4
     operations4 = ["X++", "X++", "X++", "X--", "X--", "X--"]
-    print(solution.finalValueAfterOperations(operations4))  # Expected Output: 1
+    print(solution.finalValueAfterOperations(operations4))  # Expected Output: 0
 
     # Test case 5
     operations5 = ["++X", "++X", "++X", "--X", "--X", "--X", "++X"]
-    print(solution.finalValueAfterOperations(operations5))  # Expected Output: 2
+    print(solution.finalValueAfterOperations(operations5))  # Expected Output: 1
 
 test_final_value_after_operations()
