@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def minOperations(self, grid: List[List[int]], x: int) -> int:
         nums_array = []
@@ -53,7 +55,7 @@ def test_min_operations():
     # Test case 4
     grid4 = [[10, 20], [30, 40]]
     x4 = 10
-    print(solution.minOperations(grid4, x4))  # Expected output: 6
+    print(solution.minOperations(grid4, x4))  # Expected output: 4
 
     # Test case 5
     grid5 = [[1, 1], [1, 1]]
