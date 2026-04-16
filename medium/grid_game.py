@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def gridGame(self, grid: List[List[int]]) -> int:
         first_row_sum = sum(grid[0])
@@ -26,10 +28,10 @@ def test_grid_game():
 
     # Test case 4
     grid4 = [[7, 0, 9], [8, 5, 6]]
-    print(solution.gridGame(grid4))  # Expected output: 13
+    print(solution.gridGame(grid4))  # Expected output: 9
 
     # Test case 5
     grid5 = [[1, 2, 3], [4, 5, 6]]
-    print(solution.gridGame(grid5))  # Expected output: 9
+    print(solution.gridGame(grid5))  # Expected output: 4
 
 test_grid_game()
