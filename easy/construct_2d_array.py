@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def construct2DArray(
         self, original: list[int], m: int, n: int
