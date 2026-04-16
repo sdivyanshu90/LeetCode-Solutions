@@ -1,3 +1,5 @@
+from collections import Counter, deque
+
 class Solution:
     def longestSubsequenceRepeatedK(self, s: str, k: int) -> str:
         ans = ""
@@ -38,7 +40,7 @@ def test_longest_subsequence_repeated_k():
     # Test case 4
     s4 = "aaaaa"
     k4 = 3
-    print(solution.longestSubsequenceRepeatedK(s4, k4))  # Expected output: "aaa"
+    print(solution.longestSubsequenceRepeatedK(s4, k4))  # Expected output: "a"
 
     # Test case 5
     s5 = "abcde"
