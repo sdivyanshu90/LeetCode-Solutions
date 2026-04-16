@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def missingRolls(self, rolls: List[int], mean: int, n: int) -> List[int]:
         sum_rolls = sum(rolls)
@@ -27,7 +29,7 @@ def test_missing_rolls():
     rolls2 = [1, 5, 6]
     mean2 = 3
     n2 = 4
-    print(solution.missingRolls(rolls2, mean2, n2))  # Expected output: [2, 3, 2, 2]
+    print(solution.missingRolls(rolls2, mean2, n2))  # Expected output: [3, 2, 2, 2]
 
     # Test case 3
     rolls3 = [1, 2, 3, 4]
